@@ -1,0 +1,18 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>LightSabres</name>
+    <description>LightSabres Mod</description>
+    <mod_version>1.1</mod_version>
+    <game_version>18.x</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\items.xml" hash="3938eea773e573c11c4839ad66e3e216" />
+    <hash filename="Config\loot.xml" hash="307f6ab074e95793693b69b7798e35e3" />
+    <hash filename="Config\recipes.xml" hash="d09d1b3c57fa100435b37cf62e200402" />
+    <hash filename="Config\sounds.xml" hash="63f45e4e1bcbfc77f5e5cd1e6b945b67" />
+    <hash filename="ItemIcons\LazerGem.png" hash="15d7d9f3af96aba970db951f3ad28393" />
+    <hash filename="ItemIcons\lightsabres.png" hash="bc02954ca9985eada557b35150f2547d" />
+    <hash filename="Resources\LightSabres.unity3d" hash="5245fb961009e00f5bf93a4ab94e2bb6" />
+  </hashes>
+</mod>

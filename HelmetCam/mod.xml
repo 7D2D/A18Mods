@@ -1,0 +1,20 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>HelmetCam</name>
+    <description>HelmetCam</description>
+    <mod_version>1.3</mod_version>
+    <game_version>18.x</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\items.xml" hash="417f59e0a943d3df68b60b6c1d1880ea" />
+    <hash filename="Config\item_modifiers.xml" hash="33d1dcb5bc14dfbf674e6783753c16fb" />
+    <hash filename="Config\loot.xml" hash="593554b00e6f53c589cd440c767ec313" />
+    <hash filename="Config\recipes.xml" hash="f0dd123579ca41f53ee8df3f54cd7047" />
+    <hash filename="ItemIcons\modHelmetCam.png" hash="ae3247d2ddb5c71c5a1e49bda660a0fd" />
+    <hash filename="ItemIcons\modHelmetCamSchematic.png" hash="02c67ac75341db51c20eb6146b40b73a" />
+    <hash filename="ItemIcons\ui_game_symbol_helmetcam.png" hash="2493cb484c672bec07af8ab7c6b4e641" />
+    <hash filename="Resources\HelmetCam.unity3d" hash="8a7bec2a1f309f21e68cba3ec949e922" />
+    <hash filename="Config\buffs.xml" hash="cdf18cad4f42786916b57856904cc357" />
+  </hashes>
+</mod>

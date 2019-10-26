@@ -1,0 +1,16 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>Better Books</name>
+    <description>Animated Books Mod</description>
+    <mod_version>1.1</mod_version>
+    <game_version>18.x</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\items.xml" hash="a880ccfda15f4e81af21099c87e6e282" />
+    <hash filename="Config\loot.xml" hash="cdcc27b0200e36a87474a79c69b1f16f" />
+    <hash filename="Config\sounds.xml" hash="7b0cd40d11a3a1f4ba8764e394433d8d" />
+    <hash filename="Resources\BetterBooks.unity3d" hash="420bef4d57489313f265db9c84a093d8" />
+    <hash filename="Resources\PageFlips.unity3d" hash="32bd7bc5d93de330f69f3b2de09328b5" />
+  </hashes>
+</mod>

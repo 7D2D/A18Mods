@@ -1,0 +1,27 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>Fun with Flags</name>
+    <description>RallyPoint Flags and Flags using cloth motion to simulate wind effects</description>
+    <mod_version>1.4</mod_version>
+    <game_version>18.0</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\blocks.xml" hash="f6cca944189ea7403a8d55574ee729bd" />
+    <hash filename="Config\items.xml" hash="d75f0b4820058de4f08ceff2f4b52a7d" />
+    <hash filename="Config\recipes.xml" hash="98b809307a3a44ead339f775665b9ecc" />
+    <hash filename="ItemIcons\flagCanvas.png" hash="0f02cff64057d0cc7b383c2a53138150" />
+    <hash filename="ItemIcons\FlagGuppy.png" hash="24688f655efbb1f8358cb6b0d1e56e88" />
+    <hash filename="ItemIcons\FlagInfection.png" hash="322b7079968e88819e18abdd2242ceed" />
+    <hash filename="ItemIcons\FlagLooted.png" hash="87f34e0dd072c594a1ba9f0f8ef06efa" />
+    <hash filename="ItemIcons\flagPole.png" hash="85205648070d4eded6799f30b79f4e13" />
+    <hash filename="ItemIcons\FlagRadiation.png" hash="8daeb1c8ebee1a68ff27c2551e84b350" />
+    <hash filename="ItemIcons\FlagRepo.png" hash="2a56fdc36f2b5cd6c54ff00fa5387b2d" />
+    <hash filename="ItemIcons\FlagSheldon.png" hash="d08eb93f11e5e08c0b008ce22c599e65" />
+    <hash filename="ItemIcons\FlagSphereii.png" hash="c3e8867826c06d666c0ecaa8a9a9d2e0" />
+    <hash filename="ItemIcons\FlagUSA.png" hash="c48dfbcccfbcd467b091c1c4d7153bb8" />
+    <hash filename="Resources\Flags.unity3d" hash="6e3301a5942c7f60889b9504fc81ade1" />
+    <hash filename="Resources\FlagXyth.unity3d" hash="1ac11382a8826d93071112fdf7b0be72" />
+    <hash filename="Resources\RallyFlags.unity3d" hash="f8841ea0931b383273e45110e2b6257a" />
+  </hashes>
+</mod>

@@ -1,0 +1,18 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>BillBoards</name>
+    <description>Large Automated Billboards</description>
+    <mod_version>1.1</mod_version>
+    <game_version>18.x</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\blocks.xml" hash="6e5d01c4eaca239ca73242cd9f6970de" />
+    <hash filename="Config\recipes.xml" hash="088cac575d9b026a63c23f28435d3d74" />
+    <hash filename="ItemIcons\Billboard.png" hash="b43b942ba760d3c37c7181295e8dae84" />
+    <hash filename="Resources\BillBoards.unity3d" hash="67058c69ae12c6a70ca397215811970d" />
+    <hash filename="Resources\video00.mp4" hash="869876c9c6db7693c60a2d50cd1dc0ae" />
+    <hash filename="Resources\video01.mp4" hash="f13004eed4251c602bbe15737e8a1ecb" />
+    <hash filename="Resources\video02.mp4" hash="c91f91ab0c1721d03df66d282e339d7b" />
+  </hashes>
+</mod>
