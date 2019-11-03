@@ -2,7 +2,7 @@
 
 <xml>
 	<ModInfo>
-		<Name value="Billboards" />
+		<Name value="BillBoards" />
 		<Description value="Large Automated Billboards." />
 		<Author value="Xyth" />
 		<Version value="1.1" />
