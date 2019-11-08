@@ -1,0 +1,8 @@
+<progression>
+
+		<append xpath="//perk[@name='perkBatterUpBigHits']//requirement[@name='HoldingItemHasTags']/@tags">,Bat</append>
+		
+		<append xpath="//perk[@name='perkBatterUpBaseballBats']//passive_effect[@name='RecipeTagUnlocked']/@tags">,meleeAluminumBat,meleePlainBat</append>
+
+		<append xpath="//perk[@name='perkBatterUpComplete']//requirement[@name='HoldingItemHasTags']/@tags">,Bat</append>
+</progression>
