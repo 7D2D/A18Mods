@@ -1,0 +1,7 @@
+<progression>
+
+		<append xpath="//perk[@name='perkAdvancedEngineering']/effect_group[1]/passive_effect[6]/@tags">,CCTV0-3,CCTV4-7,CCTVLarge0-3,CCTVLarge4-7,CamPan0,CamPan1,CamPan2,CamPan3,CamPan4,CamPan5,CamPan6,CamPan7,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm6,CamPanSm7
+		</append>
+
+		
+</progression>
