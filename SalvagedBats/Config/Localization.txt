@@ -1,5 +1,5 @@
 ﻿Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
-meleeAluminumBat,items,Melee,New,Baseball Bat,,,,,
+meleeAluminumBat,items,Melee,New,Aluminum Bat,,,,,
 meleeAluminumBatDesc,items,Melee,New,The Aluminum T3 Bat is a little league favorite, needs less stamina to swing.\n\nRepair with a Repair Kit.\nScrap to Baseball Bat parts.,,,,,
 meleeAluminumBatSchematic,items,Melee,New,Aluminum Bat Schematic,,,,,
 meleePlainBat,items,Melee,New,Plain Bat,,,,,

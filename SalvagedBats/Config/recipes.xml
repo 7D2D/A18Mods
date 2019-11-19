@@ -109,7 +109,7 @@
 			<ingredient name="resourceMechanicalParts" count="1"/>
 		</recipe>
 
-		<recipe name="meleePlainBat" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="meleePlainBat" count="1" craft_area="workbench" tags="learnable,perkPummelPete">
 			<ingredient name="meleeClubBaseballBatParts" count="5"/>
 			<ingredient name="resourceForgedIron" count="10"/>
 			<ingredient name="resourceWood" count="10"/>
@@ -119,7 +119,7 @@
 				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="meleeClubBaseballBatParts,resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
 			</effect_group>
 		</recipe>
-		<recipe name="meleeAluminumBat" count="1" craft_area="workbench" tags="learnable,workbenchCrafting">
+		<recipe name="meleeAluminumBat" count="1" craft_area="workbench" tags="learnable,perkPummelPete">
 			<ingredient name="meleeClubBaseballBatParts" count="5"/>
 			<ingredient name="resourceForgedSteel" count="10"/>
 			<ingredient name="resourceWood" count="10"/>
