@@ -1,0 +1,21 @@
+<configs>
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+		<entity name="AFarmerBandit" prob="0.5" />
+		<entity name="AArcherBandit" prob="0.5" />
+		<entity name="AEveBandit" prob="0.5" />
+		<entity name="AJoelTrader" prob="0.5" />
+		<entity name="AJoelBandit" prob="0.5" />
+		<entity name="ABakerBandit" prob="0.5" />
+		<entity name="AFarmerBanditSpawnClub" prob="0.5" />
+		<entity name="AFarmerSurvivor" prob="0.5" />
+		<entity name="AEveBanditSpawnAk47" prob="0.5" />
+	</append> 
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'FriendlyAnimals')]">
+		<entity name="animalFox" prob="1" />
+	</append> 
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesAll')]">
+		<entity name="ASantaZombie" prob="1" />
+		<entity name="ANurseZombie" prob="1" />
+		<entity name="AFarmerZombie" prob="1" />
+	</append> 
+</configs>
