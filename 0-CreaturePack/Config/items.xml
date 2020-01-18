@@ -212,7 +212,8 @@
 		
 		<item name="ammoProjectileBanditPlasma">
 			<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditEnergyAmmoLg_X" />
-			<!--	<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditEnergyAmmoSm_X" /> If you like a smaller particle -->			
+			<!--	<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditEnergyAmmoSm_X" /> If you like a smaller particle -->	
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Morganic"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
@@ -236,6 +237,7 @@
 			<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditSlugAmmo_X" />
 			<property name="Material" value="Mbrass"/>
 			<property name="CreativeMode" value="None"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="DamageEntity" value="75"/>
@@ -258,6 +260,7 @@
 			<property name="Material" value="Mbrass"/>
 			<property name="CreativeMode" value="None"/>
 			<property name="CustomIcon" value="ammo762mmBulletBall"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="DamageEntity" value="15"/>
