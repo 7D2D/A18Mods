@@ -10,5 +10,6 @@
 			stance="Neutral" voice_set="trader"
 			trader_id="6" dialog_id="trader" 
 			quest_list="trader_quests" />
+				
 	</insertAfter>		
 </configs>

@@ -42,7 +42,6 @@
 				<item group="modAllT5SecretStash" count="1,2"/>
 			</tier_items>
 		</trader_info>
-
+		
 	</insertAfter>	
-	  
 </configs>

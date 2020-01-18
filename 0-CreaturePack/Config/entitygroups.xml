@@ -1,14 +1,14 @@
 <configs>
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
-		<entity name="AFarmerBandit" prob="0.5" />
-		<entity name="AArcherBandit" prob="0.5" />
-		<entity name="AEveBandit" prob="0.5" />
-		<entity name="AJoelTrader" prob="0.5" /> 
-		<entity name="AJoelBandit" prob="0.5" />
-		<entity name="ABakerBandit" prob="0.5" />
-		<entity name="AFarmerBanditSpawnClub" prob="0.5" />
-		<entity name="AFarmerSurvivor" prob="0.5" />
-		<entity name="AEveBanditSpawnAk47" prob="0.5" />
+		<entity name="AFarmerBandit" prob="0.1" />
+		<entity name="AArcherBandit" prob="0.1" />
+		<entity name="AEveBandit" prob="0.1" />
+		<entity name="AJoelTrader" prob="0.1" /> 
+		<entity name="AJoelBandit" prob="0.1" />
+		<entity name="ABakerBandit" prob="0.1" />
+		<entity name="AFarmerSurvivor" prob="0.1" />
+<!--	<entity name="AFarmerBanditSpawnClub" prob="0.1" />
+		<entity name="AEveBanditSpawnAk47" prob="0.1" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 	</append> 
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'FriendlyAnimals')]">
 		<entity name="animalFox" prob="1" />
