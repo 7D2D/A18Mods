@@ -3,7 +3,7 @@
 		<entity name="AFarmerBandit" prob="0.5" />
 		<entity name="AArcherBandit" prob="0.5" />
 		<entity name="AEveBandit" prob="0.5" />
-		<entity name="AJoelTrader" prob="0.5" />
+		<entity name="AJoelTrader" prob="0.5" /> 
 		<entity name="AJoelBandit" prob="0.5" />
 		<entity name="ABakerBandit" prob="0.5" />
 		<entity name="AFarmerBanditSpawnClub" prob="0.5" />

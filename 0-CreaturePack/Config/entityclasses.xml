@@ -14,12 +14,14 @@
 			<property name="Tags" value="entity,zombie"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardSantaRagdoll"/> <!-- Model ripped from base game, Rig from base game  -->
+			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 			<property name="WalkType" value="1"/>
 		</entity_class>
 		<entity_class name="ANurseZombie" extends="zombieNurse">
 			<property name="Tags" value="entity,zombie"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardNurseRagdoll"/> <!-- Model/texture ripped from base game, Rig from base game  -->
+			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
@@ -29,6 +31,7 @@
 			<property name="Tags" value="entity,zombie"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardFarmerRagdoll"/>
+			<!-- Retexturing Index: Materials : 0 Beard,1 Body,2 Head -->
 			<property name="Mass" value="150"/>
 			<property name="WalkType" value="7"/>
 			<property name="HandItem" value="handFarmerBlade"/>
@@ -51,9 +54,9 @@
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
-			<property name="AITask-2" value="ApproachSpot"/>  
-			<property name="AITask-3" value="Swim"/> 
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,5,EntityNPC,5,EntityEnemyAnimal,5,EntityPlayer,0"/>
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="Wander"/>
 			<property name="AITask-5" value="BreakBlock"/> 
 			<property name="AITask-6" value="Leap"/> 
@@ -117,6 +120,7 @@
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardArcherRagdoll"/> <!-- Mixamo model and Rig, rig edited to TFP standards -->
+			<!-- Retexturing Index: Materials : 0 Body, 1 Bow, 2 Clothes, 3 Eyelashes, 4 Eyes -->
 			<property name="Mass" value="120"/>
 			<property name="Class" value="EntityBandit"/>
 			<property name="Faction" value="bandits"/>
@@ -133,22 +137,22 @@
 			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="" />
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
 			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value=""/>
-			<property name="SoundAttack" value=""/>
-			<property name="SoundSense" value=""/>
-			<property name="SoundGiveUp" value=""/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="SightRange" value="80"/>
 			<property name="AIPathCostScale" value=".9, .9"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,5,EntityNPC,5,EntityEnemyAnimal,5,EntityPlayer,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
 			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-5" value="Swim"/> 
+			<property name="AITask-5" value="Territorial"/>
 			<property name="AITask-6" value="Wander"/>
 			<property name="AITask-7" value="BreakBlock"/> 
 			<property name="AITask-8" value="Leap"/> 
@@ -169,6 +173,7 @@
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardEveRagdoll"/> <!-- Free Model and Rig from 3rd party, can't recall where -->
+			<!-- Retexturing Index: Materials : 0 Body -->
 			<property name="Mass" value="100"/>
 			<property name="HandItem" value="handBanditMP7"/> 
 			<property name="RightHandJointName" value="Muzzle" />
@@ -197,6 +202,7 @@
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?zombieStandardBakerRagdoll"/> <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
+			<!-- Retexturing Index: Materials : 0 Body, 1 Hair -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="handChefKnife"/>
@@ -208,6 +214,7 @@
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?JoelRagdoll"/>
+			<!-- Retexturing Index: Materials : TBD -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="handChefKnife"/>
@@ -224,7 +231,7 @@
 			<property name="Mass" value="150"/>
 			<property name="Class" value="EntitySurvivor"/> <!-- This class and the Bandit class are almost identical (bandits have a handitem index for slots which we dont have) but using this one for clarity -->
 			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/>
+			<property name="IsEnemyEntity" value="true"/>
 			<property name="EntityType" value="Player"/>
 			<property name="HandItem" value="handFarmerBlade"/>
 			<property name="WalkType" value="7"/>
@@ -330,14 +337,14 @@
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
 		
-<!-- Wandering Traders  -->
+<!-- Wandering Traders: If you decide to use vanilla Wandering traders, you "should" remove TradingPost protection in those POI's Prefab XML or there is a good chance that when a wandering trader nears the trading post the game will throw NRE errors.  However, this causes a secondary issue where tradingposts can spawn 2 traders.  I will comment this one out but leave it incase you decide to do that fix and play around with this.  Wandering Traders are working well in the DMT version.  -->
 		
 		<entity_class name="AJoelTrader" extends="AFarmerBandit">
 			<property name="Class" value="EntitySurvivor"/>
 			<property name="Tags" value="entity,npc"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?JoelRagdoll"/> <!-- Model ripped from base game, Rig from base game but different rig than zombies  -->
-			<property name="Mass" value="150"/> <!-- guessing here, I reused the vanilla ragdoll to test -->
+			<property name="Mesh" value="#@modfolder:Resources/CharacterPack00.unity3d?JoelRagdoll"/> 
+			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="HandItem" value="handChefKnife"/>
 			<property name="MoveSpeed" value="0.25"/> 
@@ -346,18 +353,19 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="tradertest"/>
-			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,5,EntityBandit,5,EntityEnemyAnimal,5,EntityPlayer,0"/>
 			<property name="AITask-2" value="ApproachSpot"/> 
 			<property name="AITask-3" value="ApproachDistraction"/>
-			<property name="AITask-4" value="Look"/> <!-- adding more look tasks will keep trader stationary more often  -->
-			<property name="AITask-5" value="BreakBlock"/> 
-			<property name="AITask-6" value="BlockIf" data="condition=Investigate ne 0"/> <!-- Trying to block wandering if trader locates player WIP -->
-			<property name="AITask-7" value="Wander"/> 
-			<property name="AITask-8" value=""/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="Look"/> 
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="BlockIf" data="condition=Investigate ne 0"/> 
+			<property name="AITask-8" value="Wander"/> 
+			<property name="AITask-9" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityNPC,EntityEnemyAnimal,EntityPlayer"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value="BlockIf" data="condition=Alert ne 1"/> <!-- Trying to block attacking the player if trading, WIP -->
+			<property name="AITarget-4" value="BlockIf" data="condition=Alert ne 1"/> 
 			<property name="AITarget-5" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0"/>	
 			<property name="AITarget-6" value=""/> 
 		</entity_class> 

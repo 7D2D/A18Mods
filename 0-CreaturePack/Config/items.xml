@@ -280,6 +280,7 @@
 			<property name="CreativeMode" value="None"/>
 			<property name="IsSticky" value="true"/>
 			<property name="StickyOffset" value="0.0"/>
+			<property name="CustomIcon" value="ammoArrowIron"/> <!-- These are not usable by player unless added as an ammotype on bows -->
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
@@ -313,6 +314,7 @@
 			<property name="EconomicBundleSize" value="1"/>
 			<property name="EconomicValue" value="175"/>
 			<property name="FuelValue" value="250"/>
+			<property name="CustomIcon" value="meleeClubWood"/>
 			<property name="ShowQuality" value="true"/>
 				<property class="Action0">
 					<!-- AttackAction -->
