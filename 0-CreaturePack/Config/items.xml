@@ -257,6 +257,7 @@
 			<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditSlugAmmo_X" />
 			<property name="Material" value="Mbrass"/>
 			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="ammo762mmBulletBall"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="DamageEntity" value="15"/>
@@ -398,6 +399,7 @@
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
 			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
 			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="CustomIcon" value="gunAK47"/>
 <!--			<property name="HoldType" value="48"/> -->
 				<property class="Action0">
 					<property name="Class" value="Melee" />
