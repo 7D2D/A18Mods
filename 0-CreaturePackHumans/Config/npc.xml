@@ -1,0 +1,25 @@
+<configs>
+<insertAfter xpath="/npc/npc_info[@id='traderbob']" >
+		<npc_info
+			id="traderWeapons"
+			name="Weapon Trader"
+			name_key="npc_Tradertest"
+			faction="whiteriver"
+			portrait="npc_joel"
+			greeting_type="nearby"
+			stance="Neutral" voice_set="trader"
+			trader_id="6" dialog_id="trader" 
+			quest_list="trader_quests" />
+		<npc_info
+			id="traderJoel"
+			name="Joel Trader"
+			name_key="npc_Tradertest"
+			faction="whiteriver"
+			portrait="npc_joel"
+			greeting_type="nearby"
+			stance="Neutral" voice_set="trader"
+			trader_id="8" dialog_id="trader" 
+			quest_list="trader_quests" />
+
+	</insertAfter>		
+</configs>

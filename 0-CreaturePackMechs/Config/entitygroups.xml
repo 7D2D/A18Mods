@@ -1,0 +1,8 @@
+<configs>
+  <append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+	<entity name="mechDrone" prob="0.25"/>
+	<entity name="mechRobot" prob="0.25" />
+	<entity name="mechSphereI" prob="0.25"/>
+	<entity name="mechSphereII" prob="0.25" />
+  </append> 
+</configs>

@@ -1,0 +1,8 @@
+<configs>
+
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'FriendlyAnimals')]">
+		<entity name="animalFox" prob="1" />
+		<entity name="animalGoat" prob="1" />
+	</append> 
+
+</configs>

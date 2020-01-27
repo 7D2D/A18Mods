@@ -1,0 +1,138 @@
+<configs>
+	<append xpath="/entity_classes" >
+	
+		<entity_class name="mechDrone" extends="animalTemplateHostile">
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="Parent" value="Animals"/>
+			<property name="ExperienceGain" value="230"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handDrone"/>
+			<property name="AITask-1" value="Swim"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.1;healthPer=.6;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAlive,0"/>
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAlive,15,10"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="DroneRandom" />
+			<property name="SoundAlert" value="DroneRandom" />
+			<property name="SoundAttack" value="DroneRandom" />
+			<property name="SoundDeath" value="DroneDie" />
+			<property name="SoundHurt" value="DroneRandom" />
+			<property name="SoundSense" value="DroneRandom" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<property name="Tags" value="entity,mech"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="120"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>
+		
+		<entity_class name="mechRobot" extends="mechDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handRobot"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class> 
+
+		<entity_class name="mechSphereI" extends="mechDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />
+			<!-- free model by 3DHaupt -->
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class> 
+		<entity_class name="mechSphereII" extends="mechDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
+			<property name="TimeStayAfterDeath" value="300"/>
+			<property name="DeadBodyHitPoints" value="1000"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+		</entity_class> 
+
+		
+<!--		<entity_class name="mechBee" extends="mechDrone" >
+			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" />
+			<property name="Faction" value="trader"/>
+			
+			<property name="HandItem" value="handMecBee"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="AttackIndexes" value="0" />
+			<property name="RunIndexes" value="0" />
+			<property name="WalkIndexes" value="0" />
+			<property name="TimeStayAfterDeath" value="5"/>
+			<property name="DeadBodyHitPoints" value="300"/>
+			<property name="JumpMaxDistance" value="3, 5"/>
+			<property name="CanClimbVertical" value="true"/>
+			<property name="CanClimbLadders" value="false"/>
+			<property class="Boundary" >
+				<property name="BoundaryBox" value=".2,1.8,.2" />
+				<property name="Center" value="0,.9,0"/> 
+			</property> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				
+			</effect_group>
+		</entity_class> 	-->	
+	</append>
+</configs>

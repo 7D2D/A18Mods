@@ -1,0 +1,33 @@
+<configs>
+
+	<append xpath="/entity_classes">
+
+	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
+		Pay attention so that you do not stack several base_add or perc_add. -->
+		
+	<!-- With the exception of the ASantaZombie, all non-zombie entities here use walkType 7, as it is the most human like animation set, and all replacement animation were placed on that walkset.  This is important for non-zombie characters only, zombies can use all walktypes  -->	
+	
+
+<!--  Zombies  -->
+
+		<entity_class name="zombieSanta" extends="zombieFatHawaiian"> <!-- Thanks to MaxFox for this guys texture and the encouragement to crack this method.  -->
+			<property name="Tags" value="entity,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/ZombieSanta.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
+			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
+			<property name="WalkType" value="1"/>
+			<property name="HandItem" value="TemplateHandZombie"/> <!-- Use a tag to pick the effect you want, see items.xml -->
+		</entity_class>
+		<entity_class name="ZombieNurseTemplate" extends="zombieNurse">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
+			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
+			<property name="HandItem" value="TemplateHandZombie"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+		</entity_class>
+		
+	</append>
+</configs>

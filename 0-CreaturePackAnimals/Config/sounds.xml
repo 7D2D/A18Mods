@@ -1,0 +1,34 @@
+<configs>
+  <append xpath="/Sounds">
+    <SoundDataNode name="GoatBell">
+      <AudioSource name="Sounds/AudioSource_Creatures"/>
+      <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
+      <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Bell" />
+      <LocalCrouchVolumeScale value="1.0"/>
+      <CrouchNoiseScale value="0.5"/>
+      <NoiseScale value="1"/>
+      <MaxVoices value="10"/>
+      <MaxRepeatRate value="0.9"/>
+    </SoundDataNode>
+    <SoundDataNode name="GoatBaah">
+      <AudioSource name="Sounds/AudioSource_Creatures"/>
+      <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
+      <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Baah" />
+      <LocalCrouchVolumeScale value="1.0"/>
+      <CrouchNoiseScale value="0.5"/>
+      <NoiseScale value="1"/>
+      <MaxVoices value="10"/>
+      <MaxRepeatRate value="0.9"/>
+    </SoundDataNode>
+    <SoundDataNode name="GoatBleat">
+      <AudioSource name="Sounds/AudioSource_Creatures"/>
+      <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
+      <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Bleat" />
+      <LocalCrouchVolumeScale value="1.0"/>
+      <CrouchNoiseScale value="0.5"/>
+      <NoiseScale value="1"/>
+      <MaxVoices value="10"/>
+      <MaxRepeatRate value="0.9"/>
+    </SoundDataNode>
+   </append>
+</configs>
