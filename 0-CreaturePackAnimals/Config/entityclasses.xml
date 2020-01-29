@@ -13,10 +13,10 @@
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
-			<property name="HasRagdoll" value="true"/>
+			<property name="HasRagdoll" value="false"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="true"/>
-			<property name="RagdollOnDeathChance" value=".9"/>
+			<property name="RagdollOnDeathChance" value=".1"/>
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="Mass" value="40"/>
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
@@ -67,11 +67,8 @@
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityAnimalStag"/>
 			<property name="Parent" value="Animals"/>
-			<property name="SoundHurt" value="Animals/pigpain"/>
-			<property name="SoundDeath" value="Animals/pigdeath"/>
 			<property name="PhysicsBody" value="Goat"/>
 			<property name="ExperienceGain" value="130"/>
-			<property name="SwimOffset" value="0.7"/>
 			<property name="Faction" value="animals"/>
 			<property name="SoundRandom" value="GoatBell"/>
 			<property name="SoundAlert" value="GoatBaah"/>
@@ -88,18 +85,18 @@
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<property name="Tags" value="entity,animal,perkAT05"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="false"/> <!-- The goat has a ragdoll but it NREs on contact sometimes with it active so not sure if thats because its generic rigged or not yet  -->
+			<property name="HasRagdoll" value="true"/> <!-- The goat has a ragdoll but it a little crazy at times -->
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value=".9"/>
-			<property name="Mass" value="80"/>
+			<property name="RagdollOnDeathChance" value=".1"/>
+			<property name="Mass" value="50"/>
 			<property name="Mesh" value="#@modfolder:Resources/Goat.unity3d?Goat_X"/>
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
 			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="DeadBodyHitPoints" value="200"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="140"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
