@@ -12,14 +12,33 @@
 			quest_list="trader_quests" />
 		<npc_info
 			id="traderJoel"
-			name="Joel Trader"
+			name="Drug Trader"
+			name_key="npc_Tradertest"
+			faction="whiteriver"
+			portrait="npc_joel"
+			greeting_type="nearby"
+			stance="Neutral" voice_set="trader"
+			trader_id="7" dialog_id="trader" 
+			quest_list="trader_quests" />
+		<npc_info
+			id="traderHeavy"
+			name="Heavy Trader"
 			name_key="npc_Tradertest"
 			faction="whiteriver"
 			portrait="npc_joel"
 			greeting_type="nearby"
 			stance="Neutral" voice_set="trader"
 			trader_id="8" dialog_id="trader" 
-			quest_list="trader_quests" />
-
+			quest_list="trader_quests" />		
+		<npc_info
+			id="traderFood"
+			name="Food Trader"
+			name_key="npc_Tradertest"
+			faction="whiteriver"
+			portrait="npc_joel"
+			greeting_type="nearby"
+			stance="Neutral" voice_set="trader"
+			trader_id="9" dialog_id="trader" 
+			quest_list="trader_quests" />		
 	</insertAfter>		
 </configs>

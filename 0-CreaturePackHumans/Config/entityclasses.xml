@@ -11,7 +11,7 @@
 		
 
 		
-<!-- Bandits  -->	
+<!-- Bandits:  Weaponized versions of models   -->	
 
 		<entity_class name="humanFarmerBandit" extends="zombieTemplateMale"> 
 			<property name="Tags" value="entity,bandit"/>
@@ -30,6 +30,7 @@
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
 			<property name="AITask-2" value="ApproachSpot"/> 
 			<property name="AITask-3" value="Territorial"/>
@@ -126,7 +127,7 @@
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="SightRange" value="80"/>
-			<property name="AIPathCostScale" value=".9, .9"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
@@ -181,7 +182,7 @@
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="SightRange" value="80"/>
-			<property name="AIPathCostScale" value=".9, .9"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
@@ -263,16 +264,21 @@
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManNoHatPack_X"/> <!-- No hat version of the Rifleman  -->
 			<!-- Retexturing Index: Materials : TBD -->
 		</entity_class> 
+		<entity_class name="humanHeavyGuyBandit" extends="humanRiflemanBandit">
+			<property name="Tags" value="entity,bandit"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
+			<!-- Retexturing Index: Materials : TBD -->
+		</entity_class> 
+
 		
 		
-		
-		
-<!-- Survivors  -->		
+<!-- Survivors:  Empty hand versions of models (generally) The run away when approached -->		
 		
 		<entity_class name="humanFarmerSurvivor" extends="zombieTemplateMale"> 
-			<property name="Tags" value="entity"/>
+			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
@@ -286,6 +292,7 @@
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".7, 1"/>
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityAlive"/>
 			<property name="AITask-2" value="RunawayWhenHurt"/>
 			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityBandit,EntityEnemyAnimal"/>
@@ -327,23 +334,58 @@
 			</effect_group>
 		</entity_class>
 		<entity_class name="humanCowboySurvivor" extends="humanFarmerSurvivor"> 
-			<property name="Tags" value="entity"/>
+			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?CowboyBasic_X"/> <!-- No weapon, no accessories version of the Rifleman  -->
+			<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class>
 		
 		<entity_class name="humanNurseSurvivor" extends="humanFarmerSurvivor"> 
-			<property name="Tags" value="entity"/>
+			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/> 
+			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
+						<property name="AIPathCostScale" value=".9, 1"/>
+		</entity_class>
+		<entity_class name="humanBakerSurvivor" extends="humanFarmerSurvivor"> 
+			<property name="Tags" value="entity,survivor"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll3_X"/>
+						<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class>
 		
+<!-- Testing  The use the player controller and dont move yet, WIP -->		
 		
-<!-- Wandering Traders: Wandering Traders will not NRE when it touches trader protection but are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC or Wandering trader Mod version.  -->
+		
+	<!--		<entity_class name="humanNurseSurvivorTestsurvivor" extends="humanFarmerSurvivor"> 
+				<property name="Tags" value="entity"/>
+				<property name="Class" value="EntityAnimalRabbit"/>
+				<property name="AvatarController" value="AvatarZombie01Controller"/>
+				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
+				<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy2_X"/> 
+			</entity_class>
+			<entity_class name="humanNurseSurvivorTestbandit" extends="humanFarmerBandit"> 
+				<property name="Tags" value="entity,bandit"/>
+				<property name="Class" value="EntityEnemyAnimal"/>
+				<property name="AvatarController" value="AvatarZombie01Controller"/>
+				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
+				<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy2_X"/> 
+			</entity_class>
+			<entity_class name="humanFarmerBanditTest" extends="humanFarmerBandit"> 
+				<property name="Tags" value="entity,bandit"/>
+				<property name="AvatarController" value="AvatarZombie01Controller"/>
+				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
+				<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll3_X"/> 
+			</entity_class> 
+		
+End testing zone  -->	
+
+	
+		
+<!-- Wandering Traders: Wandering Traders will not NRE when it touches trader protection but are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC or Wandering trader Mod version.  They have backpacks -->
 		
 		<entity_class name="humanJoelTrader" extends="humanFarmerBandit">
 			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
-			<property name="Tags" value="entity,npc"/>
+			<property name="Tags" value="entity,npc,trader"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
@@ -353,6 +395,7 @@
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderJoel"/>
@@ -382,7 +425,7 @@
 		</entity_class> 
 		<entity_class name="humanWeaponsTrader" extends="humanJoelTrader">
 			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
-			<property name="Tags" value="entity,npc"/>
+			<property name="Tags" value="entity,npc,trader"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Rifleman.unity3d?RifleManAll_X"/> 
@@ -396,6 +439,65 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderWeapons"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/> 
+			<property name="AITask-7" value="BreakBlock"/> 
+			<property name="AITask-8" value="Wander"/> 
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityEnemyAnimal,EntityBandit"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class> 
+		<entity_class name="humanHeavyTrader" extends="humanJoelTrader">
+			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
+			<property name="Tags" value="entity,npc,trader"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Mass" value="200"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="HandItem" value="handBanditShotgun"/> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="NPCID" value="traderHeavy"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="ApproachDistraction"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/> 
+			<property name="AITask-7" value="BreakBlock"/> 
+			<property name="AITask-8" value="Wander"/> 
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityEnemyAnimal,EntityBandit"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class>
+		<entity_class name="humanBakerTrader" extends="humanJoelTrader">
+			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
+			<property name="Tags" value="entity,npc,trader"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdollPack_X"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Mass" value="150"/> 
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="NPCID" value="traderFood"/>
 			<property name="SoundHurt" value="Player_Male/player1painlg"/>
 			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
 			<property name="SoundDeath" value="Player_Male/player1death"/>
@@ -407,15 +509,14 @@
 			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
-			<property name="AITask-3" value="ApproachSpot"/> 
-			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="Territorial"/>
-			<property name="AITask-6" value="Look"/> 
-			<property name="AITask-7" value="BreakBlock"/> 
-			<property name="AITask-8" value="Wander"/> 
-			<property name="AITask-9" value=""/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="Look"/> 
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Wander"/> 
+			<property name="AITask-8" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityEnemyAnimal,EntityBandit"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
