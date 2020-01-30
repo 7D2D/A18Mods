@@ -19,6 +19,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
+			<property name="SightRange" value="50"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
 			<property name="Faction" value="bandits"/>
@@ -126,7 +127,7 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
-			<property name="SightRange" value="80"/>
+			<property name="SightRange" value="60"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
@@ -156,6 +157,7 @@
 			<!-- Retexturing Index: Materials : 0 Body, 1 Bow, 2 Clothes, 3 Eyelashes, 4 Eyes -->
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="120"/>
+			<property name="SightRange" value="60"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
 			<property name="Faction" value="bandits"/>
@@ -181,7 +183,6 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
-			<property name="SightRange" value="80"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
@@ -271,6 +272,44 @@
 			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
 			<!-- Retexturing Index: Materials : TBD -->
 		</entity_class> 
+		<entity_class name="humanFatAshBandit" extends="humanRiflemanBandit">
+			<property name="Tags" value="entity,bandit"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/FatAsh.unity3d?AshBandit_X"/> 
+			<property name="Mass" value="200"/>
+			<property name="HandItem" value="handAshShotgun"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".8, .8"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AttackTimeoutDay" value="1.0"/> 
+			<property name="AttackTimeoutNight" value="1.0"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="MaxViewAngle" value="220"/>
+			<property name="MaxTurnSpeed" value="360"/>
+			<property name="AttackTimeoutDay" value="1.0"/> 
+			<property name="AttackTimeoutNight" value="1.0"/>
+			<property name="SoundAttack" value="chainsaw_fire_rev" /> 
+			<property name="JumpMaxDistance" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" /> 
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<property name="WalkType" value="7"/>
+			<property name="ExperienceGain" value="1550"/> 
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="TimeStayAfterDeath" value="5"/>
+			<property name="LootDropProb" value=".5"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerBandit"/>
+			<property name="AINoiseSeekDist" value="8"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+		</entity_class> 
+		
+	
 		
 <!-- Survivors:  Empty hand versions of models (generally) The run away when approached -->		
 		
@@ -280,7 +319,8 @@
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
-<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
+			<property name="SightRange" value="70"/>
+			<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityAnimalRabbit"/> <!-- Might not look like a rabbit, but runs like one.  Using this class so most will leave them alone  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="true"/>
@@ -388,7 +428,8 @@ End testing zone  -->
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
-			<property name="Mass" value="150"/> 
+			<property name="Mass" value="150"/>
+			<property name="SightRange" value="50"/>
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="HandItem" value="handChefKnife"/>
 			<property name="MoveSpeed" value="0.25"/> 

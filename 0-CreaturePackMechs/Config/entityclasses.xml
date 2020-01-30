@@ -9,6 +9,8 @@
 			<property name="ExperienceGain" value="230"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handDrone"/>
+			<property name="AttackTimeoutDay" value="1.5"/>
+			<property name="AttackTimeoutNight" value="1.5"/>
 			<property name="AITask-1" value="Swim"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Territorial"/>

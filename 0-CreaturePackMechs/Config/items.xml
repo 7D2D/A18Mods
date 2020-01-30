@@ -1,10 +1,12 @@
 <configs>
 	<append xpath="/items">
 		<item name="handSphereII">
-			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
-				<property name="DamageEntity" value="75"/>
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value="1.8"/>
+				<property name="DamageEntity" value="50"/>
 				<property name="DamageBlock" value="40"/>
 				<property name="Range" value="2.5"/>
 				<property name="Sphere" value=".5"/>
@@ -15,11 +17,12 @@
 			</property>
 		</item>
 		<item name="handDrone">
-			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="Extends" value="handSphereII"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
-				<property name="DamageEntity" value="30"/>
-				<property name="DamageBlock" value="50"/>
+				<property name="Class" value="Melee"/>
+				<property name="DamageEntity" value="20"/>
+				<property name="DamageBlock" value="30"/>
 				<property name="Range" value="2.0"/>
 				<property name="Sphere" value="1.0"/>
 				<property name="Sound_start" value="swoosh" />
@@ -29,10 +32,11 @@
 			</property>
 		</item>		
 		<item name="handRobot">
-			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="Extends" value="handSphereII"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
-				<property name="DamageEntity" value="60"/>
+				<property name="Class" value="Melee"/>
+				<property name="DamageEntity" value="50"/>
 				<property name="DamageBlock" value="60"/>
 				<property name="Range" value="2.5"/>
 				<property name="Sphere" value="1.0"/>
@@ -43,9 +47,10 @@
 			</property>
 		</item>	
 		<item name="handMecBee">
-			<property name="Extends" value="meleeHandZombie01"/>
+			<property name="Extends" value="handSphereII"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
+				<property name="Class" value="Melee"/>
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="30"/>
 				<property name="Range" value="1.5"/>
@@ -56,6 +61,5 @@
 				<property name="DamageBonus.head" value="5" />
 			</property>
 		</item>		
-		
 	</append>
 </configs>
