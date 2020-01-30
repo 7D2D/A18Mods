@@ -7,7 +7,8 @@
 			<property name="Class" value="EntityVulture" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="ModelType" value="Standard" />
-			<property name="HasRagdoll" value="false" />
+			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
+			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="PhysicsBody" value="vulture" />
 			<property name="SurfaceCategory" value="earth"/>
 			<property name="Mass" value="10"/>
@@ -38,7 +39,8 @@
 			<property name="Class" value="EntityVulture" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="ModelType" value="Standard" />
-			<property name="HasRagdoll" value="false" />
+			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
+			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="PhysicsBody" value="vulture" />
 			<property name="SurfaceCategory" value="organic"/>
 			<property name="Mass" value="10"/>
