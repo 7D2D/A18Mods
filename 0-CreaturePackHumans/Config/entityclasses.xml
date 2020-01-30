@@ -159,7 +159,7 @@
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
 			<property name="Faction" value="bandits"/>
-			<property name="HandItem" value="handBanditArcher"/>
+			<property name="HandItem" value="handBanditBow"/>
 			<property name="RightHandJointName" value="RightWeapon" />
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
@@ -209,6 +209,7 @@
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll_X"/> <!-- Free Model and Rig from 3rd party, can't recall where -->
 			<!-- Retexturing Index: Materials : 0 Body -->
+			<property name="SizeScale" value="1.1"/>
 			<property name="Mass" value="100"/>
 			<property name="HandItem" value="handBanditMP7"/> 
 			<property name="RightHandJointName" value="Muzzle" />
@@ -270,8 +271,6 @@
 			<property name="Mesh" value="#@modfolder:Resources/HeavyGuy.unity3d?HeavyGuy_X"/> 
 			<!-- Retexturing Index: Materials : TBD -->
 		</entity_class> 
-
-		
 		
 <!-- Survivors:  Empty hand versions of models (generally) The run away when approached -->		
 		

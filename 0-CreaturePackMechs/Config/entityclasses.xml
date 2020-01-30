@@ -58,6 +58,13 @@
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
