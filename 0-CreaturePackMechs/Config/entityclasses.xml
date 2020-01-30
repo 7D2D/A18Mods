@@ -58,6 +58,11 @@
 		
 		<entity_class name="mechRobot" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
 			<property name="SoundRandomTime" value="20.0"/>
