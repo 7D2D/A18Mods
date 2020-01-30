@@ -63,7 +63,7 @@
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
-		<entity_class name="animalGoat" extends="animalStag">
+		<entity_class name="animalGoat" extends="animalTemplateHostile">
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityAnimalStag"/>
 			<property name="Parent" value="Animals"/>
@@ -85,10 +85,10 @@
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<property name="Tags" value="entity,animal,perkAT05"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="true"/> <!-- The goat has a ragdoll but it a little crazy at times -->
+			<property name="HasRagdoll" value="false"/> <!-- The goat has a ragdoll but it a little crazy at times -->
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value=".1"/>
+			<property name="RagdollOnDeathChance" value="0"/>
 			<property name="Mass" value="50"/>
 			<property name="Mesh" value="#@modfolder:Resources/Goat.unity3d?Goat_X"/>
 			<property name="MoveSpeed" value=".3"/>
