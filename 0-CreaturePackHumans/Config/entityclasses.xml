@@ -69,6 +69,10 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
+			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
+			<!-- <property name="LootListOnDeath" value="45"/> -->
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 		<entity_class name="humanFarmerBanditSpawnClub" extends="humanFarmerBandit"> 
 			<property name="Tags" value="entity,bandit"/>
@@ -129,6 +133,8 @@
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="SightRange" value="60"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="AttackTimeoutDay" value="0"/>
+			<property name="AttackTimeoutNight" value="0"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
@@ -149,6 +155,10 @@
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
+			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
+			<!-- <property name="LootListOnDeath" value="45"/> -->
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>
 		<entity_class name="humanArcherBandit" extends="zombieNurse">
 			<property name="Tags" value="entity,bandit"/>
@@ -158,11 +168,12 @@
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="120"/>
 			<property name="SightRange" value="60"/>
+			<property name="AINoiseSeekDist" value="40"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
 			<property name="Faction" value="bandits"/>
 			<property name="HandItem" value="handBanditBow"/>
-			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="RightHandJointName" value="Erika_Archer_Arrow_Mesh" />
 			<property name="SoundHurt" value="Player_Female/player2painlg"/>
 			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
 			<property name="SoundDeath" value="Player_Female/player2death"/>
@@ -183,16 +194,19 @@
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
-			<property name="AIPathCostScale" value=".9, 1"/>
-			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
-			<property name="AITask-3" value="ApproachSpot"/> 
-			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-5" value="Territorial"/>
-			<property name="AITask-6" value="Wander"/>
-			<property name="AITask-7" value="BreakBlock"/> 
-			<property name="AITask-8" value="Leap"/> 
-			<property name="AITask-9" value=""/>	
+			<property name="AIPathCostScale" value="1, 1"/>
+			<property name="AttackTimeoutDay" value="0.3"/>
+			<property name="AttackTimeoutNight" value="0.3"/>
+
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=0;duration=4;minRange=3;maxRange=80"/> 
+<!--			<property name="AITask-3" value="ApproachSpot"/> -->
+			<property name="AITask-3" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/> 
+<!--			<property name="AITask-4" value="Territorial"/> -->
+			<property name="AITask-4" value="BreakBlock"/> 
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/> 
+			<property name="AITask-7" value=""/>	
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
@@ -204,6 +218,10 @@
 			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 			<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
+			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
+			<!-- <property name="LootListOnDeath" value="45"/> -->
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>
 		<entity_class name="humanEveBandit" extends="humanArcherBandit">
 			<property name="Tags" value="entity,bandit"/>
@@ -383,7 +401,24 @@
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
-						<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
 		</entity_class>
 		<entity_class name="humanBakerSurvivor" extends="humanFarmerSurvivor"> 
 			<property name="Tags" value="entity,survivor"/>
@@ -450,6 +485,8 @@ End testing zone  -->
 			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
 			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="AttackTimeoutDay" value="0"/>
+			<property name="AttackTimeoutNight" value="0"/>
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
 			<property name="AITask-2" value="ApproachSpot"/> 
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -562,5 +599,67 @@ End testing zone  -->
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityZombie,0,0,EntityBandit,0,0,EntityEnemyAnimal,0,0"/> 
 			<property name="AITarget-4" value=""/> 
 		</entity_class> 
+		
+		<!--  Testing  -->
+		
+		<!-- testing using the Ranged Class rather than the Vomit class.  Issues: No melee, they will get very close on attack, droped weapon is usable still but thats optional -->
+		
+		<entity_class name="humanEveBanditSpawnSMG5test" extends="humanEveBandit"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
+			<property name="Tags" value="entity,bandit"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
+			<property name="Mass" value="150"/>
+			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
+			<property name="Faction" value="bandits"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="EntityType" value="Player"/>
+<!--			<property name="HandItem" value="rangedBanditAk47test"/> --> <!-- New Hand item: like AK47 but needs melee rather than dynamicmelee -->
+			<property name="WalkType" value="7"/>
+			<property name="MaxViewAngle" value="270"/>
+			<property name="SightRange" value="80"/> <!-- distance in m -->			
+			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
+			<property name="NoiseAlertThreshold" value="80"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
+			<property name="SmellAlertThreshold" value="60"/> <!-- for awake zombies -->
+			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunSMG5test,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunSMG5test,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunSMG5test,ammo9mmBulletBalltest"/>
+			<property name="AIPathCostScale" value="1, 1"/>
+			<property name="AttackTimeoutDay" value="0.3"/>
+			<property name="AttackTimeoutNight" value="0.3"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".5, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=5"/> 
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+<!--			<property name="AITask-3" value="RangedAttackTarget" data="itemType=0;cooldown=4;duration=5"/> -->
+			<property name="AITask-3" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/> 
+			<property name="AITask-4" value="BreakBlock"/> 
+			<property name="AITask-5" value="ApproachSpot"/>
+			<property name="AITask-6" value="Wander"/> 
+			<property name="AITask-7" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+			<property name="LootDropProb" value="0.02"/> <!-- Whether it drops a loot bag on death or not. -->
+			<!-- <property name="LootListOnDeath" value="45"/> -->
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+		<entity_class name="humanEveBanditSpawnAk47test" extends="humanEveBanditSpawnSMG5test"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
+			<property name="Tags" value="entity,bandit"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
+			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
+			<property name="Faction" value="bandits"/>
+			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47test,ammo9mmBulletBalltest"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
+		</entity_class>
+		
+		
+		
 	</append>
 </configs>
