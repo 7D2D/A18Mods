@@ -102,6 +102,86 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
+		</entity_class>	
+		<entity_class name="animalSpider01" extends="animalTemplateHostile">
+			<property name="Prefab" value="NPC"/>
+			<property name="Parent" value="Animals"/>
+			<property name="ExperienceGain" value="130"/>
+			<property name="Faction" value="animals"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="50"/>
+			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider01_X"/>
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
 		</entity_class>		
+		<entity_class name="animalSpider02" extends="animalSpider01">
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="50"/>
+			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider02_X"/>
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>	
+		<entity_class name="animalSpider03" extends="animalSpider01">
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="50"/>
+			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider03_X"/>
+			<property name="MoveSpeed" value=".25"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>	
+
+
+
+
+
+
+		
 	</append>
 </configs>
