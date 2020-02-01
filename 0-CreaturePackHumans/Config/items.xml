@@ -548,15 +548,13 @@
 
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
-				<property name="Delay" value="0.15" />
-				<property name="Auto_fire" value="true" />
-				<property name="Crosshair_min_distance" value="5" />
-				<property name="Crosshair_max_distance" value="30" />
-				<property name="Magazine_size" value="30" />
+				<property name="Delay" value="0" /> 
+				<property name="Auto_fire" value="true" /> <!-- no effect -->
+				<property name="Magazine_size" value="300" />
 				<property name="Magazine_items" value="ammo9mmBulletBalltest" />
-				<property name="Magazine_item_ray_counts" value="1" />
-				<property name="Magazine_item_ray_spreads" value="0" />
-				<property name="Reload_time" value="3.9" />
+				<property name="Magazine_item_ray_counts" value="5" />
+				<property name="Magazine_item_ray_spreads" value="5" />
+				<property name="Reload_time" value="1" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Bullet_icon" value="uzi" />
 				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
@@ -564,46 +562,48 @@
 				<property name="Sound_end" value="Weapons/Ranged/MP5/mp5_fire_end" />
 				<property name="Sound_empty" value="Weapons/weapon_empty" />
 				<property name="Sound_reload" value="Weapons/Ranged/MP5/mp5_reload" />
-				<property name="Horde_meter_rate" value="2.5" />
-				<property name="Horde_meter_distance" value="20" />
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
-				<property name="DamageBonus.head" value="0.5" />
 			</property>
-			<property class="Attributes">
+<!--			<property class="Attributes">
 				<property name="EntityDamage" value="4,9" />
 				<property name="BlockDamage" value="2,6" />
 				<property name="Accuracy" value="1,1" />
 				<property name="FalloffRange" value="80,85" />
 				<property name="DegradationMax" value="9998,9999" />
 				<property name="DegradationRate" value="1,1" />
-			</property>
+			</property> -->
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
-				<passive_effect name="MaxRange" operation="base_set" value="200"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3,5"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
+				<passive_effect name="MaxRange" operation="base_set" value="65"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="500"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="350,700" tier="1,6" tags="perkGunslinger,9mmGun"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.35"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.35"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3"/>
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value=".8"/>
 			</effect_group> 
-			
-			
-			
-			<!--			<property class="Action1">
-				<property name="Class" value="Melee"/>
-				<property name="DamageEntity" value="3"/>
-				<property name="DamageBlock" value="10"/>
-				<property name="Range" value="2.0"/>
-				<property name="Sphere" value=".5"/>
-				<property name="Sound_start" value="swoosh" />
-				<property name="Delay" value="1.0" />
-			</property> -->
-				<property class="Action1">
-					<property name="Class" value="Zoom"/>
-					<property name="Zoom_max_out" value="55"/>
-					<property name="Zoom_max_in" value="55"/>
-					<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
-				</property> 
+			<property class="Action1">
+				<property name="Class" value="Zoom"/>
+				<property name="Zoom_max_out" value="55"/>
+				<property name="Zoom_max_in" value="55"/>
+				<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
+			</property> 
 <!--			<effect_group name="gunSMG5test">
 				<passive_effect name="MaxRange" operation="base_set" value="65"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
@@ -615,36 +615,10 @@
 				<passive_effect name="MagazineSize" operation="base_set" value="2"/>
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
 				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
-				<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15"/> 
-				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
-				<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15"/> 
-				<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6"/> 
 
-				<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkGunslinger"/> 
-				<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05"/> 
-				<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> 
-				<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08"/> 
 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.35"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.35"/>
-				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35"/>
-				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
-				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
-				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
 
-				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
-				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1"/>
 
-				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3"/>
-				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3"/>
-
-				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6"/>
-				<passive_effect name="WeaponHandling" operation="base_set" value=".8"/>
-
-				<passive_effect name="DegradationMax" operation="base_set" value="350,700" tier="1,6" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/>
 			</effect_group> -->
 	
 		</item>	
