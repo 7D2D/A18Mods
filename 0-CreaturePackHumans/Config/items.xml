@@ -630,6 +630,7 @@
 			<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="4"/>
 			<property name="DegradationBreaksAfter" value="false"/>
 			<property name="CustomIcon" value="gunAK47"/>
+			<property name="HoldType" value="48"/>
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
 				<property name="Delay" value="0.15" />

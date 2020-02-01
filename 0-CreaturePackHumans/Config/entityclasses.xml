@@ -627,8 +627,8 @@ End testing zone  -->
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AttackTimeoutDay" value="0"/>
 			<property name="AttackTimeoutNight" value="0"/>
-			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value=".5, 1.0"/> 
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value=".5, .5"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
