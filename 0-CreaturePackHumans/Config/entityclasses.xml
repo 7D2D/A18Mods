@@ -424,35 +424,8 @@
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll3_X"/>
-						<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class>
-		
-<!-- Testing  The use the player controller and dont move yet, WIP -->		
-		
-		
-	<!--		<entity_class name="humanNurseSurvivorTestsurvivor" extends="humanFarmerSurvivor"> 
-				<property name="Tags" value="entity"/>
-				<property name="Class" value="EntityAnimalRabbit"/>
-				<property name="AvatarController" value="AvatarZombie01Controller"/>
-				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
-				<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy2_X"/> 
-			</entity_class>
-			<entity_class name="humanNurseSurvivorTestbandit" extends="humanFarmerBandit"> 
-				<property name="Tags" value="entity,bandit"/>
-				<property name="Class" value="EntityEnemyAnimal"/>
-				<property name="AvatarController" value="AvatarZombie01Controller"/>
-				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
-				<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy2_X"/> 
-			</entity_class>
-			<entity_class name="humanFarmerBanditTest" extends="humanFarmerBandit"> 
-				<property name="Tags" value="entity,bandit"/>
-				<property name="AvatarController" value="AvatarZombie01Controller"/>
-				<property name="LocalAvatarController" value="AvatarLocalPlayerController"/>
-				<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll3_X"/> 
-			</entity_class> 
-		
-End testing zone  -->	
-
 	
 		
 <!-- Wandering Traders: Wandering Traders will not NRE when it touches trader protection but are invunerable to damage, and wont stop to chat so trade quick.  Wandering Traders are working perfectly when using the DMT NPC or Wandering trader Mod version.  They have backpacks -->
@@ -659,6 +632,15 @@ End testing zone  -->
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
 		</entity_class>
 		
+		<!--   MakeHuman model and game engine rigged, ragdoll works but not gore yet  -->
+		
+		<entity_class name="humanMHMaleSuitSurvivor" extends="humanFarmerSurvivor"> <!-- Test makeHuman Model and rig -->
+			<property name="Tags" value="entity,survivor"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/MakeHumanMaleSuit.unity3d?MakeHumanMaleSuit_X"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="PhysicsBody" value="MakeHumanGameRigStandard"/>
+		</entity_class>		
 		
 		
 	</append>

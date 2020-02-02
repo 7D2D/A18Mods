@@ -55,7 +55,11 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class>
+		<entity_class name="mechRustyDrone" extends="mechDrone" >
+		   <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
+		</entity_class>
 		
+			
 		<entity_class name="mechRobot" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>

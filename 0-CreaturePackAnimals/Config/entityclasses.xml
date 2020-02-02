@@ -23,6 +23,7 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="4.2, 4.2"/> <!-- top speed seems capped, looking into why -->
 			<property name="MoveSpeedPanic" value="4.2"/>
+			<property name="HandItem" value="meleeHandAnimalFox"/>
 			<property name="AITask-1" value="Swim"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Territorial"/>
@@ -94,6 +95,7 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
 			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalGoat"/>			
 			<property name="DeadBodyHitPoints" value="200"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -125,6 +127,7 @@
 			<property name="MoveSpeed" value=".25"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalSpider"/>			
 			<property name="DeadBodyHitPoints" value="100"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
