@@ -62,6 +62,8 @@
 			
 		<entity_class name="mechRobot" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
+			<property name="Tags" value="entity,mech"/>
+			<property name="PhysicsBody" value="RobotRig"/>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -69,6 +71,9 @@
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
+			<property name="HasRagdoll" value="false"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
 			<property name="SoundRandomTime" value="20.0"/>
 			<property name="SoundRandom" value="RobotRandom" />
 			<property name="SoundAlert" value="RobotAlert" />
@@ -90,6 +95,7 @@
 			<!-- free model by 3DHaupt -->
 			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="Tags" value="entity,mech"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
 			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
@@ -107,6 +113,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
 			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="DeadBodyHitPoints" value="1000"/> 
+			<property name="Tags" value="entity,mech"/>			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="500"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>

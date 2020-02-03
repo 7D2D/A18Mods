@@ -114,7 +114,7 @@
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
-				<property name="Delay" value="0"/> 
+				<property name="Delay" value=".3"/> 
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditArrow"/>
@@ -128,12 +128,12 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
-				<passive_effect name="MaxRange" operation="base_set" value="200"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="100"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
 				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
 				<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffInjuryBleeding"/>
 			</effect_group>
@@ -152,7 +152,7 @@
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
-				<property name="Delay" value="0"/> 
+				<property name="Delay" value=".3"/> 
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditPlasma"/>
@@ -186,7 +186,7 @@
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
-				<property name="Delay" value="0"/> 
+				<property name="Delay" value=".3"/> 
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
@@ -220,7 +220,7 @@
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
-				<property name="Delay" value="0"/> 
+				<property name="Delay" value=".3"/> 
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
@@ -388,7 +388,7 @@
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
-				<property name="DamageEntity" value="100"/>
+				<property name="DamageEntity" value="50"/>
 				<property name="DamageBlock" value="50"/>
 				<property name="Explosion.ParticleIndex" value="7"/>
 				<property name="Velocity" value="25"/>
@@ -410,8 +410,8 @@
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
-				<property name="DamageEntity" value="75"/>
-				<property name="DamageBlock" value="30"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="25"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 				<property name="Velocity" value="50"/>
 				<property name="FlyTime" value="2"/>
@@ -432,8 +432,8 @@
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
-				<property name="DamageEntity" value="30"/>
-				<property name="DamageBlock" value="30"/>
+				<property name="DamageEntity" value="35"/>
+				<property name="DamageBlock" value="35"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 				<property name="Velocity" value="30"/>
 				<property name="FlyTime" value="2"/>
@@ -456,7 +456,7 @@
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="DamageEntity" value="15"/>
-				<property name="DamageBlock" value="20"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 				<property name="Velocity" value="40"/>
 				<property name="FlyTime" value="2"/>
@@ -477,8 +477,8 @@
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
-				<property name="DamageEntity" value="20"/>
-				<property name="DamageBlock" value="30"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="15"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 				<property name="Velocity" value="40"/>
 				<property name="FlyTime" value="2"/>
@@ -492,32 +492,51 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="metal"/>
 			</effect_group>
 		</item>
+		
 		<item name="ammoProjectileBanditArrow">
-			<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditArrow_X" />
-			<property name="Material" value="Mwood"/>
+			<property name="DisplayType" value="ammoArrow"/>
 			<property name="CreativeMode" value="None"/>
-			<property name="IsSticky" value="true"/>
-			<property name="StickyOffset" value="0.0"/>
-			<property name="CustomIcon" value="ammoArrowIron"/> <!-- These are not usable by player unless added as an ammotype on bows -->
+			<property name="Tags" value="ammo,ranged,attAgility,perkArchery"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Bows/WoodenBow/arrowPrefab"/> 
+<!--			<property name="Meshfile" value="#@modfolder:Resources/XythBanditAmmo.unity3d?BanditArrow_X" /> -->
+			<property name="HoldType" value="45"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="IsSticky" value="false"/>
+			<property name="StickyOffset" value=".5"/>
+			<property name="StickyColliderUp" value="0"/>
+			<property name="StickyColliderRadius" value="1"/>
+			<property name="StickyColliderLength" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="150"/> <!-- STK ammo low -->
+			<property name="FuelValue" value="25"/>
+			<property name="EconomicValue" value="12"/>
+			<property name="EconomicBundleSize" value="5"/>
+			<property name="Group" value="Ammo/Weapons,Basics"/>
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
 				<property name="Velocity" value="50"/>
 				<property name="FlyTime" value="2"/>
-				<property name="LifeTime" value="14"/>  <!-- 4 -->
-				<property name="CollisionRadius" value=".1"/>
+				<property name="LifeTime" value="4"/>  <!-- 4 -->
+				<property name="CollisionRadius" value=".5"/>
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="5"/>
 			</property>
-			<effect_group name="ammoBandit" tiered="false"> <!-- ammoArrowStone -->
-				<passive_effect name="EntityDamage" operation="base_set" value="35"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
+
+			<effect_group name="ammoBandit" tiered="false"> 
 				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
-				<passive_effect name="ProjectileVelocity" operation="base_set" value="50"/>
-				<passive_effect name="ProjectileStickChance" operation="perc_set" value="0" tags="glass"/>
-				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 			</effect_group>
- 		</item>	
-		
+			<effect_group tiered="false">
+				<!-- Shots to the leg with arrows slow you -->
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="other" buff="buffLegSprained">
+					<requirement name="HitLocation" body_parts="LeftUpperLeg,RightUpperLeg,LeftLowerLeg,RightLowerLeg"/>
+					<requirement name="RandomRoll" seed_type="Random" min_max="0,100" operation="LTE" value="50"/>
+				</triggered_effect>
+			</effect_group>
+		</item>
+
 <!--    testing Zone     -->		
 		
 		
@@ -548,12 +567,12 @@
 
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
-				<property name="Delay" value="0" /> 
-				<property name="Auto_fire" value="true" /> <!-- no effect -->
+				<property name="Delay" value="1" /> 
+				<property name="Auto_fire" value="false" /> <!-- no effect -->
 				<property name="Magazine_size" value="300" />
 				<property name="Magazine_items" value="ammo9mmBulletBalltest" />
-				<property name="Magazine_item_ray_counts" value="5" />
-				<property name="Magazine_item_ray_spreads" value="5" />
+				<property name="Magazine_item_ray_counts" value="3" />
+				<property name="Magazine_item_ray_spreads" value="3" />
 				<property name="Reload_time" value="1" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Bullet_icon" value="uzi" />
@@ -577,26 +596,11 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="65"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="5"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="300"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
-				<passive_effect name="RoundsPerMinute" operation="base_set" value="500"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
-				<passive_effect name="DegradationMax" operation="base_set" value="350,700" tier="1,6" tags="perkGunslinger,9mmGun"/>
-				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkGunslinger,9mmGun"/> 
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.35"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.35"/>
-				<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".35"/>
-				<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
-				<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
-				<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
-				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value=".5"/>
-				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1"/>
-				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.3"/>
-				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".3"/>
-				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.6"/>
-				<passive_effect name="WeaponHandling" operation="base_set" value=".8"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> 
 			</effect_group> 
 			<property class="Action1">
 				<property name="Class" value="Zoom"/>
@@ -604,23 +608,6 @@
 				<property name="Zoom_max_in" value="55"/>
 				<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
 			</property> 
-<!--			<effect_group name="gunSMG5test">
-				<passive_effect name="MaxRange" operation="base_set" value="65"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
-				<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2"/> 
-
-				<passive_effect name="RoundsPerMinute" operation="base_set" value="500"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="1000"/>
-
-				<passive_effect name="MagazineSize" operation="base_set" value="2"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
-
-
-
-
-			</effect_group> -->
-	
 		</item>	
 		<item name="gunBanditAk47test">
 			<property name="Extends" value="gunSMG5test"/>
@@ -639,9 +626,9 @@
 				<property name="Crosshair_max_distance" value="30" />
 				<property name="Magazine_size" value="30" />
 				<property name="Magazine_items" value="ammo9mmBulletBalltest" />
-				<property name="Magazine_item_ray_counts" value="1" />
-				<property name="Magazine_item_ray_spreads" value="0" />
-				<property name="Reload_time" value="3.9" />
+				<property name="Magazine_item_ray_counts" value="3" />
+				<property name="Magazine_item_ray_spreads" value="3" />
+				<property name="Reload_time" value="1" />
 				<property name="Infinite_ammo" value="true" />
 				<property name="Bullet_icon" value="uzi" />
 				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
@@ -655,21 +642,15 @@
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 				<property name="DamageBonus.head" value="0.5" />
 			</property>
-			<property class="Attributes">
-				<property name="EntityDamage" value="4,9" />
-				<property name="BlockDamage" value="2,6" />
-				<property name="Accuracy" value="1,1" />
-				<property name="FalloffRange" value="80,85" />
-				<property name="DegradationMax" value="9998,9999" />
-				<property name="DegradationRate" value="1,1" />
-			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
-				<passive_effect name="MaxRange" operation="base_set" value="200"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3,5"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
+				<passive_effect name="MaxRange" operation="base_set" value="65"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="300"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> 
 			</effect_group> 
 		</item>	
 		
@@ -689,8 +670,8 @@
 			<property name="EconomicValue" value="9"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammo9mmBulletBall" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="3"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="3"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 			</effect_group>
