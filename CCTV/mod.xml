@@ -3,22 +3,7 @@
     <author>Xyth</author>
     <name>CCTV</name>
     <description>Adds an 8 camera CCTV system to the game.</description>
-    <mod_version>1.6</mod_version>
+    <mod_version>1.7</mod_version>
     <game_version>18.x</game_version>
   </info>
-  <hashes>
-    <hash filename="Config\blocks.xml" hash="75ee2ea3cc7cb7ba61188729bd8b48f3" />
-    <hash filename="Config\recipes.xml" hash="5aba57d140bf95d5484b70d01f6ec09d" />
-    <hash filename="ItemIcons\Cam0.png" hash="3323aea0f3505ffce19030acec7fc390" />
-    <hash filename="ItemIcons\Cam1.png" hash="3d098f5def5cb5a6d74a0658286ca94c" />
-    <hash filename="ItemIcons\Cam2.png" hash="5a06b8795ca04f852446d9f6352654ea" />
-    <hash filename="ItemIcons\Cam3.png" hash="c982c503797a42a072f013b77788ad2f" />
-    <hash filename="ItemIcons\Cam4.png" hash="9a79495fc4ddc70f9c73aacac5530be5" />
-    <hash filename="ItemIcons\Cam5.png" hash="9441da8b572477ca727d6c1c747214ef" />
-    <hash filename="ItemIcons\Cam6.png" hash="43c7e226119a435b9d2af51f1db82491" />
-    <hash filename="ItemIcons\Cam7.png" hash="80cf47f570d1ded233656ca63c6d38c8" />
-    <hash filename="ItemIcons\CCTV1.png" hash="21f78a047b50ab4cc328861d23be5816" />
-    <hash filename="ItemIcons\CCTV2.png" hash="7dbdb42d29238719cd93ee61373e4fca" />
-    <hash filename="Resources\CCTV.unity3d" hash="a3855fd68264d3cc89f5d9540519006a" />
-  </hashes>
 </mod>
