@@ -37,6 +37,7 @@
 			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Tags" value="entity,mech"/>
+			<property name="Immunity" value="sickness;disease;wellness"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
@@ -46,7 +47,8 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
 			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="DeadBodyHitPoints" value="200"/>
+			<property name="DeadBodyHitPoints" value="800"/>
+			<property name="TimeStayAfterDeath" value="300"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="400"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -71,9 +73,9 @@
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
-			<property name="HasRagdoll" value="false"/>
+			<property name="HasRagdoll" value="false"/> <!-- Known issue, when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers  -->
 			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
+			<property name="RootMotion" value="false"/> <!-- In this guys case he has a badly formed rig so cannot have a ragdoll so he needs to be replaced  -->
 			<property name="SoundRandomTime" value="20.0"/>
 			<property name="SoundRandom" value="RobotRandom" />
 			<property name="SoundAlert" value="RobotAlert" />
@@ -93,7 +95,6 @@
 		<entity_class name="mechSphereI" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />
 			<!-- free model by 3DHaupt -->
-			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,mech"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -111,7 +112,6 @@
 		</entity_class> 
 		<entity_class name="mechSphereII" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
-			<property name="TimeStayAfterDeath" value="300"/>
 			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,mech"/>			
 			<effect_group name="Base Effects">
@@ -129,35 +129,29 @@
 		</entity_class> 
 
 		
-<!--		<entity_class name="mechBee" extends="mechDrone" >
+		<entity_class name="mechBee" extends="mechDrone" >
+			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" />
-			<property name="Faction" value="trader"/>
-			
+			<property name="Tags" value="entity,mech"/>
 			<property name="HandItem" value="handMecBee"/>
-			<property name="SurfaceCategory" value="metal"/>
+			<property name="SurfaceCategory" value="Mmetal"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
-			<property name="AttackIndexes" value="0" />
-			<property name="RunIndexes" value="0" />
-			<property name="WalkIndexes" value="0" />
-			<property name="TimeStayAfterDeath" value="5"/>
-			<property name="DeadBodyHitPoints" value="300"/>
-			<property name="JumpMaxDistance" value="3, 5"/>
-			<property name="CanClimbVertical" value="true"/>
-			<property name="CanClimbLadders" value="false"/>
-			<property class="Boundary" >
-				<property name="BoundaryBox" value=".2,1.8,.2" />
-				<property name="Center" value="0,.9,0"/> 
-			</property> 
+			<property name="SightRange" value="70"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.2"/>
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="1"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="3"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="3"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="2"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="300"/>
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				
 			</effect_group>
-		</entity_class> 	-->	
+		</entity_class> 		
 	</append>
 </configs>

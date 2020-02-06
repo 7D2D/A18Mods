@@ -104,6 +104,7 @@
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action0">
+			<property name="Delay" value="1.2"/> 
 				<property name="DamageEntity" value="10"/>
 				<property name="DamageBlock" value="5"/>
 				<property name="Range" value="1.5"/>
@@ -114,8 +115,8 @@
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
-				<property name="Delay" value=".3"/> 
-				<property name="Range" value="200"/>
+				<property name="Delay" value=".1"/> 
+				<property name="Range" value="65"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditArrow"/>
 				<property name="Reload_time" value="0"/>
@@ -128,12 +129,12 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
-				<passive_effect name="MaxRange" operation="base_set" value="100"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="4"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="35"/>
+				<passive_effect name="MaxRange" operation="base_set" value="65"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="1"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="8"/>
 				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
 				<passive_effect name="BuffProcChance" operation="base_set" value="0.20" tags="buffInjuryBleeding"/>
 			</effect_group>
@@ -516,10 +517,10 @@
 			<property class="Action1">
 				<property name="Class" value="Projectile"/>
 				<property name="Explosion.ParticleIndex" value="0"/>
-				<property name="Velocity" value="50"/>
+				<property name="Velocity" value="40"/>
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>  <!-- 4 -->
-				<property name="CollisionRadius" value=".5"/>
+				<property name="CollisionRadius" value="1.0"/>
 				<property name="DamageEntity" value="15"/>
 				<property name="DamageBlock" value="5"/>
 			</property>

@@ -6,7 +6,7 @@
 	</append> 
 		<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
 		<entity name="animalSpider01" prob="0.25"/>
-		<entity name="animalSpider01" prob="0.25" />
-		<entity name="animalSpider01" prob="0.25"/>
+		<entity name="animalSpider02" prob="0.25" />
+		<entity name="animalSpider03" prob="0.25"/>
     </append> 
 </configs>

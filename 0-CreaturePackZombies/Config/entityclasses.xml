@@ -1,12 +1,10 @@
 <configs>
-
 	<append xpath="/entity_classes">
 
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
 		Pay attention so that you do not stack several base_add or perc_add. -->
 		
 	<!-- With the exception of the ASantaZombie, all non-zombie entities here use walkType 7, as it is the most human like animation set, and all replacement animation were placed on that walkset.  This is important for non-zombie characters only, zombies can use all walktypes  -->	
-	
 
 <!--  Zombies  -->
 
@@ -16,17 +14,36 @@
 			<property name="Mesh" value="#@modfolder:Resources/ZombieSanta.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
 			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 			<property name="WalkType" value="1"/>
+			<property name="MoveSpeed" value="0.08"/> <!-- just shambling around -->
+			<property name="MoveSpeedAggro" value=".5, 1.35"/> <!-- chasing a target min/max (like day or night)-->
+			<property name="MoveSpeedPanic" value="0.55"/>
 			<property name="HandItem" value="TemplateHandZombie"/> <!-- Use a tag to pick the effect you want, see items.xml -->
 		</entity_class>
+		
 		<entity_class name="ZombieNurseTemplate" extends="zombieNurse">
 			<property name="Tags" value="entity,zombie,normal"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
 			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
 			<property name="HandItem" value="TemplateHandZombie"/>
+			<property name="PhysicsBody" value="zombieStandard"/>
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
+		</entity_class>
+		
+		<entity_class name="ZombieFemaleTutorial" extends="ZombieNurseTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieTestFemale.unity3d?zombieTestFemale_X"/> 
+			<!-- Retexturing Index: N/A -->
+			<property name="HandItem" value="meleeHandZombie01"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
 		</entity_class>
 		
 	</append>

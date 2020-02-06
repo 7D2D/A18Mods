@@ -195,20 +195,21 @@
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
 			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
 			<property name="MoveSpeed" value="0.3"/> 
-			<property name="MoveSpeedAggro" value=".5, .5"/> 
-			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="AIPathCostScale" value=".9, 1"/>
-			<property name="AttackTimeoutDay" value="0.8"/>
-			<property name="AttackTimeoutNight" value="0.8"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.6"/>
+			<property name="AIPathCostScale" value="1,1"/>
+			<property name="AttackTimeoutDay" value="0.1"/>
+			<property name="AttackTimeoutNight" value="0.1"/>
 			<property name="PushFactor" value="10"/>
-
-			<property name="AITask-1" value="BreakBlock"/>
-			<property name="AITask-2" value="RangedAttackTarget" data="itemType=1;cooldown=4;duration=5"/>
-			<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
-			<property name="AITask-4" value="ApproachSpot"/>
-			<property name="AITask-5" value="Look"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="Territorial"/>
 			<property name="AITask-6" value="Wander"/>
-			<property name="AITask-7" value=""/><!-- Marks end, so we don't inheirit -->			
+			<property name="AITask-7" value="BreakBlock"/> 
+			<property name="AITask-8" value="Leap"/> 
+			<property name="AITask-9" value=""/>	
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
