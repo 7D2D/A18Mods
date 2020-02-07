@@ -180,11 +180,60 @@
 			</effect_group>
 		</entity_class>	
 
-
-
-
-
-
+		<entity_class name="animalRobin" extends="animalZombieVulture" >
+			<property name="Class" value="EntityVulture"/>
+			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Tags" value="entity,animal"/>
+			<property name="SurfaceCategory" value="Morganic"/>
+			<!-- Want a mostly non-aggressive Bird?  You need these lines and no Action0 on the hand in case they seek you so no damage -->
+			<property name="HandItem" value="meleeHandAnimalRobin"/>
+			<property name="AINoiseSeekDist" value="1"/>
+			<property name="MaxViewAngle" value="1"/>
+			<property name="SightRange" value="1"/>
+			<!--                                                                  -->
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.1"/>
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="EntityType" value="Animal"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
+			<property name="Faction" value="animals"/>
+			<property name="SoundRandom" value="robinSounds" />
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value="robinSounds"/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="20"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 
 		
+<!--		<entity_class name="birdFalcon" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Falcon_X" />
+			<property name="SoundRandom" value="falconSounds" />
+		</entity_class>
+		<entity_class name="birdCrow" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Eagle_X" />
+			<property name="SoundRandom" value="falconSounds" />
+		</entity_class>
+		<entity_class name="birdBat" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Alcatraz_X" />
+			<property name="SoundRandom" value="AlcatrazSounds" />
+		</entity_class> -->
+	
 	</append>
 </configs>
