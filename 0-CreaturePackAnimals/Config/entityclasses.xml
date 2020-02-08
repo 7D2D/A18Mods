@@ -108,6 +108,10 @@
 		<entity_class name="animalSpider01" extends="animalTemplateHostile">
 			<property name="Prefab" value="NPC"/>
 			<property name="Parent" value="Animals"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 
+			<property name="Faction" value="animals"/>			
 			<property name="ExperienceGain" value="130"/>
 			<property name="Faction" value="animals"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
@@ -116,7 +120,7 @@
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
 			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
-			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
 			<property name="HasDeathAnim" value="true"/>
@@ -129,6 +133,16 @@
 			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="HandItem" value="meleeHandAnimalSpider"/>			
 			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityBandit,0"/>
+			<property name="AITask-2" value="ApproachSpot"/>
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="BreakBlock"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockIf" data="condition=alert e 0"/>
+			<property name="AITarget-3" value="BlockingTargetTask"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,15,EntitySurvivor,20,15,EntityBandit,20,15,EntityZombie,20,15"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -138,7 +152,7 @@
 			</effect_group>
 		</entity_class>		
 		<entity_class name="animalSpider02" extends="animalSpider01">
-			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
 			<property name="HasDeathAnim" value="true"/>
@@ -159,7 +173,7 @@
 			</effect_group>
 		</entity_class>	
 		<entity_class name="animalSpider03" extends="animalSpider01">
-			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="Tags" value="entity,animal,hostile"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
 			<property name="HasDeathAnim" value="true"/>

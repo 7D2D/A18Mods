@@ -9,6 +9,7 @@
 			<property name="ExperienceGain" value="230"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handDrone"/>
+			<property name="SurfaceCategory" value="metal"/>
 			<property name="AttackTimeoutDay" value="1.5"/>
 			<property name="AttackTimeoutNight" value="1.5"/>
 			<property name="AITask-1" value="Swim"/>
@@ -134,7 +135,6 @@
 			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" />
 			<property name="Tags" value="entity,mech"/>
 			<property name="HandItem" value="handMecBee"/>
-			<property name="SurfaceCategory" value="Mmetal"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="SightRange" value="70"/>
 			<property name="MoveSpeed" value="1"/>
