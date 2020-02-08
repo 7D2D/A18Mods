@@ -3,10 +3,28 @@
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'FriendlyAnimals')]">
 		<entity name="animalFox" prob="1" />
 		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />		
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />				
 	</append> 
-		<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
 		<entity name="animalSpider01" prob="0.25"/>
 		<entity name="animalSpider02" prob="0.25" />
 		<entity name="animalSpider03" prob="0.25"/>
     </append> 
+	
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'AnimalsAll')]">
+		<entity name="animalFox" prob="1" />
+		<entity name="animalGoat" prob="1" />
+		<entity name="animalRobin" prob="1" />
+		<entity name="animalCrow" prob="1" />		
+		<entity name="animalBat" prob="1" />
+		<entity name="animalBats" prob=".25" />		
+		<entity name="animalSpider01" prob="0.25"/>
+		<entity name="animalSpider02" prob="0.25" />
+		<entity name="animalSpider03" prob="0.25"/>
+	 </append> 	
+	
 </configs>

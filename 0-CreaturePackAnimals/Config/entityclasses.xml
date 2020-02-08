@@ -204,13 +204,14 @@
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
 			<property name="Faction" value="animals"/>
-			<property name="SoundRandom" value="robinSounds" />
-			<property name="SoundAlert" value=""/>
+			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandom" value="RobinSounds" />
+			<property name="SoundAlert" value="RobinSounds"/>
 			<property name="SoundHurt" value=""/>
-			<property name="SoundDeath" value="robinSounds"/>
+			<property name="SoundDeath" value="RobinSounds"/>
 			<property name="SoundAttack" value=""/>
-			<property name="SoundSense" value=""/>
-			<property name="SoundGiveUp" value=""/>
+			<property name="SoundSense" value="RobinSounds"/>
+			<property name="SoundGiveUp" value="RobinSounds"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
@@ -221,19 +222,38 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
 		</entity_class> 
-		
-<!--		<entity_class name="birdFalcon" extends="animalRobin">
-			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Falcon_X" />
-			<property name="SoundRandom" value="falconSounds" />
+		<entity_class name="animalCrow" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/Crow.unity3d?Crow_X" />
+			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandom" value="CrowRandom" />
+			<property name="SoundAlert" value="CrowRandom"/>
+			<property name="SoundHurt" value="CrowAttack"/>
+			<property name="SoundDeath" value="CrowAttack"/>
+			<property name="SoundAttack" value="CrowAttack"/>
+			<property name="SoundSense" value="CrowRandom"/>
+			<property name="SoundGiveUp" value="CrowRandom"/>			
 		</entity_class>
-		<entity_class name="birdCrow" extends="animalRobin">
-			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Eagle_X" />
-			<property name="SoundRandom" value="falconSounds" />
-		</entity_class>
-		<entity_class name="birdBat" extends="animalRobin">
-			<property name="Mesh" value="#@modfolder:Resources/FlyingBirds.unity3d?Alcatraz_X" />
-			<property name="SoundRandom" value="AlcatrazSounds" />
-		</entity_class> -->
-	
+		<entity_class name="animalBat" extends="animalRobin">
+			<property name="SoundRandomTime" value="4.0"/>
+			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bat_X" />
+			<property name="SoundRandom" value="BatRandom" />
+			<property name="SoundAlert" value="BatRandom"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="BatRandom"/>
+			<property name="SoundSense" value="BatRandom"/>
+			<property name="SoundGiveUp" value="BatRandom"/>				
+		</entity_class> 
+		<entity_class name="animalBats" extends="animalRobin"> <!-- has a particle of...Bats!  -->
+			<property name="SoundRandomTime" value="4.0"/>
+			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bats_X" />
+			<property name="SoundRandom" value="BatRandom" />
+			<property name="SoundAlert" value="BatRandom"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="BatRandom"/>
+			<property name="SoundSense" value="BatRandom"/>
+			<property name="SoundGiveUp" value="BatRandom"/>				
+		</entity_class> 	
 	</append>
 </configs>

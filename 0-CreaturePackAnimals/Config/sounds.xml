@@ -2,73 +2,104 @@
 	<append xpath="/Sounds">
 		<SoundDataNode name="GoatBell">
 		  <AudioSource name="Sounds/AudioSource_Creatures"/>
-		  <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
 		  <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Bell" />
-		  <LocalCrouchVolumeScale value="1.0"/>
-		  <CrouchNoiseScale value="0.5"/>
-		  <NoiseScale value="1"/>
-		  <MaxVoices value="10"/>
-		  <MaxRepeatRate value="0.9"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 		</SoundDataNode>
 		<SoundDataNode name="GoatBaah">
 		  <AudioSource name="Sounds/AudioSource_Creatures"/>
-		  <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
 		  <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Baah" />
-		  <LocalCrouchVolumeScale value="1.0"/>
-		  <CrouchNoiseScale value="0.5"/>
-		  <NoiseScale value="1"/>
-		  <MaxVoices value="10"/>
-		  <MaxRepeatRate value="0.9"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 		</SoundDataNode>
 		<SoundDataNode name="GoatBleat">
 		  <AudioSource name="Sounds/AudioSource_Creatures"/>
-		  <Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />
 		  <AudioClip ClipName="#@modfolder:Resources/GoatSounds.unity3d?Bleat" />
-		  <LocalCrouchVolumeScale value="1.0"/>
-		  <CrouchNoiseScale value="0.5"/>
-		  <NoiseScale value="1"/>
-		  <MaxVoices value="10"/>
-		  <MaxRepeatRate value="0.9"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 		</SoundDataNode>
-		<SoundDataNode name="robinSounds">
+		<SoundDataNode name="RobinSounds">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />		
-			<AudioClip ClipName="#@modfolder:Resources/RobinSounds?Robin"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="0.9"/>
+			<AudioClip ClipName="#@modfolder:Resources/RobinSounds.unity3d?Robin"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="3"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="15"/> 
 		</SoundDataNode>	
-		<SoundDataNode name="falconSounds">
+		<SoundDataNode name="CrowRandom">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />		
-			<AudioClip ClipName="#@modfolder:Resources/FalconSounds?Falcon"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="0.9"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow1"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow3"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow4"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow5"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow6"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow7"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow8"/>	
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow9"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>
+		<SoundDataNode name="CrowAttack">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/CrowSounds.unity3d?Crow11"/>				
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>		
+		<SoundDataNode name="BatRandom">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatIdle"/>
+			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatIdle2"/>			
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="3"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>	
+		<SoundDataNode name="BatAttack">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatAttack"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 		</SoundDataNode>			
-		<SoundDataNode name="CrowSounds">
+		<SoundDataNode name="BatHurt">
 			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />		
-			<AudioClip ClipName="#@modfolder:Resources/CrowSounds?Crow"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="0.9"/>
-		</SoundDataNode>	
-		<SoundDataNode name="BatSounds">
-			<AudioSource name="Sounds/AudioSource_Creatures"/>
-			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5" heat_map_strength="0.05" heat_map_time="60" />		
-			<AudioClip ClipName="#@modfolder:Resources/BatSounds?Bat"/>
-			<LocalCrouchVolumeScale value="1.0"/>
-			<CrouchNoiseScale value="0.5"/>
-			<NoiseScale value="1"/>
-			<MaxVoices value="10"/>
-			<MaxRepeatRate value="0.9"/>
-		</SoundDataNode>	
+			<AudioClip ClipName="#@modfolder:Resources/BatSounds.unity3d?BatHurt"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
+		</SoundDataNode>			
+		
+		
+		
 	</append>
 </configs>
