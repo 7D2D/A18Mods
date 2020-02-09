@@ -6,7 +6,10 @@
 		<entity name="animalRobin" prob="1" />
 		<entity name="animalCrow" prob="1" />		
 		<entity name="animalBat" prob="1" />
-		<entity name="animalBats" prob=".25" />				
+		<entity name="animalBats" prob=".25" />	
+		<entity name="animalEagle" prob="1" />
+		<entity name="animalAlcatraz" prob=".25" />	
+		
 	</append> 
 	
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
@@ -22,9 +25,11 @@
 		<entity name="animalCrow" prob="1" />		
 		<entity name="animalBat" prob="1" />
 		<entity name="animalBats" prob=".25" />		
-		<entity name="animalSpider01" prob="0.25"/>
-		<entity name="animalSpider02" prob="0.25" />
-		<entity name="animalSpider03" prob="0.25"/>
+		<entity name="animalSpider01" prob="0.35"/>
+		<entity name="animalSpider02" prob="0.35" />
+		<entity name="animalSpider03" prob="0.35"/>
+		<entity name="animalEagle" prob="1" />
+		<entity name="animalAlcatraz" prob="1" />		
 	 </append> 	
 	
 </configs>
