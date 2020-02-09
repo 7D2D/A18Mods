@@ -98,8 +98,26 @@
 			<HighestPitch name="1.05"/>
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="3"/> 
 		</SoundDataNode>			
-		
-		
+		<SoundDataNode name="EagleSounds">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?EagleSound"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="8"/> 
+		</SoundDataNode>			
+		<SoundDataNode name="AlcatrazSounds">
+			<AudioSource name="Sounds/AudioSource_Creatures"/>
+			<AudioClip ClipName="#@modfolder:Resources/BirdSounds.unity3d?AlcatrazSound"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+			<LowestPitch name="0.95"/>
+			<HighestPitch name="1.05"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="8"/> 
+		</SoundDataNode>		
 		
 	</append>
 </configs>

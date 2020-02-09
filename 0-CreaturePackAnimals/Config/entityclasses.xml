@@ -218,7 +218,7 @@
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
 			<property name="Faction" value="animals"/>
-			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="RobinSounds" />
 			<property name="SoundAlert" value="RobinSounds"/>
 			<property name="SoundHurt" value=""/>
@@ -238,7 +238,7 @@
 		</entity_class> 
 		<entity_class name="animalCrow" extends="animalRobin">
 			<property name="Mesh" value="#@modfolder:Resources/Crow.unity3d?Crow_X" />
-			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="CrowRandom" />
 			<property name="SoundAlert" value="CrowRandom"/>
 			<property name="SoundHurt" value="CrowAttack"/>
@@ -248,7 +248,7 @@
 			<property name="SoundGiveUp" value="CrowRandom"/>			
 		</entity_class>
 		<entity_class name="animalBat" extends="animalRobin">
-			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandomTime" value="10.0"/>
 			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bat_X" />
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
@@ -259,7 +259,7 @@
 			<property name="SoundGiveUp" value="BatRandom"/>				
 		</entity_class> 
 		<entity_class name="animalBats" extends="animalRobin"> <!-- has a particle of...Bats!  -->
-			<property name="SoundRandomTime" value="4.0"/>
+			<property name="SoundRandomTime" value="10.0"/>
 			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bats_X" />
 			<property name="SoundRandom" value="BatRandom" />
 			<property name="SoundAlert" value="BatRandom"/>
@@ -268,6 +268,29 @@
 			<property name="SoundAttack" value="BatRandom"/>
 			<property name="SoundSense" value="BatRandom"/>
 			<property name="SoundGiveUp" value="BatRandom"/>				
-		</entity_class> 	
+		</entity_class> 
+		<entity_class name="animalEagle" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/Eagle.unity3d?Eagle_X" />
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="EagleSound" />
+			<property name="SoundAlert" value="EagleSound"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="EagleSound"/>
+			<property name="SoundSense" value="EagleSound"/>
+			<property name="SoundGiveUp" value="EagleSound"/>			
+		</entity_class>
+		<entity_class name="animalAlcatraz" extends="animalRobin">
+			<property name="Mesh" value="#@modfolder:Resources/Alcatraz.unity3d?Alcatraz_X" />
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="AlcatrazSound" />
+			<property name="SoundAlert" value="AlcatrazSound"/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value="AlcatrazSound"/>
+			<property name="SoundSense" value="AlcatrazSound"/>
+			<property name="SoundGiveUp" value="AlcatrazSound"/>			
+		</entity_class>
+		
 	</append>
 </configs>

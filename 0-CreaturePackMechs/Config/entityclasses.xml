@@ -59,7 +59,8 @@
 			</effect_group>
 		</entity_class>
 		<entity_class name="mechRustyDrone" extends="mechDrone" >
-		   <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
+			<property name="Tags" value="entity,mech"/>
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
 		</entity_class>
 		
 			
@@ -74,7 +75,7 @@
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
-			<property name="HasRagdoll" value="false"/> <!-- Known issue, when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers  -->
+			<property name="HasRagdoll" value="true"/> <!-- Known issue, when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers.  Set it to true eben without a ragdoll but you must not have an E_Biped_Root tag on the entity or it will NRE  -->
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/> <!-- In this guys case he has a badly formed rig so cannot have a ragdoll so he needs to be replaced  -->
 			<property name="SoundRandomTime" value="20.0"/>
@@ -92,7 +93,15 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class> 
-
+		<entity_class name="mechRobotArmy" extends="mechRobot" >
+			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
+			<property name="Tags" value="entity,mech"/>
+			<property name="HandItem" value="handRobot"/>
+		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo"/>
+		    <property name="ReplaceMaterial1" value="#@modfolder:Resources/RobotArmyMat.unity3d?paint_albedo"/>
+			<property name="ReplaceMaterial2" value="#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
+		</entity_class>					
+		
 		<entity_class name="mechSphereI" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />
 			<!-- free model by 3DHaupt -->
