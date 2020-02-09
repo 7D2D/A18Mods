@@ -2,10 +2,17 @@
 	<append xpath="/entity_classes" >
 	
 		<entity_class name="mechDrone" extends="animalTemplateHostile">
-			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />
+			<property name="Mesh" value="#@modfolder:Resources/Drone.unity3d?Drone_X" />	<!-- Free CC model by Willy Decarpentrie -->
+			<property name="Tags" value="entity,mech"/>			
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityEnemyAnimal"/>
 			<property name="Parent" value="Animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="Mass" value="120"/>			
 			<property name="ExperienceGain" value="230"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handDrone"/>
@@ -37,16 +44,9 @@
 			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
 			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
-			<property name="Tags" value="entity,mech"/>
 			<property name="Immunity" value="sickness;disease;wellness"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="true"/>
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="120"/>
 			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="DeadBodyHitPoints" value="800"/>
 			<property name="TimeStayAfterDeath" value="300"/>
@@ -58,26 +58,21 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class>
+		
 		<entity_class name="mechRustyDrone" extends="mechDrone" >
 			<property name="Tags" value="entity,mech"/>
 		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RustyDroidMat.unity3d?RustyDroid"/>
 		</entity_class>
-		
 			
 		<entity_class name="mechRobot" extends="mechDrone" >
-			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
+			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" /> <!-- Free CC model by Willy Decarpentrie -->
 			<property name="Tags" value="entity,mech"/>
 			<property name="PhysicsBody" value="RobotRig"/>
-			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
-			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
-			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handRobot"/>
-			<property name="HasRagdoll" value="true"/> <!-- Known issue, when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers.  Set it to true eben without a ragdoll but you must not have an E_Biped_Root tag on the entity or it will NRE  -->
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll on entity, but when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers.  Set it to true even without a ragdoll but you MUST NOT have an E_Biped_Root tag on the entity or it will NRE  -->
 			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/> <!-- In this guys case he has a badly formed rig so cannot have a ragdoll so he needs to be replaced  -->
+			<property name="RootMotion" value="false"/> 
 			<property name="SoundRandomTime" value="20.0"/>
 			<property name="SoundRandom" value="RobotRandom" />
 			<property name="SoundAlert" value="RobotAlert" />
@@ -85,6 +80,11 @@
 			<property name="SoundDeath" value="RobotDie" />
 			<property name="SoundHurt" value="RobotRandom" />
 			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -92,19 +92,19 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
-		</entity_class> 
+		</entity_class>
+		
 		<entity_class name="mechRobotArmy" extends="mechRobot" >
 			<property name="Mesh" value="#@modfolder:Resources/Robot.unity3d?Robot_X" />
 			<property name="Tags" value="entity,mech"/>
-			<property name="HandItem" value="handRobot"/>
+			<property name="HandItem" value="handRobotArmy"/>
 		    <property name="ReplaceMaterial0" value="#@modfolder:Resources/RobotArmyMat.unity3d?metal_albedo"/>
 		    <property name="ReplaceMaterial1" value="#@modfolder:Resources/RobotArmyMat.unity3d?paint_albedo"/>
 			<property name="ReplaceMaterial2" value="#@modfolder:Resources/RobotArmyMat.unity3d?rubber_albedo"/>
 		</entity_class>					
 		
 		<entity_class name="mechSphereI" extends="mechDrone" >
-			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />
-			<!-- free model by 3DHaupt -->
+			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereI_X" />	<!-- Free CC model by 3DHaupt -->
 			<property name="DeadBodyHitPoints" value="1000"/> 
 			<property name="Tags" value="entity,mech"/>			
 			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
@@ -120,6 +120,7 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class> 
+		
 		<entity_class name="mechSphereII" extends="mechDrone" >
 			<property name="Mesh" value="#@modfolder:Resources/Spheres.unity3d?SphereII_X" />
 			<property name="DeadBodyHitPoints" value="1000"/> 
@@ -137,11 +138,10 @@
 			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
 			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>
 		</entity_class> 
-
 		
 		<entity_class name="mechBee" extends="mechDrone" >
 			<property name="Class" value="EntityVulture"/>
-			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" />
+			<property name="Mesh" value="#@modfolder:Resources/MecBee.unity3d?Mecbee_X" /> <!--  Free CC model but cant find attribution yet  -->
 			<property name="Tags" value="entity,mech"/>
 			<property name="HandItem" value="handMecBee"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
@@ -159,7 +159,6 @@
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="50"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				
 			</effect_group>
 		</entity_class> 		
 	</append>

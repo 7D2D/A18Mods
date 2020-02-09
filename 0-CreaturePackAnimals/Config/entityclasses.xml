@@ -4,21 +4,84 @@
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
 		Pay attention so that you do not stack several base_add or perc_add. -->
 		
-<!-- Animals  -->		
-		
-		<entity_class name="animalFox" extends="animalTemplateHostile">
+<!-- Walking Things  -->	
+
+		<entity_class name="animalTemplateHostileWalking" extends="animalTemplateHostile">
 			<property name="Tags" value="entity,animal"/>
-			<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
-			<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
 			<property name="ModelType" value="Standard"/>
 			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityEnemyAnimal"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Weight" value="100"/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="RagdollOnDeathChance" value=".1"/>
+			<property name="PhysicsBody" value="ArcticFox"/>
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="AIPathCostScale" value=".4, .6"/>			
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalCoyote"/>
+			<property name="AITask-1" value="Swim"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.6;healthPerMax=0.75"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,8,EntityPlayer,10"/>
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,10,EntityAnimalRabbit,0,18"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="200"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="80"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="8"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class>		
+		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="HasRagdoll" value="false"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="true"/>
 			<property name="RagdollOnDeathChance" value=".1"/>
 			<property name="PhysicsBody" value="ArcticFox"/>
-			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="true"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="4.2, 4.2"/> <!-- top speed seems capped, looking into why -->
@@ -64,13 +127,24 @@
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>
-		<entity_class name="animalGoat" extends="animalTemplateHostile">
+		<entity_class name="animalGoat" extends="animalTemplateHostileWalking">
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityAnimalStag"/>
-			<property name="Parent" value="Animals"/>
 			<property name="PhysicsBody" value="Goat"/>
 			<property name="ExperienceGain" value="130"/>
 			<property name="Faction" value="animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="false"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Goat.unity3d?Goat_X"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalGoat"/>					
 			<property name="SoundRandom" value="GoatBell"/>
 			<property name="SoundAlert" value="GoatBaah"/>
 			<property name="SoundHurt" value="GoatBleat"/>
@@ -85,17 +159,6 @@
 			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
 			<property name="Tags" value="entity,animal,perkAT05"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="false"/> <!-- The goat has a ragdoll but it a little crazy at times -->
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="50"/>
-			<property name="Mesh" value="#@modfolder:Resources/Goat.unity3d?Goat_X"/>
-			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
-			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="HandItem" value="meleeHandAnimalGoat"/>			
 			<property name="DeadBodyHitPoints" value="200"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -105,29 +168,26 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class>	
-		<entity_class name="animalSpider01" extends="animalTemplateHostile">
+		<entity_class name="animalSpider01" extends="animalTemplateHostileWalking">
+			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider01_X"/>
 			<property name="Prefab" value="NPC"/>
 			<property name="Parent" value="Animals"/>
 			<property name="Class" value="EntityEnemyAnimal"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="true"/> 
-			<property name="Faction" value="animals"/>			
+			<property name="Tags" value="entity,animal,hostile"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>			
 			<property name="ExperienceGain" value="130"/>
-			<property name="Faction" value="animals"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
 			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
 			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
-			<property name="Tags" value="entity,animal,hostile"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="50"/>
-			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider01_X"/>
 			<property name="MoveSpeed" value=".25"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
@@ -153,48 +213,16 @@
 		</entity_class>		
 		<entity_class name="animalSpider02" extends="animalSpider01">
 			<property name="Tags" value="entity,animal,hostile"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="50"/>
 			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider02_X"/>
-			<property name="MoveSpeed" value=".25"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
-			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="DeadBodyHitPoints" value="100"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-			</effect_group>
 		</entity_class>	
 		<entity_class name="animalSpider03" extends="animalSpider01">
 			<property name="Tags" value="entity,animal,hostile"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="Mass" value="50"/>
 			<property name="Mesh" value="#@modfolder:Resources/Spiders.unity3d?Spider03_X"/>
-			<property name="MoveSpeed" value=".25"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
-			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="DeadBodyHitPoints" value="100"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-			</effect_group>
 		</entity_class>	
+		
+<!-- Flying Things  -->
 
-		<entity_class name="animalRobin" extends="animalZombieVulture" >
+		<entity_class name="animalTemplateTimidFlying" extends="animalZombieVulture" >
 			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
 			<property name="Tags" value="entity,animal"/>
@@ -209,14 +237,41 @@
 			<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
-			<property name="SizeScale" value="1.1"/>
-			<property name="HasRagdoll" value="true"/> <!-- No ragdoll but needed for dedi -->
+			<property name="HasRagdoll" value="true"/> <!-- No actual ragdoll but needed for dedi, but make sure you dont have a E_Bipded_Root tag on the entity though or boom! -->
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
 			<property name="AIPathCostScale" value="100, 100"/>
 			<property name="EntityType" value="Animal"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
+			<property name="Faction" value="animals"/>
+			<property name="SoundRandomTime" value="10.0"/>
+			<property name="SoundRandom" value="" />
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="20"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 
+		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >
+			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Tags" value="entity,animal"/>
+			<property name="HandItem" value="meleeHandAnimalRobin"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SizeScale" value="1.1"/>
 			<property name="Faction" value="animals"/>
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="RobinSounds" />
@@ -235,8 +290,8 @@
 				<passive_effect name="HealthMax" operation="base_set" value="20"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-		</entity_class> 
-		<entity_class name="animalCrow" extends="animalRobin">
+		</entity_class> 		
+		<entity_class name="animalCrow" extends="animalTemplateTimidFlying">
 			<property name="Mesh" value="#@modfolder:Resources/Crow.unity3d?Crow_X" />
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="CrowRandom" />
@@ -247,7 +302,7 @@
 			<property name="SoundSense" value="CrowRandom"/>
 			<property name="SoundGiveUp" value="CrowRandom"/>			
 		</entity_class>
-		<entity_class name="animalBat" extends="animalRobin">
+		<entity_class name="animalBat" extends="animalTemplateTimidFlying">
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bat_X" />
 			<property name="SoundRandom" value="BatRandom" />
@@ -258,7 +313,7 @@
 			<property name="SoundSense" value="BatRandom"/>
 			<property name="SoundGiveUp" value="BatRandom"/>				
 		</entity_class> 
-		<entity_class name="animalBats" extends="animalRobin"> <!-- has a particle of...Bats!  -->
+		<entity_class name="animalBats" extends="animalTemplateTimidFlying"> <!-- has a particle of...Bats!  -->
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="Mesh" value="#@modfolder:Resources/Bats.unity3d?Bats_X" />
 			<property name="SoundRandom" value="BatRandom" />
@@ -269,7 +324,7 @@
 			<property name="SoundSense" value="BatRandom"/>
 			<property name="SoundGiveUp" value="BatRandom"/>				
 		</entity_class> 
-		<entity_class name="animalEagle" extends="animalRobin">
+		<entity_class name="animalEagle" extends="animalTemplateTimidFlying">
 			<property name="Mesh" value="#@modfolder:Resources/Eagle.unity3d?Eagle_X" />
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="EagleSound" />
@@ -278,9 +333,18 @@
 			<property name="SoundDeath" value=""/>
 			<property name="SoundAttack" value="EagleSound"/>
 			<property name="SoundSense" value="EagleSound"/>
-			<property name="SoundGiveUp" value="EagleSound"/>			
+			<property name="SoundGiveUp" value="EagleSound"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="50"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
 		</entity_class>
-		<entity_class name="animalAlcatraz" extends="animalRobin">
+		<entity_class name="animalAlcatraz" extends="animalTemplateTimidFlying">
 			<property name="Mesh" value="#@modfolder:Resources/Alcatraz.unity3d?Alcatraz_X" />
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="AlcatrazSound" />
@@ -289,7 +353,16 @@
 			<property name="SoundDeath" value=""/>
 			<property name="SoundAttack" value="AlcatrazSound"/>
 			<property name="SoundSense" value="AlcatrazSound"/>
-			<property name="SoundGiveUp" value="AlcatrazSound"/>			
+			<property name="SoundGiveUp" value="AlcatrazSound"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="30"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>			
 		</entity_class>
 		
 	</append>
