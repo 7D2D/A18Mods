@@ -50,10 +50,10 @@
 	</append> 
 
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'FriendlyAnimals')]">
-			<entity name="humanJoelTrader" prob="0.05" /> 
-			<entity name="humanWeaponsTrader" prob="0.05" /> 
-			<entity name="humanHeavyTrader" prob="0.05" /> 
-			<entity name="humanBakerTrader" prob="0.05" />			
+			<entity name="humanJoelTrader" prob="0.01" /> 
+			<entity name="humanWeaponsTrader" prob="0.01" /> 
+			<entity name="humanHeavyTrader" prob="0.01" /> 
+			<entity name="humanBakerTrader" prob="0.01" />			
 			<entity name="humanFarmerSurvivor" prob="0.15" />
 			<entity name="humanCowboySurvivor" prob="0.15" />
 			<entity name="humanNurseSurvivor" prob="0.15" />
