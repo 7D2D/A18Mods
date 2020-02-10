@@ -6,7 +6,7 @@
 		
 	<!-- With the exception of the ASantaZombie, all non-zombie entities here use walkType 7, as it is the most human like animation set, and all replacement animation were placed on that walkset.  This is important for non-zombie characters only, zombies can use all walktypes  -->	
 
-<!--  Zombies  -->
+<!--  Xyth Zombies  -->
 
 		<entity_class name="zombieSanta" extends="zombieFatHawaiian"> <!-- Thanks to MaxFox for this guys texture and the encouragement to crack this method.  -->
 			<property name="Tags" value="entity,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
@@ -20,7 +20,7 @@
 			<property name="HandItem" value="TemplateHandZombie"/> <!-- Use a tag to pick the effect you want, see items.xml -->
 		</entity_class>
 		
-		<entity_class name="ZombieNurseTemplate" extends="zombieNurse">
+		<entity_class name="zombieNurseTemplate" extends="zombieNurse">
 			<property name="Tags" value="entity,zombie,normal"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
@@ -28,11 +28,11 @@
 			<property name="HandItem" value="TemplateHandZombie"/>
 			<property name="PhysicsBody" value="zombieStandard"/>
 			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedAggro" value=".4, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 		</entity_class>
 		
-		<entity_class name="ZombieFemaleTutorial" extends="ZombieNurseTemplate">
+		<entity_class name="zombieFemaleTutorial" extends="zombieNurseTemplate">
 			<property name="Tags" value="entity,zombie,normal"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/zombieTestFemale.unity3d?zombieTestFemale_X"/> 
@@ -46,5 +46,121 @@
 			<property name="Mass" value="150"/>
 		</entity_class>
 		
+<!--  Zombies by DarkStarDragon -->
+		
+		<entity_class name="zombieFlayed" extends="zombieTemplateMale">
+		<!-- Free model from Mixamo  -->
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombieDark"/> 
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".5, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<!-- Gameplay -->
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieClown" extends="zombieTemplateMale">
+		<!-- Free model from Mixamo  -->
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombieClownDark"/> 
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="5"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".5, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>			
+			<!-- Gameplay -->
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombiePrepper" extends="zombieTemplateMale">
+		<!-- Free model from Mixamo  -->
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombiePrepperDark"/> 
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="Mass" value="150"/>
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".5, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieCoroner" extends="zombieTemplateMale">
+		<!-- Free model from Mixamo  -->
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombieCoronerDark"/> 
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="2"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="Mass" value="150"/>
+			<!-- Gameplay -->
+			<property name="MoveSpeed" value="0.06"/>
+			<property name="MoveSpeedAggro" value="0.2, 1.1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="zombieJill" extends="zombieNurseTemplate">
+		<!-- Free model from Mixamo  -->
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombieJillDark"/> 
+			<!-- Retexturing Index: N/A -->
+			<property name="HandItem" value="meleeHandZombie01"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>			
+			<property name="WalkType" value="7"/>
+			<property name="Mass" value="150"/>
+		</entity_class>
+	
 	</append>
 </configs>

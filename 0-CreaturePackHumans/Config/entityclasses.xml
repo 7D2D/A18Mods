@@ -23,6 +23,7 @@
 			<property name="MaxViewAngle" value="270"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
+			<property name="RotateToGround" value="false"/>			
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/>
 			<property name="EntityType" value="Player"/>
@@ -132,6 +133,7 @@
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
+			<property name="RotateToGround" value="false"/>			
 			<property name="Faction" value="bandits"/>
 			<property name="Mass" value="150"/>
 			<property name="HandItem" value="handBanditMP7"/> 
@@ -251,7 +253,7 @@
 			<property name="SoundAttack" value="Player_Female/player2stamina"/>
 			<property name="SoundSense" value="Player_Female/player2stamina"/>
 			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
-			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeed" value="0.5"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.6"/>
 			<property name="AIPathCostScale" value="1,1"/>
@@ -510,6 +512,7 @@
 		
 		<entity_class name="humanMeleeMaleTraderTemplate" extends="humanMeleeMaleBanditTemplate">
 			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
+			<property name="RotateToGround" value="false"/>			
 			<property name="Tags" value="entity,npc,trader"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 

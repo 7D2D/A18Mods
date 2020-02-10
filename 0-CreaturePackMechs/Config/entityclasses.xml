@@ -8,6 +8,7 @@
 			<property name="Class" value="EntityEnemyAnimal"/>
 			<property name="Parent" value="Animals"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="RotateToGround" value="false"/>
 			<property name="HasRagdoll" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
