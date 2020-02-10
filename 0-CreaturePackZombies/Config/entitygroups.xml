@@ -1,12 +1,12 @@
 <configs>
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesAll')]">
 		<entity name="zombieSanta" prob=".5" />
-		<entity name="ZombieNurseTemplate" prob=".25" />
-		<entity name="ZombieFemaleTutorial" prob=".5" />
-		<entity name="ZombieFlayed" prob=".5" />
-		<entity name="ZombieClown" prob=".5" />
-		<entity name="ZombiePrepper" prob=".5" />		
-		<entity name="ZombieCoroner" prob=".5" />
-		<entity name="ZombieJill" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
 	</append> 
 </configs>
