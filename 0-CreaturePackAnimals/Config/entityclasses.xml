@@ -248,6 +248,13 @@
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
 			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="1"/>
+			<property name="SoundRandom" value="animalspiderrandom"/>
+			<property name="SoundAlert" value="animalspideralert"/>
+			<property name="SoundHurt" value="animalspiderhurt"/>
+			<property name="SoundDeath" value="animalspiderdeath"/>
+			<property name="SoundAttack" value="animalspiderattack"/>
+			<property name="SoundSense" value="animalspidersense"/>
+			<property name="SoundGiveUp" value="animalspiderroam"/>
 			<property name="MoveSpeed" value=".25"/>
 			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
