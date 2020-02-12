@@ -34,7 +34,7 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
-			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
 			<property name="AITask-2" value="ApproachSpot"/> 
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="Look"/> 		
@@ -44,7 +44,7 @@
 			<property name="AITask-8" value=""/>	
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalStag,0,0"/> 
 			<property name="AITarget-4" value=""/> 
 			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
 			<property name="SoundStamina" value="Player_Male/player1stamina"/>
@@ -166,7 +166,7 @@
 			<property name="AttackTimeoutDay" value="0"/>
 			<property name="AttackTimeoutNight" value="0"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
 			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
 			<property name="AITask-5" value="Territorial"/>
@@ -177,7 +177,7 @@
 			<property name="AITask-10" value=""/>	
 			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalStag,0,0"/> 
 			<property name="AITarget-4" value=""/> 
 			<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="200"/>
@@ -383,6 +383,37 @@
 			<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class> 
 		
+<!--		<entity_class name="humanHarleyBandit" extends="humanFarmerBandit">
+			<property name="Tags" value="entity,bandit"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/> --> <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
+<!--			<property name="Mass" value="150"/> 
+			<property name="RightHandJointName" value="RightHand" />
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+		</entity_class> -->
+		
+		
+		
 <!-- Survivors:  Empty hand versions of models (generally) The run away when approached -->		
 		
 		<entity_class name="humanMaleSurvivorTemplate" extends="zombieTemplateMale"> 
@@ -394,7 +425,7 @@
 			<property name="SightRange" value="70"/>
 			<property name="MaxViewAngle" value="270"/>			
 			<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
-			<property name="Class" value="EntityAnimalRabbit"/> <!-- Might not look like a rabbit, but runs like one.  Using this class so most will leave them alone  -->
+			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="IsEnemyEntity" value="false"/>
 			<property name="EntityType" value="Player"/>
@@ -452,7 +483,6 @@
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
-			<property name="Class" value="EntityAnimalRabbit"/> <!-- Might not look like a rabbit, but runs like one.  Using this class so most will leave them alone  -->
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handFarmerBlade"/>
 			<property name="WalkType" value="7"/>

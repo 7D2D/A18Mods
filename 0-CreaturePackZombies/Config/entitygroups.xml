@@ -8,5 +8,150 @@
 		<entity name="zombiePrepper" prob=".5" />		
 		<entity name="zombieCoroner" prob=".5" />
 		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
 	</append> 
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>
+
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>
+
+<!--	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='zombieBoeFeral']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>	-->
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>	
+	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroup']/entity[@name='zombieBoe']" >
+		<entity name="zombieSanta" prob=".5" />
+		<entity name="zombieNurseTemplate" prob=".25" />
+		<entity name="zombieFemaleTutorial" prob=".5" />
+		<entity name="zombieFlayed" prob=".5" />
+		<entity name="zombieClown" prob=".5" />
+		<entity name="zombiePrepper" prob=".5" />		
+		<entity name="zombieCoroner" prob=".5" />
+		<entity name="zombieJill" prob=".5" />
+		<entity name="zombieGuppy01Beige" prob=".5" />
+		<entity name="zombieGuppy02White" prob=".5" />
+		<entity name="zombieGuppy03Dark" prob=".5" />
+		<entity name="zombieGuppyHungry01Blue" prob=".5" />
+		<entity name="zombieGuppyHungry02Red" prob=".5" />
+		<entity name="zombieGuppyHungry03White" prob=".5" />		
+		<entity name="zombieGuppyCarmela" prob=".5" />
+	</insertAfter>		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 </configs>

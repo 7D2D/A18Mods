@@ -19,7 +19,7 @@
 			<property name="Weight" value="100"/>
 			<property name="HasRagdoll" value="true"/> 
 			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="true"/>
+			<property name="RootMotion" value="false"/>
 			<property name="RagdollOnDeathChance" value=".1"/>
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="AIGroupCircle" value="1"/>
@@ -71,35 +71,94 @@
 			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-		</entity_class>		
+		</entity_class>	
+		<entity_class name="animalTemplateTimidWalking" extends="animalTemplateTimid">
+			<property name="Tags" value="entity,animal"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_rabbit"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityAnimalRabbit"/>
+			<property name="RotateToGround" value="false"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Weight" value="100"/>
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value=".1"/>
+			<property name="PhysicsBody" value="ArcticFox"/>
+			<property name="AIGroupCircle" value="1"/>
+			<property name="AINoiseSeekDist" value="3"/>
+			<property name="Mass" value="40"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 			
+			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalCoyote"/>
+			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="AITask-1" value="Swim"/>
+			<property name="AITask-2" value="RunawayWhenHurt"/>
+			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityEnemyAnimal"/>
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="Wander"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="200"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="80"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class>	
+		
 		<entity_class name="animalFox" extends="animalTemplateHostileWalking">
 			<property name="Tags" value="entity,animal,perkAT05"/>
 			<property name="MapIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="TrackerIcon" value="ui_game_symbol_tracking_wolf"/>
 			<property name="HasRagdoll" value="false"/>
 			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="true"/>
+			<property name="RootMotion" value="false"/>
 			<property name="RagdollOnDeathChance" value=".1"/>
 			<property name="PhysicsBody" value="ArcticFox"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="true"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
 			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="4.2, 4.2"/> <!-- top speed seems capped, looking into why -->
-			<property name="MoveSpeedPanic" value="4.2"/>
+			<property name="MoveSpeedAggro" value="1.5, 1.5"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedPanic" value="1.5"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>
 			<property name="AITask-1" value="Swim"/>
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Territorial"/>
-			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.6;healthPerMax=0.75"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,8,EntityPlayer,10"/>
+			<property name="AITask-4" value="RunawayWhenHurt"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18,EntityAnimalSnake,18"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
 			<property name="AITask-9" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,15,10,EntityAnimalRabbit,0,18"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalSnake,0,0,EntityAnimalRabbit,0,0"/>
 			<property name="AITarget-4" value=""/>
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
