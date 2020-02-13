@@ -119,8 +119,8 @@
 				<requirement name="HoldingItemHasTags" tags="club"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value="-.2"/> 
 			</effect_group>
-			<property name="AttackTimeoutDay" value="0.5"/>
-			<property name="AttackTimeoutNight" value="0.5"/>
+			<property name="AttackTimeoutDay" value="0.8"/>
+			<property name="AttackTimeoutNight" value="0.8"/>
 		</entity_class>
 		
 		<!--             -->
@@ -163,8 +163,6 @@
 			<property name="SightRange" value="60"/>
 			<property name="MaxViewAngle" value="270"/>			
 			<property name="AIPathCostScale" value=".8, 1"/>
-			<property name="AttackTimeoutDay" value="0"/>
-			<property name="AttackTimeoutNight" value="0"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/>
 			<property name="AITask-3" value="ApproachSpot"/> 
@@ -257,8 +255,6 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.6"/>
 			<property name="AIPathCostScale" value="1,1"/>
-			<property name="AttackTimeoutDay" value="0.1"/>
-			<property name="AttackTimeoutNight" value="0.1"/>
 			<property name="PushFactor" value="10"/>
 			<effect_group name="Base Effects">
 			<passive_effect name="HealthMax" operation="base_set" value="150"/>
@@ -360,8 +356,6 @@
 			<property name="PainResistPerHit" value=".5"/>
 			<property name="MaxViewAngle" value="220"/>
 			<property name="MaxTurnSpeed" value="360"/>
-			<property name="AttackTimeoutDay" value="1.0"/> 
-			<property name="AttackTimeoutNight" value="1.0"/>
 			<property name="SoundAttack" value="chainsaw_fire_rev" /> 
 			<property name="JumpMaxDistance" value="2.0"/>
 			<effect_group name="Base Effects">
@@ -680,6 +674,80 @@
 			<property name="NPCID" value="traderFood"/>
 		</entity_class> 
 		
+<!--  DarkstarDragon Characters   -->
+
+		<entity_class name="humanRaiderPest" extends="humanMeleeMaleBanditTemplate"> 
+		<!--   fumigator V2 by megatrom and star axe purchased model by maksim bugrimov  -->
+					<property name="Tags" value="entity,bandit,melee"/>
+					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/>
+					<property name="HandItem" value="handFarmerBlade"/>
+					<property name="WalkType" value="7"/>
+					<property name="RightHandJointName" value="RightWeapon" /> 
+					<property name="MoveSpeed" value="0.25"/> 
+					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+					<property name="MoveSpeedPanic" value="1.1"/>
+					<property name="AIPathCostScale" value=".8, 1"/>
+					<effect_group name="Base Effects">
+						<passive_effect name="HealthMax" operation="base_set" value="200"/>
+						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+					</effect_group>
+					<property name="ExperienceGain" value="500"/> 
+					<property name="LootDropProb" value="0.02"/> 
+					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+				</entity_class>
+
+		<entity_class name="humanRaiderMoto" extends="humanMeleeMaleBanditTemplate"> 
+		<!--   free mixamo model and ice axe purchased model by maksim bugrimov  -->
+					<property name="Tags" value="entity,bandit,melee"/>
+					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/>
+					<property name="HandItem" value="handFarmerBlade"/>
+					<property name="WalkType" value="7"/>
+					<property name="RightHandJointName" value="RightWeapon" /> 
+					<property name="MoveSpeed" value="0.25"/> 
+					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+					<property name="MoveSpeedPanic" value="1.1"/>
+					<property name="AIPathCostScale" value=".8, 1"/>
+					<effect_group name="Base Effects">
+						<passive_effect name="HealthMax" operation="base_set" value="200"/>
+						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+					</effect_group>
+					<property name="ExperienceGain" value="500"/> 
+					<property name="LootDropProb" value="0.02"/> 
+					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+				</entity_class>
+
+		<entity_class name="humanRaiderSlugger" extends="humanMeleeMaleBanditTemplate"> 
+		<!--   incinerator by megatrom and bit bat puchased model by maksim bugrimov -->
+					<property name="Tags" value="entity,bandit,melee"/>
+					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/>
+					<property name="HandItem" value="handFarmerBlade"/>
+					<property name="WalkType" value="7"/>
+					<property name="RightHandJointName" value="RightWeapon" /> 
+					<property name="MoveSpeed" value="0.25"/> 
+					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+					<property name="MoveSpeedPanic" value="1.1"/>
+					<property name="AIPathCostScale" value=".8, 1"/>
+					<effect_group name="Base Effects">
+						<passive_effect name="HealthMax" operation="base_set" value="200"/>
+						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+					</effect_group>
+					<property name="ExperienceGain" value="500"/> 
+					<property name="LootDropProb" value="0.02"/> 
+					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+				</entity_class>
+	
 		<!--  Testing  -->
 		
 		<!-- testing using the Ranged Class rather than the Vomit class.  Issues: No melee, they will get very close on attack, droped weapon is usable still but thats optional -->
@@ -724,6 +792,7 @@
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalRabbit,0,0"/> 
 			<property name="AITarget-4" value=""/> 
 			<property name="ExperienceGain" value="413"/> <!-- XP grunt -->
+<!--			<property name="LootListAlive" value="62"/> -->
 			<property name="LootDropProb" value="0.05"/> <!-- Whether it drops a loot bag on death or not. -->
 			<!-- <property name="LootListOnDeath" value="45"/> -->
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>

@@ -34,7 +34,7 @@
 				<property name="DamageEntity" value="25"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="2.2"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="chainsaw_fire_rev"/>
 				<property name="DamageBonus.head" value="5" />
 			</property>
@@ -70,8 +70,8 @@
 			<property class="Action0">
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="15"/>
-				<property name="Range" value="1.5"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
 				<property name="DamageBonus.head" value="5" />
 			</property>
@@ -107,8 +107,8 @@
 			<property name="Delay" value="1.2"/> 
 				<property name="DamageEntity" value="10"/>
 				<property name="DamageBlock" value="5"/>
-				<property name="Range" value="1.5"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
 				<property name="DamageBonus.head" value="5" />
 			</property>
@@ -146,7 +146,7 @@
 				<property name="DamageEntity" value="50"/>
 				<property name="DamageBlock" value="15"/>
 				<property name="Range" value="1.8"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
 				<property name="DamageBonus.head" value="5" />
 			</property>
@@ -179,11 +179,12 @@
 			<property class="Action0">
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="10"/>
-				<property name="Range" value="1.3"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
 				<property name="DamageBonus.head" value="5" />
 			</property>
+		
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
 				<property name="Hitmask_override" value="Arrow"/>
@@ -191,18 +192,19 @@
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
-				<property name="Reload_time" value="0"/>
 				<property name="Sound_start" value="mp5_fire"/>
-				<property name="Sound_repeat" value=""/>
+				<property name="Sound_repeat" value="mp5_fire"/>
 				<property name="Sound_end" value=""/>
 				<property name="Sound_empty" value=""/>
 				<property name="Sound_reload" value=""/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> 
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
 				<passive_effect name="MaxRange" operation="base_set" value="200"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3,5"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
 			</effect_group>
@@ -213,8 +215,8 @@
 			<property class="Action0">
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="10"/>
-				<property name="Range" value="1.3"/>
-				<property name="Sphere" value=".5"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
 				<property name="DamageBonus.head" value="5" />
 			</property>
@@ -226,17 +228,17 @@
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
 				<property name="Reload_time" value="0"/>
-				<property name="Sound_start" value="mp5_fire"/>
-				<property name="Sound_repeat" value=""/>
-				<property name="Sound_end" value=""/>
-				<property name="Sound_empty" value=""/>
-				<property name="Sound_reload" value=""/>
+				<property name="Sound_start" value="ak47_fire"/>
+				<property name="Sound_loop" value="ak47_fire"/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="ak47_reload"/>
+				<property name="Sound_end" value="ak47_fire_end"/>
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
 				<passive_effect name="MaxRange" operation="base_set" value="200"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3,5"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 			</effect_group>
@@ -263,7 +265,7 @@
 					<property name="Class" value="Melee" />
 					<property name="Delay" value="1.5" />
 					<property name="Range" value="2.9" />
-					<property name="Sphere" value="0.2" />
+					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="6" />
 					<property name="DamageBonus.head" value="24" />
@@ -285,7 +287,7 @@
 					<property name="Class" value="Melee" />
 					<property name="Delay" value="4" />
 					<property name="Range" value="2.9" />
-					<property name="Sphere" value="0.2" />
+					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="12" />
 					<property name="DamageBonus.head" value="44" />
@@ -346,7 +348,7 @@
 					<property name="Class" value="Melee" />
 					<property name="Delay" value="1.5" />
 					<property name="Range" value="2.9" />
-					<property name="Sphere" value="0.2" />
+					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="6" />
 					<property name="DamageBonus.head" value="24" />
