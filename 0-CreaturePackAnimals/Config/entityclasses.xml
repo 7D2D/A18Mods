@@ -293,7 +293,7 @@
 			<property name="Class" value="EntityVulture"/>
 			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
 			<property name="Tags" value="entity,animal"/>
-			<property name="SurfaceCategory" value="Morganic"/>
+			<property name="SurfaceCategory" value="organic"/>
 			<!-- Want a mostly non-aggressive Bird?  You need these lines and no Action0 on the hand in case they seek you so no damage -->
 			<property name="HandItem" value="meleeHandAnimalRobin"/>
 			<property name="AINoiseSeekDist" value="1"/>
