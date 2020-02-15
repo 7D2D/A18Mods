@@ -1,8 +1,9 @@
 <configs>
 	<append xpath="/Sounds">
+	
 		<SoundDataNode name="HarleyAlert">
 			<AudioSource name="Sounds/AudioSource_Creatures" />
-			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Iseeyou" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Onemore" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Bigape" />
@@ -18,7 +19,7 @@
 		<SoundDataNode name="HarleyAttack">
 			<AudioSource name="Sounds/AudioSource_VO" />
 			<Channel name="Mouth"/>
-			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Couldabeen" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Eatthis" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Punchline" />
@@ -52,7 +53,7 @@
 		<SoundDataNode name="HarleyHurt">
 			<AudioSource name="Sounds/AudioSource_VO" />
 			<Channel name="Mouth"/>
-			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Oww" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Hey" />
 			<LocalCrouchVolumeScale name="1.0" />

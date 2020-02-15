@@ -11,7 +11,9 @@
 			<entity name="humanHeavyGuyBandit" prob="0.1" />
 			<entity name="humanRaiderPest" prob="0.1" />
 			<entity name="humanRaiderMoto" prob="0.1" />
-			<entity name="humanRaiderSlugger" prob="0.1" />			
+			<entity name="humanRaiderSlugger" prob="0.1" />	
+			<entity name="humanRaiderFlamer" prob="0.1" />	
+			
 	<!--	<entity name="humanFarmerBanditSpawnClub" prob="0.1" />
 			<entity name="humanEveBanditSpawnAk47" prob="0.1" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 		</entitygroup>
@@ -50,7 +52,8 @@
 		<entity name="humanBakerSurvivor" prob="0.1" />
 		<entity name="humanRaiderPest" prob="0.1" />
 		<entity name="humanRaiderMoto" prob="0.1" />
-		<entity name="humanRaiderSlugger" prob="0.1" />			
+		<entity name="humanRaiderSlugger" prob="0.1" />	
+		<entity name="humanRaiderFlamer" prob="0.1" />			
 <!--	<entity name="humanFarmerBanditSpawnClub" prob="0.1" />
 		<entity name="humanEveBanditSpawnAk47" prob="0.1" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 	</append> 

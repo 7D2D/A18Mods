@@ -12,7 +12,6 @@
 				<property name="Range" value="1.5"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 		</item>	
 
@@ -26,7 +25,18 @@
 				<property name="Sphere" value="1.1"/>
 			</property>
 		</item>	
-
+		<item name="handHarleyBat">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Material" value="Mmetal"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="40"/>
+				<property name="Range" value="2.2"/>
+				<property name="Sphere" value="1.1"/>
+				<property name="Sound_start" value="swoosh" />
+			</property>
+		</item>			
 		<item name="handAshShotgun">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
@@ -36,7 +46,6 @@
 				<property name="Range" value="2.2"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="chainsaw_fire_rev"/>
-				<property name="DamageBonus.head" value="5" />
 			</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -73,7 +82,6 @@
 				<property name="Range" value="1.7"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -110,7 +118,6 @@
 				<property name="Range" value="1.7"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -148,7 +155,6 @@
 				<property name="Range" value="1.8"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -176,13 +182,13 @@
 		<item name="handBanditMP7">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
 			<property class="Action0">
 				<property name="DamageEntity" value="30"/>
 				<property name="DamageBlock" value="10"/>
 				<property name="Range" value="1.7"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 		
 			<property class="Action1"> 
@@ -192,8 +198,9 @@
 				<property name="Range" value="200"/>
 				<property name="Infinite_ammo" value="true"/>
 				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
+				<property name="Sound_warning" value=""/>
 				<property name="Sound_start" value="mp5_fire"/>
-				<property name="Sound_repeat" value="mp5_fire"/>
+				<property name="Sound_repeat" value=""/>
 				<property name="Sound_end" value=""/>
 				<property name="Sound_empty" value=""/>
 				<property name="Sound_reload" value=""/>
@@ -207,6 +214,7 @@
 				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="15"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
 			</effect_group>
 		</item>	
 		<item name="handGunBanditAK47">
@@ -218,7 +226,6 @@
 				<property name="Range" value="1.7"/>
 				<property name="Sphere" value="1.1"/>
 				<property name="Sound_start" value="swoosh" />
-				<property name="DamageBonus.head" value="5" />
 			</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -268,16 +275,6 @@
 					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="6" />
-					<property name="DamageBonus.head" value="24" />
-					<property name="DamageBonus.glass" value="10" />
-					<property name="DamageBonus.organic" value="1" />
-					<property name="DamageBonus.cloth" value="0.5" />
-					<property name="DamageBonus.earth" value="0.5" />
-					<property name="DamageBonus.stone" value="0.5" />
-					<property name="DamageBonus.hardStone" value="0" />
-					<property name="DamageBonus.wood" value="2" />
-					<property name="DamageBonus.metal" value="0" />
-					<property name="DamageBonus.steel" value="0" />
 					<property name="ActionExp" value="1" />
 					<property name="ActionExpBonusMultiplier" value="1" />
 					<property name="ToolCategory.Butcher" value="0" param1="5" />
@@ -290,16 +287,6 @@
 					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="12" />
-					<property name="DamageBonus.head" value="44" />
-					<property name="DamageBonus.glass" value="10" />
-					<property name="DamageBonus.organic" value="1" />
-					<property name="DamageBonus.cloth" value="0.5" />
-					<property name="DamageBonus.earth" value="0.5" />
-					<property name="DamageBonus.stone" value="0.5" />
-					<property name="DamageBonus.hardStone" value="0" />
-					<property name="DamageBonus.wood" value="2" />
-					<property name="DamageBonus.metal" value="0" />
-					<property name="DamageBonus.steel" value="0" />
 					<property name="ActionExp" value="1" />
 					<property name="ActionExpBonusMultiplier" value="1" />
 					<property name="ToolCategory.Butcher" value="0" param1="5" />
@@ -351,9 +338,6 @@
 					<property name="Sphere" value="1.1" />
 					<property name="Sound_start" value="swoosh" />
 					<property name="Stamina_usage" value="6" />
-					<property name="DamageBonus.head" value="24" />
-					<property name="DamageBonus.glass" value="10" />
-					<property name="DamageBonus.organic" value="1" />
 				</property>
 			<property class="Action1"> 
 				<property name="Class" value="Vomit"/>
@@ -378,7 +362,44 @@
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 			</effect_group>
 		</item>	
-		
+		<item name="handRaiderFlamer">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
+				<property name="Sound_start" value="swoosh" />
+				<property name="DamageBonus.head" value="5" />
+			</property>
+			<property class="Action1"> 
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0"/> 
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoBurntZombieVomit"/>
+				<property name="Reload_time" value="0"/>
+				<property name="Sound_start" value="pump_shotgun_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_shotgun"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="8"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="8"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="6"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0.5"/>
+			</effect_group>
+		</item>						
 
 			
 <!-- Ammo Projectiles  -->
@@ -398,7 +419,6 @@
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
 				<property name="CollisionRadius" value=".5"/>
-				<property name="DamageBonus.earth" value="0"/>	
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -420,7 +440,6 @@
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
 				<property name="CollisionRadius" value=".5"/>
-				<property name="DamageBonus.earth" value="0"/>	
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -442,7 +461,6 @@
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
 				<property name="CollisionRadius" value=".25"/>
-				<property name="DamageBonus.earth" value="0"/>	
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -465,7 +483,6 @@
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
 				<property name="CollisionRadius" value=".25"/>
-				<property name="DamageBonus.earth" value="0"/>	
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -487,7 +504,6 @@
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
 				<property name="CollisionRadius" value=".5"/>
-				<property name="DamageBonus.earth" value="0"/>	
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -539,6 +555,42 @@
 				</triggered_effect>
 			</effect_group>
 		</item>
+		<item name="ammoBurntZombieVomit">
+			<property name="Meshfile" value="ParticleEffects/p_onFire"/>
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="0"/>
+				<property name="DamageBlock" value="0"/>
+				<property name="Velocity" value="9"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value=".75"/>
+				<property name="Buff" value="buffBurningZombie"/>
+			</property>
+			<effect_group name="ammoProjectileZombieVomit" tiered="false">
+				<requirement name="EntityTagCompare" tags="feral"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.3" tags="buffBurningZombie"/>
+				
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="player"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="npc"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="animal"/>
+				
+				<passive_effect name="DamageModifier" operation="base_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="14" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="concrete"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="metal"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="steel"/>
+			</effect_group>
+			<effect_group>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="5" buff="buffBurningZombie"/>
+			</effect_group>
+		</item>
+
 
 <!--    testing Zone     -->		
 		
@@ -643,7 +695,6 @@
 				<property name="Horde_meter_distance" value="20" />
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
-				<property name="DamageBonus.head" value="0.5" />
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
