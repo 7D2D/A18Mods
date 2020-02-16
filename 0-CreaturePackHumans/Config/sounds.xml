@@ -2,19 +2,17 @@
 	<append xpath="/Sounds">
 	
 		<SoundDataNode name="HarleyAlert">
-			<AudioSource name="Sounds/AudioSource_Creatures" />
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
 			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Iseeyou" />
 			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Onemore" />
-			<AudioClip ClipName="#@modfolder:Resources/HarleySounds.unity3d?Bigape" />
-			<Channel name="Mouth" />
-			<Priority name="6" />
-			<maxVoicesPerEntity name="1" />
 			<LocalCrouchVolumeScale name="1.0" />
 			<CrouchNoiseScale name="0.5" />
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
-			<MaxRepeatRate name="3" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 		<SoundDataNode name="HarleyAttack">
 			<AudioSource name="Sounds/AudioSource_VO" />
@@ -30,7 +28,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="5.0" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 		<SoundDataNode name="HarleyRandom">
 			<AudioSource name="Sounds/AudioSource_VO" />
@@ -48,7 +46,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 		<SoundDataNode name="HarleyHurt">
 			<AudioSource name="Sounds/AudioSource_VO" />
@@ -61,7 +59,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.0" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 		<SoundDataNode name="HarleySense">
 			<AudioSource name="Sounds/AudioSource_VO" />
@@ -74,7 +72,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 		<SoundDataNode name="HarleyDie">
 			<AudioSource name="Sounds/AudioSource_VO" />
@@ -88,7 +86,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
 	</append>
 	

@@ -556,7 +556,7 @@
 			</effect_group>
 		</item>
 		<item name="ammoBurntZombieVomit">
-			<property name="Meshfile" value="ParticleEffects/p_onFire"/>
+		  <property name="Meshfile" value="#@modfolder:Resources/GuppycurParticles.unity3d?FlamethrowerFlames"/>
 			<property name="Material" value="Morganic"/>
 			<property name="CreativeMode" value="None"/>
 			<property class="Action1">
@@ -586,9 +586,9 @@
 				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="metal"/>
 				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="steel"/>
 			</effect_group>
-			<effect_group>
-				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="5" buff="buffBurningZombie"/>
-			</effect_group>
+		<effect_group>
+			<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="5" buff="buffBurningZombie"/>
+		</effect_group>
 		</item>
 
 
