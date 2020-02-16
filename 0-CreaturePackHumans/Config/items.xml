@@ -622,13 +622,13 @@
 
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
-				<property name="Delay" value="1" /> 
+				<property name="Delay" value="1.0" /> 
 				<property name="Auto_fire" value="false" /> <!-- no effect -->
 				<property name="Magazine_size" value="300" />
 				<property name="Magazine_items" value="ammo9mmBulletBalltest" />
 				<property name="Magazine_item_ray_counts" value="3" />
 				<property name="Magazine_item_ray_spreads" value="3" />
-				<property name="Reload_time" value="1" /> 
+				<property name="Reload_time" value="2" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Bullet_icon" value="uzi" />
 				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
