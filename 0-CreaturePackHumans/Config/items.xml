@@ -622,13 +622,12 @@
 
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
-				<property name="Delay" value="1.0" /> 
-				<property name="Auto_fire" value="false" /> <!-- no effect -->
-				<property name="Magazine_size" value="300" />
+<!--				<property name="Delay" value="1.0" />  obsoleted by rounds per min  -->
+				<property name="Auto_fire" value="false" /> 
 				<property name="Magazine_items" value="ammo9mmBulletBalltest" />
 				<property name="Magazine_item_ray_counts" value="3" />
 				<property name="Magazine_item_ray_spreads" value="3" />
-				<property name="Reload_time" value="2" /> 
+				<property name="Reload_time" value="3" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Bullet_icon" value="uzi" />
 				<property name="Sound_start" value="Weapons/Ranged/MP5/mp5_fire_start" />
@@ -639,23 +638,16 @@
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 			</property>
-<!--			<property class="Attributes">
-				<property name="EntityDamage" value="4,9" />
-				<property name="BlockDamage" value="2,6" />
-				<property name="Accuracy" value="1,1" />
-				<property name="FalloffRange" value="80,85" />
-				<property name="DegradationMax" value="9998,9999" />
-				<property name="DegradationRate" value="1,1" />
-			</property> -->
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="65"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="300"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30"/> <!-- if this matches the ammo stack size, the Character loads the gun, and wont drop gun or ammo on death  -->
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> 
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> <!-- Bullets per shot  -->
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
 			</effect_group> 
 			<property class="Action1">
 				<property name="Class" value="Zoom"/>
@@ -663,7 +655,36 @@
 				<property name="Zoom_max_in" value="55"/>
 				<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
 			</property> 
+<!--		<property class="Action1">
+				<property name="Class" value="Melee"/>
+				<property name="Delay" value=".8"/> 
+				<property name="Range" value="1.65"/> 
+				<property name="Sphere" value=".1"/>
+				<property name="Block_range" value="2.5"/>
+				<property name="DamageEntity" value="10"/>
+				<property name="DamageBlock" value="16"/>
+				<property name="Sound_start" value="swoosh"/>
+			</property>
+			<effect_group name="meleeHandMaster" tiered="false">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="1.65"/>
+			</effect_group>		-->
+				
+<!--		<property class="Action1">
+				<property name="Class" value="Eat"/>
+				<property name="Magazine_items" value="medicalBandage" />
+				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="1.0"/>
+				<property name="Sound_start" value="player_bandage"/>
+				<effect_group tiered="false">
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="3"/> 
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="5"/> 
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
+				</effect_group> 
+			</property> -->
+			
 		</item>	
+		
 		<item name="gunBanditAk47test">
 			<property name="Extends" value="gunSMG5test"/>
 			<property name="Tags" value="weapon,ranged"/>
@@ -720,12 +741,12 @@
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mbrass"/>
 			<property name="MeltTimePerUnit" value=".4"/>
-			<property name="Stacknumber" value="300"/> 
-			<property name="EconomicValue" value="9"/>
+			<property name="Stacknumber" value="30"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 30 bullets -->
+			<property name="EconomicValue" value="1"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammo9mmBulletBall" tiered="false">
-				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
-				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- per bullet that hits  -->
+				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 			</effect_group>
