@@ -5,8 +5,6 @@ CCTV4-7,blocks,Electricity,New,Surveillance Monitor (4-7),,Überwachungsmonitor 
 CCTVLarge0-3,blocks,Electricity,New,Large Surveillance Monitor (0-3),,Großer Überwachungsmonitor (0-3),,,
 CCTVLarge4-7,blocks,Electricity,New,Large Surveillance Monitor (4-7),,Großer Überwachungsmonitor (4-7),,,
 CCTV_MonitorDesc,blocks,Description,New,Right click the monitor with the wire tool to power it. Then you can press the left mouse button because this block power it self. You can set a fix transmission of a camera by pressing the E-button.,,Rechtsklicke den Monitor mit dem Drahtwerkzeug um ihn mit Strom zu versorgen. Danach kannst du die linke Maustaste drücken da dieser Block sich selbst mit Strom versorgt. Du kannst eine feste Übertragung einer Kamera einstellen durch drücken der E-Taste.,,,
-CamPanVariantHelper,blocks,Description,New,Large Security Camera,,Große Überwachungskamera,,,
-CamPanSmVariantHelper,blocks,Description,New,Security Camera,,Überwachungskamera,,,
 CamPan0,blocks,Electricity,New,Large Security Camera (0),,Große Überwachungskamera (0),,,
 CamPanSm0,blocks,Electricity,New,Security Camera (0),,Überwachungskamera (0),,,
 CamPan1,blocks,Electricity,New,Large Security Camera (1),,Große Überwachungskamera (1),,,

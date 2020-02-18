@@ -76,7 +76,7 @@
 			<property name="Class" value="Switch"/>		
             <property name="DisplayType" value="blockElectrical" />
 			<property name="RequiredPower" value="0"/>
-            <property name="CreativeMode" value="None"/>
+			<property name="CreativeMode" value="Player"/>
 			<property name="TriggerType" value="Switch"/> 
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="Path" value="solid"/>
@@ -95,72 +95,48 @@
 			<property name="CustomIcon" value="Cam0" />
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="ItemTypeIcon" value="all_blocks"/>
-			<property name="SelectAlternates" value="true" />
-			<property name="PlaceAltBlockValue" value="CamPan0,CamPan1,CamPan2,CamPan3,CamPan4,CamPan5,CamPan6,CamPan7"/>
 		</block>
 		<block name="CamPan1">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan1_X" />
 			<property name="CustomIcon" value="Cam1" />
-			<property name="PlaceAltBlockValue" value="CamPan1,CamPan0,CamPan2,CamPan3,CamPan4,CamPan5,CamPan6,CamPan7"/>
 		</block>
 		<block name="CamPan2">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan2_X" />
 			<property name="CustomIcon" value="Cam2" />
-			<property name="PlaceAltBlockValue" value="CamPan2,CamPan0,CamPan1,CamPan3,CamPan4,CamPan5,CamPan6,CamPan7"/>
 		</block>
 		<block name="CamPan3">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan3_X" />
 			<property name="CustomIcon" value="Cam3" />
-			<property name="PlaceAltBlockValue" value="CamPan3,CamPan0,CamPan1,CamPan2,CamPan4,CamPan5,CamPan6,CamPan7"/>
 		</block>
 		<block name="CamPan4">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan4_X" />
 			<property name="CustomIcon" value="Cam4" />
-			<property name="PlaceAltBlockValue" value="CamPan4,CamPan0,CamPan1,CamPan2,CamPan3,CamPan5,CamPan6,CamPan7"/>
 		</block>	
 		<block name="CamPan5">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan5_X" />
 			<property name="CustomIcon" value="Cam5" />
-			<property name="PlaceAltBlockValue" value="CamPan5,CamPan0,CamPan1,CamPan2,CamPan3,CamPan4,CamPan6,CamPan7"/>
 		</block>	
 		<block name="CamPan6">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan6_X" />
 			<property name="CustomIcon" value="Cam6" />
-			<property name="PlaceAltBlockValue" value="CamPan6,CamPan0,CamPan1,CamPan2,CamPan3,CamPan4,CamPan5,CamPan7"/>
 		</block>	
 		<block name="CamPan7">
 			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPan7_X" />
 			<property name="CustomIcon" value="Cam7" />
-			<property name="PlaceAltBlockValue" value="CamPan7,CamPan0,CamPan1,CamPan2,CamPan3,CamPan4,CamPan5,CamPan6"/>
 		</block>
-		<block name="CamPanVariantHelper">
-			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="Cam0"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,CCTVSchematic"/>
-		</block>
-		
 		<block name="CamPanSm0">
 			<property name="Material" value="Mmetal"/>
 			<property name="Class" value="Switch"/>		
             <property name="DisplayType" value="blockElectrical" />
 			<property name="RequiredPower" value="0"/>
-            <property name="CreativeMode" value="None"/>
+            <property name="CreativeMode" value="Player"/>
 			<property name="TriggerType" value="Switch"/> 
 			<property name="IsTerrainDecoration" value="true"/>
 			<property name="Path" value="solid"/>
@@ -179,64 +155,42 @@
 			<property name="CustomIcon" value="Cam0" />
 			<property name="Place" value="TowardsPlacerInverted"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="ItemTypeIcon" value="all_blocks"/>
-			<property name="SelectAlternates" value="true" />
-			<property name="PlaceAltBlockValue" value="CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm6,CamPanSm7"/>
 		</block>
 		<block name="CamPanSm1">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm1_X" />
 			<property name="CustomIcon" value="Cam1" />
-			<property name="PlaceAltBlockValue" value="CamPanSm1,CamPanSm0,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm6,CamPanSm7"/>
 		</block>
 		<block name="CamPanSm2">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm2_X" />
 			<property name="CustomIcon" value="Cam2" />
-			<property name="PlaceAltBlockValue" value="CamPanSm2,CamPanSm0,CamPanSm1,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm6,CamPanSm7"/>
 		</block>
 		<block name="CamPanSm3">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm3_X" />
 			<property name="CustomIcon" value="Cam3" />
-			<property name="PlaceAltBlockValue" value="CamPanSm3,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm4,CamPanSm5,CamPanSm6,CamPanSm7"/>
 		</block>
 		<block name="CamPanSm4">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm4_X" />
 			<property name="CustomIcon" value="Cam4" />
-			<property name="PlaceAltBlockValue" value="CamPanSm4,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm5,CamPanSm6,CamPanSm7"/>
 		</block>	
 		<block name="CamPanSm5">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm5_X" />
 			<property name="CustomIcon" value="Cam5" />
-			<property name="PlaceAltBlockValue" value="CamPanSm5,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm6,CamPanSm7"/>
 		</block>	
 		<block name="CamPanSm6">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm6_X" />
 			<property name="CustomIcon" value="Cam6" />
-			<property name="PlaceAltBlockValue" value="CamPanSm6,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm7"/>
 		</block>	
 		<block name="CamPanSm7">
 			<property name="Extends" value="CamPanSm0"/>
-			<property name="CreativeMode" value="None"/>
 			<property name="Model" value="#@modfolder:Resources/CCTV.unity3d?CamPanSm7_X" />
 			<property name="CustomIcon" value="Cam7" />
-			<property name="PlaceAltBlockValue" value="CamPanSm7,CamPanSm0,CamPanSm1,CamPanSm2,CamPanSm3,CamPanSm4,CamPanSm5,CamPanSm6"/>
-		</block>
-		<block name="CamPanSmVariantHelper">
-			<property name="Extends" value="CamPan0"/>
-			<property name="CreativeMode" value="Player"/>
-			<property name="CustomIcon" value="Cam0"/>
-			<property name="UnlockedBy" value="perkAdvancedEngineering,CCTVSchematic"/>
+
 		</block>
 	</append>
 </configs>

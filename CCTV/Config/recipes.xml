@@ -29,22 +29,6 @@
 			<ingredient name="solarCellSmall" count="1"/>
 			<ingredient name="carBattery" count="1"/>
 		</recipe>
-		
-		<recipe name="CamPanVariantHelper" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
-			<ingredient name="resourceForgedIron" count="3"/>
-			<ingredient name="resourceElectricParts" count="7"/>
-			<ingredient name="resourceMechanicalParts" count="2"/>
-			<ingredient name="solarCellSmall" count="1"/>
-			<ingredient name="carBattery" count="1"/>
-		</recipe>
-		
-		<recipe name="CamPanSmVariantHelper" count="1" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
-			<ingredient name="resourceForgedIron" count="2"/>
-			<ingredient name="resourceElectricParts" count="5"/>
-			<ingredient name="resourceMechanicalParts" count="1"/>
-			<ingredient name="solarCellSmall" count="1"/>
-			<ingredient name="carBattery" count="1"/>
-		</recipe>	
 		<recipe name="solarCellSmall" count="2" craft_area="workbench" tags="perkAdvancedEngineering,learnable" >
 			<ingredient name="solarCell" count="1"/>
 		</recipe>	

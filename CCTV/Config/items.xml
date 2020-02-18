@@ -10,8 +10,6 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="CCTV4-7" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="CCTVLarge0-3" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="CCTVLarge4-7" operation="set" value="1"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="CamPanVariantHelper" operation="set" value="1"/>		
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="CamPanSmVariantHelper" operation="set" value="1"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="solarCellSmall" operation="set" value="1"/>					
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
 			</effect_group>
