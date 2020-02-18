@@ -36,6 +36,18 @@
 			<entity name="humanBakerTrader" prob="1" />		
 		</entitygroup>
 	</append> 
+	
+	<append xpath="/entitygroups">
+		<entitygroup name="VaultDwellers">
+			<entity name="humanFemaleVaultResident" prob="1" /> 
+			<entity name="humanVaultDoctor" prob="1" /> 
+			<entity name="humanMaleVaultResident" prob="1" /> 
+			<entity name="humanVaultBoss" prob="1" />	
+			<entity name="humanFemaleVaultSecurity" prob="1" /> 
+			<entity name="humanMaleVaultSecurity" prob="1" />	
+			<entity name="humanMalePowerArmor" prob="1" />	
+		</entitygroup>
+	</append> 
 
 	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'ZombiesAll')]">
 		<entity name="humanFarmerBandit" prob="0.1" />

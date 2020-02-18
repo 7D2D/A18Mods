@@ -412,9 +412,10 @@
 		
 		
 		
-<!-- Survivors:  Empty hand versions of models (generally) The run away when approached -->		
-		
-		<entity_class name="humanMaleSurvivorTemplate" extends="zombieTemplateMale"> 
+<!-- Survivors:  Timid and Normal types -->		
+
+
+		<entity_class name="humanMaleSurvivorTimidTemplate" extends="zombieTemplateMale"> <!-- Timid, will flee trouble unless hurt  -->
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
@@ -475,6 +476,67 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
 		</entity_class>
+		
+		<entity_class name="humanMaleSurvivorTemplate" extends="zombieTemplateMale"> <!-- Normal Surviors, will engage enemies  -->
+			<property name="Tags" value="entity,survivor"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Mass" value="150"/>
+			<property name="SightRange" value="70"/>
+			<property name="MaxViewAngle" value="270"/>			
+			<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
+			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="EntityType" value="Player"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".7, 1"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandom" value="Player_Male/player1stamina"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="0" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+		</entity_class>
 			
 		<entity_class name="humanFarmerSurvivor" extends="humanMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
@@ -505,7 +567,7 @@
 			<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class>
 		
-		<entity_class name="humanNurseSurvivor" extends="humanMaleSurvivorTemplate"> 
+		<entity_class name="humanNurseSurvivor" extends="humanMaleSurvivorTimidTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/NurseNancy.unity3d?NurseNancy_X"/>
@@ -528,7 +590,7 @@
 			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 		</entity_class>
-		<entity_class name="humanBakerSurvivor" extends="humanMaleSurvivorTemplate"> 
+		<entity_class name="humanBakerSurvivor" extends="humanMaleSurvivorTimidTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll3_X"/>
@@ -682,75 +744,75 @@
 
 		<entity_class name="humanRaiderPest" extends="humanMeleeMaleBanditTemplate"> 
 		<!--   fumigator V2 by megatrom and star axe purchased model by maksim bugrimov  -->
-					<property name="Tags" value="entity,bandit,melee"/>
-					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/>
-					<property name="HandItem" value="handFarmerBlade"/>
-					<property name="WalkType" value="7"/>
-					<property name="RightHandJointName" value="RightWeapon" /> 
-					<property name="MoveSpeed" value="0.25"/> 
-					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-					<property name="MoveSpeedPanic" value="1.1"/>
-					<property name="AIPathCostScale" value=".8, 1"/>
-					<effect_group name="Base Effects">
-						<passive_effect name="HealthMax" operation="base_set" value="200"/>
-						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-					</effect_group>
-					<property name="ExperienceGain" value="500"/> 
-					<property name="LootDropProb" value="0.02"/> 
-					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-				</entity_class>
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderPestDark"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
 
 		<entity_class name="humanRaiderMoto" extends="humanMeleeMaleBanditTemplate"> 
 		<!--   free mixamo model and ice axe purchased model by maksim bugrimov  -->
-					<property name="Tags" value="entity,bandit,melee"/>
-					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/>
-					<property name="HandItem" value="handFarmerBlade"/>
-					<property name="WalkType" value="7"/>
-					<property name="RightHandJointName" value="RightWeapon" /> 
-					<property name="MoveSpeed" value="0.25"/> 
-					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-					<property name="MoveSpeedPanic" value="1.1"/>
-					<property name="AIPathCostScale" value=".8, 1"/>
-					<effect_group name="Base Effects">
-						<passive_effect name="HealthMax" operation="base_set" value="200"/>
-						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-					</effect_group>
-					<property name="ExperienceGain" value="500"/> 
-					<property name="LootDropProb" value="0.02"/> 
-					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-				</entity_class>
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderMotoDark"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
 
 		<entity_class name="humanRaiderSlugger" extends="humanMeleeMaleBanditTemplate"> 
 		<!--   incinerator by megatrom and bit bat puchased model by maksim bugrimov -->
-					<property name="Tags" value="entity,bandit,melee"/>
-					<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/>
-					<property name="HandItem" value="handFarmerBlade"/>
-					<property name="WalkType" value="7"/>
-					<property name="RightHandJointName" value="RightWeapon" /> 
-					<property name="MoveSpeed" value="0.25"/> 
-					<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-					<property name="MoveSpeedPanic" value="1.1"/>
-					<property name="AIPathCostScale" value=".8, 1"/>
-					<effect_group name="Base Effects">
-						<passive_effect name="HealthMax" operation="base_set" value="200"/>
-						<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-						<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-						<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-						<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-					</effect_group>
-					<property name="ExperienceGain" value="500"/> 
-					<property name="LootDropProb" value="0.02"/> 
-					<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
-				</entity_class>
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="Mesh" value="#@modfolder:Resources/Raiderz.unity3d?RaiderSluggerDark"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
 				
 		<entity_class name="humanRaiderFlamer" extends="humanRangedMaleBanditTemplate"> 
 			<property name="Tags" value="entity,bandit,ranged"/>
@@ -777,9 +839,344 @@
 			<property name="ExperienceGain" value="413"/> 
 			<property name="LootDropProb" value="0.02"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
-		</entity_class>				
-	
-		<!--  Testing  -->
+		</entity_class>	
+		
+		<entity_class name="humanFemaleVaultResident" extends="humanMeleeMaleBanditTemplate"> 
+			<!-- purchased model by All Star Characters, creative commons Bone Club by Scrampunk-->
+			<property name="Tags" value="entity,survivor,melee"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultResidentDark"/>
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+
+		<entity_class name="humanVaultDoctor" extends="humanMeleeMaleBanditTemplate"> 
+			<!-- purchased model by All Star Characters, knife purchased model by Maksim Bugrimov -->
+			<property name="Tags" value="entity,survivor,melee"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultDoctorDark"/>
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+
+		<entity_class name="humanMaleVaultResident" extends="humanMeleeMaleBanditTemplate"> 
+			<!-- purchased model by All Star Characters -->
+			<property name="Tags" value="entity,survivor,melee"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultResidentDark"/>
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+
+		<entity_class name="humanVaultBoss" extends="humanMeleeMaleBanditTemplate"> 
+			<!-- purchased model by All Star Characters, creative commons Pipe Axe by Yogensia -->
+			<property name="Tags" value="entity,survivor,melee"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?VaultBossDark"/>
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+
+		
+		<entity_class name="humanFemaleVaultSecurity" extends="humanRangedMaleBanditTemplate"> 
+		<!-- purchased model by All Star Characters -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?FemaleVaultSecurityDark"/> 
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="BreakBlock"/> 
+			<property name="AITask-9" value="Leap"/> 
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="SightRange" value="60"/>
+			<property name="MaxViewAngle" value="270"/>			
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="413"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>
+
+		<entity_class name="humanMaleVaultSecurity" extends="humanRangedMaleBanditTemplate"> 
+			<!-- purchased model by All Star Characters -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MaleVaultSecurityDark"/> 
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="BreakBlock"/> 
+			<property name="AITask-9" value="Leap"/> 
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="SightRange" value="60"/>
+			<property name="MaxViewAngle" value="270"/>			
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="413"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>
+
+		<entity_class name="humanMalePowerArmor" extends="humanRangedMaleBanditTemplate"> 
+		<!-- purchased model by All Star Characters -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/> 
+			<property name="PhysicsBody" value="ASCharacterStandard"/>
+			<property name="Mass" value="200"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="BreakBlock"/> 
+			<property name="AITask-9" value="Leap"/> 
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="SightRange" value="60"/>
+			<property name="MaxViewAngle" value="270"/>			
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="413"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>
+
+<!--  Testing  -->
 		
 		<!-- testing using the Ranged Class rather than the Vomit class.  Issues: No melee, they will get very close on attack, droped weapon is usable still but thats optional -->
 		
