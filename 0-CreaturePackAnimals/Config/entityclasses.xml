@@ -30,7 +30,7 @@
 			<property name="IsEnemyEntity" value="true"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
 			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="1.2, 1.2"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
 			<property name="HandItem" value="meleeHandAnimalCoyote"/>
 			<property name="AITask-1" value="Swim"/>
@@ -144,7 +144,7 @@
 			<property name="IsEnemyEntity" value="true"/> 			
 			<property name="Mesh" value="#@modfolder:Resources/ArcticFox.unity3d?ArcticFox_X"/>
 			<property name="MoveSpeed" value=".3"/>
-			<property name="MoveSpeedAggro" value="1.5, 1.5"/> <!-- top speed seems capped, looking into why -->
+			<property name="MoveSpeedAggro" value="1.5, 1.5"/> 
 			<property name="MoveSpeedPanic" value="1.5"/>
 			<property name="HandItem" value="meleeHandAnimalFox"/>
 			<property name="AITask-1" value="Swim"/>

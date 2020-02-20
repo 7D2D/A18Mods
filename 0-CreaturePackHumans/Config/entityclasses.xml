@@ -21,6 +21,7 @@
 			<property name="Weight" value="70"/>
 			<property name="SightRange" value="50"/>
 			<property name="MaxViewAngle" value="270"/>
+			<property name="PainResistPerHit" value=".5"/>
 <!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
 			<property name="RotateToGround" value="false"/>			
@@ -422,7 +423,8 @@
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
-			<property name="MaxViewAngle" value="270"/>			
+			<property name="MaxViewAngle" value="270"/>	
+			<property name="PainResistPerHit" value=".4"/>			
 			<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
 			<property name="Faction" value="whiteriver"/>
@@ -484,7 +486,8 @@
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
-			<property name="MaxViewAngle" value="270"/>			
+			<property name="MaxViewAngle" value="270"/>	
+			<property name="PainResistPerHit" value=".5"/>
 			<!--			<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
 			<property name="Faction" value="whiteriver"/>
@@ -608,6 +611,7 @@
 			<property name="Mesh" value="#@modfolder:Resources/Joel.unity3d?JoelRagdoll_X"/> 
 			<property name="PhysicsBody" value="traderStandard"/>
 			<property name="Mass" value="150"/>
+			<property name="PainResistPerHit" value=".65"/>
 			<property name="SightRange" value="50"/>
 			<property name="MaxViewAngle" value="270"/>			
 			<property name="RightHandJointName" value="RightWeapon" />
