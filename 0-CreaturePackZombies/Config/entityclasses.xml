@@ -420,7 +420,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>		
-		<entity_class name="guppyZombieDoctor01" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctor01" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor01.prefab"/>
@@ -442,7 +442,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>	
-		<entity_class name="guppyZombieDoctor02" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctor02" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor02.prefab"/>
@@ -464,7 +464,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>	
-		<entity_class name="guppyZombieDoctor03" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctor03" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor03.prefab"/>
@@ -486,7 +486,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>		
-		<entity_class name="guppyZombieDoctor04Black" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctor04Black" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctor04Black.prefab"/>
@@ -508,7 +508,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>	
-		<entity_class name="guppyZombieDoctorFemale01" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctorFemale01" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctorFemale01.prefab"/>
@@ -530,7 +530,7 @@
 					<passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
 				</effect_group>				
 		</entity_class>			
-		<entity_class name="guppyZombieDoctorFemale02" extends="zombieTemplateMale">
+		<entity_class name="zombieGuppyDoctorFemale02" extends="zombieTemplateMale">
 			<property name="Tags" value="entity,zombie,normal"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="Mesh" value="#@modfolder:Resources/guppyZombieDoctors.unity3d?guppyZombieDoctorFemale02.prefab"/>
