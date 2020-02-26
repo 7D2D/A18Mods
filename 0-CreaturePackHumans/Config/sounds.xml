@@ -89,6 +89,108 @@
 			<maxVoicesPerEntity name="1" />
 			<MaxRepeatRate name="3.0" />
 		</SoundDataNode>
+		
+<!--  Ranger Sounds -->		
+		
+		
+		<SoundDataNode name="RangerAlert">
+<!-- Soldier Radio Voice by iwanPlays -->
+			<AudioSource name="Sounds/AudioSource_Creatures" />
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Attack_Formation" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Enemy_Spotted_1" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Hostiles_Detected" />
+			<Channel name="Mouth" />
+			<Priority name="6" />
+			<maxVoicesPerEntity name="1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<MaxRepeatRate name="3" />
+		</SoundDataNode>
+
+		<SoundDataNode name="RangerAttack">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Engaging_Enemy" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Go_Go_Go" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Move_Out" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Open_Fire" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Weapons_Free" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="5.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="RangerRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-All_Clear" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Copy_That" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Hold_Your_Positions" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Roger_That" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Understood" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Yes_Sir" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Request_Immediate_Support" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="1.111" />
+		</SoundDataNode>
+
+		<SoundDataNode name="RangerHurt">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Taking_Casualties" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Retreat_1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="1.0" />
+		</SoundDataNode>
+
+		<SoundDataNode name="RangerSense">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Hostiles_Detected" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?iSR-Enemy_Spotted_1" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="1.111" />
+		</SoundDataNode>
+
+		<SoundDataNode name="RangerDie">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?Die01" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?Die02" />
+			<AudioClip ClipName="#@modfolder:Resources/RangerRadio.unity3d?Isntfunny" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="1.111" />
+		</SoundDataNode>
+		
+		
+		
 	</append>
 	
 </configs>

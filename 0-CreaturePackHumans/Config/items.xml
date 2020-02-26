@@ -25,6 +25,20 @@
 				<property name="Sphere" value="1.1"/>
 			</property>
 		</item>	
+		
+		<item name="handChefKnifeMesh">
+			<property name="Extends" value="handFarmerBlade"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="HoldType" value="36"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="40"/>
+				<property name="Range" value="1.2"/>
+				<property name="Sphere" value="1.2"/>
+			</property>
+		</item>			
+		
 		<item name="handHarleyBat">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
@@ -322,7 +336,7 @@
 				<passive_effect name="StaminaLoss" operation="base_add" value="20.2" tags="secondary"/>
 			</effect_group>
 		</item>
-		<item name="meleeToolNPCKnifeIron"> <!-- T2 Blades -->
+		<item name="meleeBanditKnifeIron"> <!-- T2 Blades -->
 			<property name="Tags" value="knife,melee,grunting,light,perkFlurryOfBlows,weapon,meleeWeapon,attAgility,perkDeepCuts,perkTheHuntsman,canHaveCosmetic"/>
 			<property name="DisplayType" value="meleeKnife"/>
 			<property name="HoldType" value="36"/>
@@ -481,7 +495,45 @@
 				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0.5"/>
 			</effect_group>
 		</item>						
-
+		<item name="handSprayNPray">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="10"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.1"/>
+				<property name="Sound_start" value="swoosh" />
+			</property>
+		
+			<property class="Action1"> 
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".3"/> 
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileBanditMP7"/>
+				<property name="Sound_warning" value=""/>
+				<property name="Sound_start" value="mp5_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" /> 
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="4"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="4"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="6"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="6"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0.5"/>
+			</effect_group>
+		</item>	
 			
 <!-- Ammo Projectiles  -->
 		
@@ -735,31 +787,6 @@
 				<property name="Zoom_max_in" value="55"/>
 				<property name="ScopeCameraOffset" value="-.0003,0,-.01"/>
 			</property> 
-<!--			<property class="Action1">
-				<property name="Class" value="Melee"/>
-				<property name="Range" value="1.2"/> 
-				<property name="Sphere" value="1.0"/>
-				<property name="Block_range" value="1.5"/>
-				<property name="DamageEntity" value="50"/>
-				<property name="DamageBlock" value="16"/>
-				<property name="Sound_start" value="swoosh"/>
-			</property> -->
-
-				
-<!--		<property class="Action1">
-				<property name="Class" value="Eat"/>
-				<property name="Magazine_items" value="medicalBandage" />
-				<property name="Delay" value="1.0"/>
-				<property name="Use_time" value="1.0"/>
-				<property name="Sound_start" value="player_bandage"/>
-				<effect_group tiered="false">
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="maxHealthAmount" operation="add" value="3"/> 
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalHealthAmount" operation="add" value="5"/> 
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
-					<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/>
-				</effect_group> 
-			</property> -->
-			
 		</item>	
 		
 		<item name="gunBanditAk47test">

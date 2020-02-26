@@ -34,6 +34,7 @@
 			<property name="MoveSpeed" value="0.25"/> 
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AINoiseSeekDist" value="20"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="ApproachDistraction"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
@@ -108,7 +109,7 @@
 		<entity_class name="humanFarmerBanditSpawnClub" extends="humanFarmerBandit"> 
 			<property name="Tags" value="entity,bandit,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/> <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/> <!-- emptyhand version -->
 			<property name="Class" value="EntityBandit"/> <!-- This class NREs when inside a trader protection area  -->
 			<property name="HandItem" value="meleeBanditClubWood"/> <!-- New Hand item: like vanillaclub but needs melee rather than dynamicmelee -->
 			<property name="WalkType" value="7"/>
@@ -165,6 +166,7 @@
 			<property name="SightRange" value="60"/>
 			<property name="MaxViewAngle" value="270"/>			
 			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
 			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
@@ -290,7 +292,7 @@
 		<entity_class name="humanEveBanditSpawnAk47" extends="humanEveBandit"> 
 			<property name="Tags" value="entity,bandit,ranged"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
 			<property name="Mass" value="150"/>
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
@@ -419,7 +421,7 @@
 		<entity_class name="humanMaleSurvivorTimidTemplate" extends="zombieTemplateMale"> <!-- Timid, will flee trouble unless hurt  -->
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
@@ -437,6 +439,7 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AIPathCostScale" value=".7, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityAlive"/>
 			<property name="AITask-2" value="RunawayWhenHurt"/>
 			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityBandit,EntityEnemyAnimal"/>
@@ -482,7 +485,7 @@
 		<entity_class name="humanMaleSurvivorTemplate" extends="zombieTemplateMale"> <!-- Normal Surviors, will engage enemies  -->
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
@@ -500,6 +503,7 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AIPathCostScale" value=".7, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
 			<property name="AITask-2" value="ApproachSpot"/> 
 			<property name="AITask-3" value="Territorial"/>
@@ -543,7 +547,7 @@
 			
 		<entity_class name="humanFarmerSurvivor" extends="humanMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="Faction" value="whiteriver"/>
@@ -620,6 +624,7 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="AINoiseSeekDist" value="20"/>
 			<property name="Faction" value="whiteriver"/>
 			<property name="LootListAlive" value="62"/>
 			<property name="NPCID" value="traderJoel"/>
@@ -901,7 +906,7 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
-		<entity_class name="humanVaultDoctor" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanVaultDoctor" extends="humanFemaleVaultResident"> 
 			<!-- purchased model by All Star Characters, knife purchased model by Maksim Bugrimov -->
 			<property name="Tags" value="entity,survivor,melee"/>
 			<property name="Class" value="EntityAnimalStag"/> 
@@ -911,50 +916,6 @@
 			<property name="HandItem" value="handFarmerBlade"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
-			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
-			<property name="AITask-2" value="ApproachSpot"/> 
-			<property name="AITask-3" value="Territorial"/>
-			<property name="AITask-4" value="Look"/> 		
-			<property name="AITask-5" value="Wander"/>
-			<property name="AITask-6" value="BreakBlock"/> 
-			<property name="AITask-7" value="Leap"/> 
-			<property name="AITask-8" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
-			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value=""/> 
-			<property name="SoundHurt" value="Player_Female/player2painlg"/>
-			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
-			<property name="SoundDeath" value="Player_Female/player2death"/>
-			<property name="SoundStamina" value="Player_Female/player2stamina"/>
-			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player2Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundRandom" value="Player_Female/player2stamina" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value="Player_Female/player2stamina"/>
-			<property name="SoundAttack" value="Player_Female/player2stamina"/>
-			<property name="SoundSense" value="Player_Female/player2stamina"/>
-			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
-			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPathCostScale" value=".8, 1"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>
-			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.02"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
 		<entity_class name="humanMaleVaultResident" extends="humanMeleeMaleBanditTemplate"> 
@@ -996,7 +957,7 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
-		<entity_class name="humanVaultBoss" extends="humanMeleeMaleBanditTemplate"> 
+		<entity_class name="humanVaultBoss" extends="humanMaleVaultResident"> 
 			<!-- purchased model by All Star Characters, creative commons Pipe Axe by Yogensia -->
 			<property name="Tags" value="entity,survivor,melee"/>
 			<property name="Class" value="EntityAnimalStag"/> 
@@ -1006,33 +967,6 @@
 			<property name="HandItem" value="handFarmerBlade"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
-			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
-			<property name="AITask-2" value="ApproachSpot"/> 
-			<property name="AITask-3" value="Territorial"/>
-			<property name="AITask-4" value="Look"/> 		
-			<property name="AITask-5" value="Wander"/>
-			<property name="AITask-6" value="BreakBlock"/> 
-			<property name="AITask-7" value="Leap"/> 
-			<property name="AITask-8" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
-			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value=""/> 
-			<property name="MoveSpeed" value="0.25"/> 
-			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
-			<property name="MoveSpeedPanic" value="1.1"/>
-			<property name="AIPathCostScale" value=".8, 1"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>
-			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.02"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 
 		
@@ -1137,7 +1071,7 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>
 
-		<entity_class name="humanMalePowerArmor" extends="humanRangedMaleBanditTemplate"> 
+		<entity_class name="humanMalePowerArmor" extends="humanMaleVaultSecurity"> 
 		<!-- purchased model by All Star Characters -->
 			<property name="Tags" value="entity,survivor,ranged"/>
 			<property name="Mesh" value="#@modfolder:Resources/Dwellerz.unity3d?MalePowerArmorDark"/> 
@@ -1147,39 +1081,139 @@
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="handBanditMP7"/> 
 			<property name="RightHandJointName" value="Muzzle" />
-			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
-			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
-			<property name="AITask-3" value="ApproachSpot"/> 
-			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
-			<property name="AITask-5" value="Territorial"/>
-			<property name="AITask-6" value="Look"/>			
-			<property name="AITask-7" value="Wander"/>
-			<property name="AITask-8" value="BreakBlock"/> 
-			<property name="AITask-9" value="Leap"/> 
-			<property name="AITask-10" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
-			<property name="AITarget-2" value="BlockingTargetTask"/> 
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
-			<property name="AITarget-4" value=""/> 
 			<property name="MoveSpeed" value="0.3"/> 
 			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="SightRange" value="60"/>
 			<property name="MaxViewAngle" value="270"/>			
 			<property name="AIPathCostScale" value=".8, 1"/>
-			<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="200"/>
-			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>
-			<property name="ExperienceGain" value="413"/> 
-			<property name="LootDropProb" value="0.02"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>
+		
+		<entity_class name="humanArmyRanger" extends="humanMaleVaultSecurity"> 
+			<!-- soldier model by asethi rflicense, assault rifle purchased model by eldanu -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?RangerDark"/> 
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandom" value="RangerRandom"/>
+			<property name="SoundAlert" value="RangerAlert"/>
+			<property name="SoundSense" value="RangerSense"/>
+			<property name="SoundHurt" value="RangerHurt"/>
+			<property name="SoundAttack" value="RangerAttack"/>
 		</entity_class>
 
+		<entity_class name="humanDeltaForce" extends="humanArmyRanger"> 
+		<!-- model created with fuse, assault rifle purchased model by eldanu -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?DeltaDark"/> 
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="AIPathCostScale" value=".8, 1"/>
+		</entity_class>
+
+		<entity_class name="humanNationalGuard" extends="humanArmyRanger"> 
+		<!-- model created with fuse, assault rifle purchased model by eldanu -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuard1Dark"/> 
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+		</entity_class>
+
+		<entity_class name="humanNationalGuardMedic" extends="humanArmyRanger"> 
+		<!-- model created with fuse, pistol purchased model by eldanu -->
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?NationalGuardMedicDark"/> 
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Class" value="EntityAnimalStag"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+		</entity_class>
+
+		<entity_class name="humanArmyDoctor" extends="humanMeleeMaleBanditTemplate"> 
+			<!-- model created with fuse, knife purchased model by Maksim Bugrimov -->
+			<property name="Tags" value="entity,survivor,melee"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/Soldierz.unity3d?ArmyDoctorDark"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="Player_Female/player2stamina" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value="Player_Female/player2stamina"/>
+			<property name="SoundAttack" value="Player_Female/player2stamina"/>
+			<property name="SoundSense" value="Player_Female/player2stamina"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+		
 <!--  Testing  -->
 		
 		<!-- testing using the Ranged Class rather than the Vomit class.  Issues: No melee, they will get very close on attack, droped weapon is usable still but thats optional -->
@@ -1187,7 +1221,7 @@
 		<entity_class name="humanEveBanditSpawnSMG5test" extends="humanEveBandit"> 
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
 			<property name="Mass" value="150"/>
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
@@ -1232,7 +1266,7 @@
 		<entity_class name="humanEveBanditSpawnAk47test" extends="humanEveBanditSpawnSMG5test"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
 			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
