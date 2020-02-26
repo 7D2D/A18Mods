@@ -187,7 +187,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob="1" />
 		<entity name="zombieGuppyDoctorFemale02" prob="1" />	
 	</insertAfter>
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS1']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS1']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob="1" />
 		<entity name="zombieGuppyDoctor02" prob="1" />
 		<entity name="zombieGuppyDoctor03" prob="1" />
@@ -195,7 +195,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob="1" />
 		<entity name="zombieGuppyDoctorFemale02" prob="1" />	
 	</insertAfter>	
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS50']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS50']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob=".8" />
 		<entity name="zombieGuppyDoctor02" prob=".8" />
 		<entity name="zombieGuppyDoctor03" prob=".8" />
@@ -203,7 +203,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob=".8" />
 		<entity name="zombieGuppyDoctorFemale02" prob=".8" />	
 	</insertAfter>		
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS100']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS100']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob=".8" />
 		<entity name="zombieGuppyDoctor02" prob=".8" />
 		<entity name="zombieGuppyDoctor03" prob=".8" />
@@ -211,7 +211,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob=".8" />
 		<entity name="zombieGuppyDoctorFemale02" prob=".8" />	
 	</insertAfter>		
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS200']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS200']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob=".5" />
 		<entity name="zombieGuppyDoctor02" prob=".5" />
 		<entity name="zombieGuppyDoctor03" prob=".5" />
@@ -219,7 +219,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob=".5" />
 		<entity name="zombieGuppyDoctorFemale02" prob=".5" />	
 	</insertAfter>		
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS400']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS400']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob=".5" />
 		<entity name="zombieGuppyDoctor02" prob=".5" />
 		<entity name="zombieGuppyDoctor03" prob=".5" />
@@ -227,7 +227,7 @@
 		<entity name="zombieGuppyDoctorFemale01" prob=".5" />
 		<entity name="zombieGuppyDoctorFemale02" prob=".5" />
 	</insertAfter>		
-	<insertAfter xpath="/entitygroups/entitygroup[@name='HospitalGroupGS800']/entity[@name='zombieLab']" >	
+	<insertAfter xpath="/entitygroups/entitygroup[@name='zombieHospitalGroupGS800']/entity[@name='zombieLab']" >	
 		<entity name="zombieGuppyDoctor01" prob=".25" />
 		<entity name="zombieGuppyDoctor02" prob=".25" />
 		<entity name="zombieGuppyDoctor03" prob=".25" />
