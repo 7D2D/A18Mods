@@ -26,19 +26,6 @@
 			</property>
 		</item>	
 		
-		<item name="handChefKnifeMesh">
-			<property name="Extends" value="handFarmerBlade"/>
-			<property name="Material" value="Mmetal"/>
-			<property name="HoldType" value="36"/>
-			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Knives/hunting_knifePrefab.prefab"/>
-			<property class="Action0">
-				<property name="DamageEntity" value="30"/>
-				<property name="DamageBlock" value="40"/>
-				<property name="Range" value="1.2"/>
-				<property name="Sphere" value="1.2"/>
-			</property>
-		</item>			
-		
 		<item name="handHarleyBat">
 			<property name="Extends" value="meleeHandMaster"/>
 			<property name="CreativeMode" value="None"/>
