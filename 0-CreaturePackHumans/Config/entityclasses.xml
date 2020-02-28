@@ -45,7 +45,7 @@
 			<property name="AITask-7" value="BreakBlock"/> 
 			<property name="AITask-8" value="Leap"/> 
 			<property name="AITask-9" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer,EntityAnimalStag"/> 
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalStag,0,0"/> 
 			<property name="AITarget-4" value=""/> 
@@ -178,7 +178,7 @@
 			<property name="AITask-9" value="BreakBlock"/> 
 			<property name="AITask-10" value="Leap"/> 
 			<property name="AITask-11" value=""/>	
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer,EntityAnimalStag"/> 
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalStag,0,0"/> 
 			<property name="AITarget-4" value=""/> 
@@ -849,6 +849,105 @@
 			<property name="LootDropProb" value="0.02"/> 
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
 		</entity_class>	
+		
+		<entity_class name="humanRaiderBettie" extends="humanMeleeMaleBanditTemplate"> 
+		<!--  purchased model by zuhian teyu  -->
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlz.unity3d?BettieDark"/>
+			<property name="HandItem" value="handFarmerBlade"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="RightWeapon" /> 
+			<property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="GurlzRandom" />
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundAlert" value="GurlzAlert"/>
+			<property name="SoundAttack" value="GurlzAttack"/>
+			<property name="SoundSense" value="GurlzSense"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>
+
+		<entity_class name="humanRaiderJayne" extends="humanRaiderBettie"> 
+		<!--  purchased model by zuhian teyu -->
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlz.unity3d?JayneDark"/>
+		</entity_class>
+
+		<entity_class name="humanRaiderGina" extends="humanRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,bandit,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlz.unity3d?GinaDark"/> <!-- purchased model by zuhian teyu, rifle purchased model by maksim bugrimov -->
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->
+			<property name="Faction" value="bandits"/>
+			<property name="HandItem" value="handSprayNPray"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="MoveSpeed" value="0.3"/> 
+			<property name="MoveSpeedAggro" value="1.0, 1.0"/> 
+			<property name="MoveSpeedPanic" value="1.0"/>
+			<property name="SightRange" value="60"/>
+			<property name="MaxViewAngle" value="270"/>	
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundHurt" value="Player_Female/player2painlg"/>
+			<property name="SoundHurtSmall" value="Player_Female/player2painsm"/>
+			<property name="SoundDeath" value="Player_Female/player2death"/>
+			<property name="SoundStamina" value="Player_Female/player2stamina"/>
+			<property name="SoundDrownPain" value="Player_Female/player2drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Female/player2drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Female/player2drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player2Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player2LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundRandom" value="GurlzRandom" />
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundAlert" value="GurlzAlert"/>
+			<property name="SoundAttack" value="GurlzAttack"/>
+			<property name="SoundSense" value="GurlzSense"/>
+			<property name="SoundGiveUp" value="Player_Female/player2stamina"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<effect_group name="Base Effects">
+			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="413"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>			
+		</entity_class>	
+
+		<entity_class name="humanRaiderHedy" extends="humanRaiderGina"> 
+			<property name="Tags" value="entity,bandit,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/RaiderGurlz.unity3d?HedyDark"/> <!-- purchased model by zuhian teyu, gun purchased model by maksim bugrimov -->
+		</entity_class>			
 		
 		<entity_class name="humanFemaleVaultResident" extends="humanMeleeMaleBanditTemplate"> 
 			<!-- purchased model by All Star Characters, creative commons Bone Club by Scrampunk-->

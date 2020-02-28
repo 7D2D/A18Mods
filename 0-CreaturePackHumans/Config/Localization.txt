@@ -1,6 +1,41 @@
-Key,English
-"start","Are you the undead ?"
-"statement_-1684104497","Maybe not. But a bar of soap wouldn't kill ya none either."
-"responseID_1595140464","No, I'm not dead yet."
-"response_-24413466","Gee, thanks."
-"responseID_-307220871","Be safe, friend."
+Key,Source,Context,UsedInMainMenu,NoTranslate,English
+"start",,,,,"Are you the undead?"
+"statement_-1684104497",,,,,"Maybe not but a bar of soap wouldn't kill ya none either."
+"responseID_1595140464",,,,,"No I'm not dead yet."
+"response_-24413466",,,,,"Gee thanks."
+"responseID_-307220871",,,,,"Be safe friend."
+
+humanFarmerBandit,entityclasses,Entity,,,Sharecropper
+humanArcherBandit,entityclasses,Entity,,,Archer
+humanEveBandit,entityclasses,Entity,,,Eve
+humanJoelBandit,entityclasses,Entity,,,Hillbilly
+humanBakerBandit,entityclasses,Entity,,,Cannibal
+humanRifleManBanditNoHat,entityclasses,Entity,,,Rifleman
+humanRiflemanBandit,entityclasses,Entity,,,Rifleman
+humanHeavyGuyBandit,entityclasses,Entity,,,Gringo Bandito
+humanRaiderPest,entityclasses,Entity,,,Raider
+humanRaiderMoto,entityclasses,Entity,,,Raider
+humanRaiderSlugger,entityclasses,Entity,,,Raider
+humanRaiderFlamer,entityclasses,Entity,,,Raider
+humanRaiderBettie,entityclasses,Entity,,,Raider
+humanRaiderJayne,entityclasses,Entity,,,Raider
+humanRaiderGina,entityclasses,Entity,,,Raider
+humanRaiderHedy,entityclasses,Entity,,,Raider
+
+humanFarmerSurvivor,entityclasses,Entity,,,Lost Farmer
+humanCowboySurvivor,entityclasses,Entity,,,Lost Cowboy
+humanNurseSurvivor,entityclasses,Entity,,,Lost Medic
+humanBakerSurvivor,entityclasses,Entity,,,Lost Chef
+
+humanJoelTrader,entityclasses,Entity,,,Trader Joel
+humanWeaponsTrader,entityclasses,Entity,,,Gun Runner
+humanHeavyTrader,entityclasses,Entity,,,Wandering Tinker
+humanBakerTrader,entityclasses,Entity,,,Travelling Peddler
+
+humanFemaleVaultResident,entityclasses,Entity,,,Vault Dweller
+humanVaultDoctor,entityclasses,Entity,,,Streetdoc
+humanMaleVaultResident,entityclasses,Entity,,,Vault Dweller
+humanVaultBoss,entityclasses,Entity,,,Overseer
+humanFemaleVaultSecurity,entityclasses,Entity,,,Mercenary
+humanMaleVaultSecurity,entityclasses,Entity,,,Mercenary
+humanMalePowerArmor,entityclasses,Entity,,,Armored Trooper
