@@ -194,7 +194,7 @@
 			<property name="ExperienceGain" value="130"/>
 			<property name="Faction" value="animals"/>
 			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="HasRagdoll" value="false"/> 
+			<property name="HasRagdoll" value="true"/> 
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
 			<property name="RagdollOnDeathChance" value="0"/>
