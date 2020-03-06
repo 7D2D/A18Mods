@@ -17,7 +17,7 @@
 			portrait="npc_joel"
 			greeting_type="nearby"
 			stance="Neutral" voice_set="trader"
-			trader_id="6" dialog_id="trader" 
+			trader_id="60" dialog_id="trader" 
 			quest_list="trader_quests" />
 		<npc_info
 			id="traderJoel"
@@ -27,7 +27,7 @@
 			portrait="npc_joel"
 			greeting_type="nearby"
 			stance="Neutral" voice_set="trader"
-			trader_id="7" dialog_id="trader" 
+			trader_id="61" dialog_id="trader" 
 			quest_list="trader_quests" />
 		<npc_info
 			id="traderHeavy"
@@ -37,7 +37,7 @@
 			portrait="npc_joel"
 			greeting_type="nearby"
 			stance="Neutral" voice_set="trader"
-			trader_id="8" dialog_id="trader" 
+			trader_id="62" dialog_id="trader" 
 			quest_list="trader_quests" />		
 		<npc_info
 			id="traderFood"
@@ -47,7 +47,7 @@
 			portrait="npc_joel"
 			greeting_type="nearby"
 			stance="Neutral" voice_set="trader"
-			trader_id="9" dialog_id="trader" 
+			trader_id="63" dialog_id="trader" 
 			quest_list="trader_quests" />		
 	</insertAfter>		
 </configs>

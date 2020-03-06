@@ -8,6 +8,8 @@
 	<!-- With the exception of the ASantaZombie, all non-zombie entities here use walkType 7, as it is the most human like animation set, and all replacement animation were placed on that walkset.  This is important for non-zombie characters only, zombies can use all walktypes  -->	
 	
 	<!-- Bandits and Survivor classes: If you decide to use these classes, you "should" either remove TradingPost protection in those POI's Prefab XML or move the protection area inside the walls as there is a good chance that when a wandering trader nears the trading post the game will throw NRE errors.  However, removing the protection entirely can cause a secondary issue where tradingposts can spawn 2 traders.   The EntityEnemyAnimal class is used here instead for greater compatibility.-->
+	
+	<!-- Walktypes: 1. Unarmed/Melee BruteWalk, 2. PistolWalk, 3. BowWalk, 4. Not Used/crawler, 5. Not Used/Crippled, 6. RifleWalk, 7. NormalWalk 8. Not Used/Spider, 9. Not Used/Behemoth -->
 
 		
 <!-- Bandits:  Weaponized versions of models   -->	
@@ -35,6 +37,8 @@
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AINoiseSeekDist" value="20"/>
+			<property name="AttackTimeoutDay" value="1.2"/> 
+			<property name="AttackTimeoutNight" value="1.2"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="ApproachDistraction"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalStag,0"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
@@ -109,21 +113,16 @@
 		<entity_class name="humanFarmerBanditSpawnClub" extends="humanFarmerBandit"> 
 			<property name="Tags" value="entity,bandit,melee"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/> <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/> <!-- emptyhand version -->
 			<property name="Class" value="EntityBandit"/> <!-- This class NREs when inside a trader protection area  -->
-			<property name="HandItem" value="meleeBanditClubWood"/> <!-- New Hand item: like vanillaclub but needs melee rather than dynamicmelee -->
+<!--			<property name="HandItem" value="meleeBanditClubWood"/>  New Hand item: like vanillaclub but needs melee rather than dynamicmelee -->
 			<property name="WalkType" value="7"/>
+			<property name="AttackTimeoutDay" value="1.2"/> 
+			<property name="AttackTimeoutNight" value="1.2"/>
 			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon goes on this child -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> <!-- puts it on the RightWeapon child -->
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
-			<effect_group>
-				<requirement name="ProgressionLevel" progression_name="perkBatterUpConditioning" target="other" operation="Equals" value="1"/>
-				<requirement name="HoldingItemHasTags" tags="club"/>
-				<passive_effect name="EntityDamage" operation="perc_add" value="-.2"/> 
-			</effect_group>
-			<property name="AttackTimeoutDay" value="0.8"/>
-			<property name="AttackTimeoutNight" value="0.8"/>
 		</entity_class>
 		
 		<!--             -->
@@ -421,7 +420,7 @@
 		<entity_class name="humanMaleSurvivorTimidTemplate" extends="zombieTemplateMale"> <!-- Timid, will flee trouble unless hurt  -->
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
@@ -485,7 +484,7 @@
 		<entity_class name="humanMaleSurvivorTemplate" extends="zombieTemplateMale"> <!-- Normal Surviors, will engage enemies  -->
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="SightRange" value="70"/>
@@ -547,7 +546,7 @@
 			
 		<entity_class name="humanFarmerSurvivor" extends="humanMaleSurvivorTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdollMelee_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="150"/>
 			<property name="Faction" value="whiteriver"/>
@@ -1333,7 +1332,7 @@
 			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
 			<property name="NoiseAlertThreshold" value="80"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
 			<property name="SmellAlertThreshold" value="60"/> <!-- for awake zombies -->
-			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
+			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunSMG5test,ammo9mmBulletBalltest"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunSMG5test,ammo9mmBulletBalltest"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunSMG5test,ammo9mmBulletBalltest"/>
@@ -1373,6 +1372,24 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
 		</entity_class>
+		
+		<entity_class name="humanFarmerTestXBow" extends="humanEveBanditSpawnSMG5test"> 
+			<property name="Tags" value="entity,bandit,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
+			<property name="Mass" value="150"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name='Class' value='EntityBandit' />
+			<property name="WalkType" value="6"/> 
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/> 
+			<property name="AttackTimeoutDay" value="1.2"/>
+			<property name="AttackTimeoutNight" value="1.2"/>
+			<property name="MoveSpeed" value="0.5"/> 
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.4"/>
+		</entity_class>		
 		
 		<!--   MakeHuman model and game engine rigged, ragdoll works but not gore yet  -->
 		

@@ -2,7 +2,7 @@
 
 	<insertAfter xpath="/traders/trader_info[@id='5']" >
 	
-		<trader_info id="6" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
+		<trader_info id="60" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
 			reset_interval="3" open_time="4:05" close_time="21:50"> <!-- weapons/ammo specialty trader -->
 			
 			<trader_items count="all">
@@ -43,7 +43,7 @@
 			</tier_items>
 		</trader_info>
 		
-		<trader_info id="7" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
+		<trader_info id="61" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
 			reset_interval="3" open_time="4:05" close_time="21:50"> <!-- Science/drugs specialty trader -->
 			<trader_items count="all">
 				<item group="tools" count="1" quality="3"/>
@@ -105,7 +105,7 @@
 			</tier_items>
 		</trader_info>
 
-		<trader_info id="8" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
+		<trader_info id="62" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
 			reset_interval="3" open_time="4:05" close_time="21:50"> <!-- Bulk/armor/clothing/food trader -->
 			
 			<trader_items count="all">
@@ -159,7 +159,7 @@
 			</tier_items>
 		</trader_info>	
 		
-		<trader_info id="9" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
+		<trader_info id="63" full_reset="true" min_inventory="20" max_inventory="40" min_items_swapped="10" max_items_swapped="20"
 			reset_interval="3" open_time="4:05" close_time="21:50"> 
 			
 			<trader_items count="all">
