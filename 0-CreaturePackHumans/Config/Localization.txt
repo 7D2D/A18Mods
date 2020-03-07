@@ -39,3 +39,10 @@ humanVaultBoss,entityclasses,Entity,,,Overseer
 humanFemaleVaultSecurity,entityclasses,Entity,,,Mercenary
 humanMaleVaultSecurity,entityclasses,Entity,,,Mercenary
 humanMalePowerArmor,entityclasses,Entity,,,Armored Trooper
+
+qc_FoolsGold,items,Item,New,FoolsGold Quest,,,,,
+qc_FoolsGoldDesc,items,Zombie Challenge Note,KgNone,There are rumors of a great treasure at this location,,,,,
+challenge_FoolsGold,Quest,Challenge Info,,,Fools Gold
+challenge_FoolsGold_offer,Quest,Challenge Info,,,"Dear Survivor,\nIf you've found this note then you know my crew and I have been watching you from afar. You're pretty good at survival but let's see if you can pass this test and just maybe we'll let you join our clan.\n\nGood Luck, Crazy Jake."
+challenge_FoolsGold_subtitle,Quest,Challenge Info,,,Is this a joke?
+challenge_FoolsGold_completion,Quest,Quest Info,,,Well Done...here are some things i found awhile ago. \nTake it.  

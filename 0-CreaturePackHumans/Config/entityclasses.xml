@@ -384,7 +384,7 @@
 		<entity_class name="humanHarleyBandit" extends="humanMeleeMaleBanditTemplate">
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn2_X"/>  <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
+			<property name="Mesh" value="#@modfolder:Resources/HarleyQuinn.unity3d?HarleyQuinn_X"/>  <!-- Free Model from Liam Pickford via sketchfab, Rigged in Mixamo -->
 			<property name="Mass" value="150"/> 
 			<property name="RightHandJointName" value="RightHand" />
 			<property name="HandItem" value="handHarleyBat"/>
@@ -1381,9 +1381,9 @@
 			<property name='Class' value='EntityBandit' />
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="RightWeapon" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBowtest,ammoCrossbowBoltIrontest"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoCrossbowBoltIrontest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoCrossbowBoltIrontest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoCrossbowBoltIrontest"/> 
 			<property name="AttackTimeoutDay" value="1.2"/>
 			<property name="AttackTimeoutNight" value="1.2"/>
 			<property name="MoveSpeed" value="0.5"/> 
