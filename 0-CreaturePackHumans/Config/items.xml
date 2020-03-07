@@ -662,7 +662,7 @@
 		
 <!-- Guns for Spawning  -->	
 	
-		<item name="gunSMG5"> 
+		<item name="gunBanditSMG5"> 
 			<property name="Tags" value="weapon,ranged"/>
 			<property name="DisplayType" value="rangedGun"/>
 			<property name="HoldType" value="6"/>
@@ -731,7 +731,7 @@
 		</item>	
 		
 		<item name="gunBanditAk47">
-			<property name="Extends" value="gunSMG5"/>
+			<property name="Extends" value="gunBanditSMG5"/>
 			<property name="Tags" value="weapon,ranged"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/ak47/ak47Prefab.prefab"/>
@@ -774,7 +774,7 @@
 			</effect_group> 
 		</item>	
 		<item name="gunBanditPistol">
-			<property name="Extends" value="gunSMG5"/>
+			<property name="Extends" value="gunBanditSMG5"/>
 			<property name="Tags" value="weapon,ranged"/>
 			<property name="CreativeMode" value="Dev"/>
 			<property name="HoldType" value="1"/>
@@ -833,7 +833,7 @@
 			</effect_group> 
 		</item>	
 		<item name="gunBanditBow">
-			<property name="Extends" value="gunSMG5"/>
+			<property name="Extends" value="gunBanditSMG5"/>
 			<property name="Tags" value="weapon,ranged"/>
 			<property name="CreativeMode" value="Dev"/>
 			

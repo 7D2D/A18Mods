@@ -1333,9 +1333,9 @@
 			<property name="NoiseAlertThreshold" value="80"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
 			<property name="SmellAlertThreshold" value="60"/> <!-- for awake zombies -->
 			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunSMG5test,ammo9mmBulletBalltest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunSMG5test,ammo9mmBulletBalltest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunSMG5test,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="ggunBanditSMG5,ammo9mmBulletBalltest"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AttackTimeoutDay" value="1"/>
 			<property name="AttackTimeoutNight" value="1"/>
