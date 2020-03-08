@@ -1333,9 +1333,9 @@
 			<property name="NoiseAlertThreshold" value="80"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
 			<property name="SmellAlertThreshold" value="60"/> <!-- for awake zombies -->
 			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammo9mmBulletBalltest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammo9mmBulletBalltest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="ggunBanditSMG5,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="AIPathCostScale" value=".9, 1"/>
 			<property name="AttackTimeoutDay" value="1"/>
 			<property name="AttackTimeoutNight" value="1"/>
@@ -1368,9 +1368,9 @@
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
 			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47test,ammo9mmBulletBalltest"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47test,ammo9mmBulletBalltest"/>
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC9mmBulletBall"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC9mmBulletBall"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC9mmBulletBall"/>
 		</entity_class>
 		
 		<entity_class name="humanFarmerTestXBow" extends="humanEveBanditSpawnSMG5test"> 
@@ -1381,9 +1381,9 @@
 			<property name='Class' value='EntityBandit' />
 			<property name="WalkType" value="6"/> 
 			<property name="RightHandJointName" value="RightWeapon" />
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoCrossbowBoltIrontest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoCrossbowBoltIrontest"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoCrossbowBoltIrontest"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/>
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditXBow,ammoNPCCrossbowBoltIron"/> 
 			<property name="AttackTimeoutDay" value="1.2"/>
 			<property name="AttackTimeoutNight" value="1.2"/>
 			<property name="MoveSpeed" value="0.5"/> 
