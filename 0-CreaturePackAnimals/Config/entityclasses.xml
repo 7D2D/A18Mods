@@ -60,7 +60,7 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
@@ -118,7 +118,7 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
@@ -175,7 +175,7 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
@@ -225,7 +225,7 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class>	
 		<entity_class name="animalSpider01" extends="animalTemplateHostileWalking">
@@ -275,7 +275,7 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 		</entity_class>		
 		<entity_class name="animalSpider02" extends="animalSpider01">
@@ -431,6 +431,140 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>			
 		</entity_class>
+		
+<!--  DarkStarDragons Animals   -->
+		
+		<entity_class name="animalWolfhound" extends="animalTemplateHostileWalking">
+			<property name="Prefab" value="NPC"/>
+			<property name="Class" value="EntityAnimalStag"/>
+			<property name="PhysicsBody" value="Goat"/>
+			<property name="ExperienceGain" value="130"/>
+			<property name="Faction" value="animals"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HasRagdoll" value="true"/> 
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="IsEntityAnimal" value="true"/>
+			<property name="IsEnemyEntity" value="false"/> 
+			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?WolfhoundDark"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>					
+			<property name="SoundRandom" value="wolfroam"/>
+			<property name="SoundAlert" value="wolfalert"/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value="wolfdeath"/>
+			<property name="SoundAttack" value="wolfattack"/>
+			<property name="SoundSense" value="wolfsense"/>
+			<property name="SoundGiveUp" value="wolfgiveup"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="6"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="animalBeagle" extends="animalWolfhound">
+			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?BeagleDark"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalSnake"/>					
+			<property name="SoundRandom" value="coyoteroam"/>
+			<property name="SoundAlert" value="wolfalert"/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value="wolfdeath"/>
+			<property name="SoundAttack" value="wolfattack"/>
+			<property name="SoundSense" value="wolfsense"/>
+			<property name="SoundGiveUp" value="wolfgiveup"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="4"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="10"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="3"/>
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="animalPug" extends="animalWolfhound">
+			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?PugDark"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalSnake"/>					
+			<property name="SoundRandom" value="coyoteroam"/>
+			<property name="SoundAlert" value="wolfalert"/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value="wolfdeath"/>
+			<property name="SoundAttack" value="wolfattack"/>
+			<property name="SoundSense" value="wolfsense"/>
+			<property name="SoundGiveUp" value="wolfgiveup"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>	
+
+		<entity_class name="animalWulf" extends="animalWolfhound">
+			<property name="Mesh" value="#@modfolder:Resources/Dogz.unity3d?WolfDark"/>
+			<property name="MoveSpeed" value=".3"/>
+			<property name="MoveSpeedAggro" value="1.2, 1.2"/> 
+			<property name="MoveSpeedPanic" value="1.2"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>					
+			<property name="SoundRandom" value="wolfroam"/>
+			<property name="SoundAlert" value="wolfalert"/>
+			<property name="SoundHurt" value="wolfpain"/>
+			<property name="SoundDeath" value="wolfdeath"/>
+			<property name="SoundAttack" value="wolfattack"/>
+			<property name="SoundSense" value="wolfsense"/>
+			<property name="SoundGiveUp" value="wolfgiveup"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="7"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="6"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<property name="Tags" value="entity,animal,perkAT05"/>
+			<property name="DeadBodyHitPoints" value="200"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+		</entity_class>			
 		
 	</append>
 </configs>

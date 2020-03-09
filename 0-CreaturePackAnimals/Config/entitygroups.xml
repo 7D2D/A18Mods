@@ -12,6 +12,10 @@
 		<entity name="animalBat" prob="1" />
 		<entity name="animalBats" prob=".25" />
 		<entity name="animalEagle" prob="1" />
+		<entity name="animalWulf" prob="1" />
+		<entity name="animalPug" prob="1" />
+		<entity name="animalBeagle" prob="1" />
+		<entity name="animalWolfhound" prob="1" />
 	</append>
 	<!-- crows (carrion eaters) in burnt and wasteland biomes -->
 	<append xpath="/entitygroups/entitygroup[@name='FriendlyAnimalsBurntForest']">
@@ -57,5 +61,9 @@
 		<entity name="animalSpider03" prob="0.35"/>
 		<entity name="animalEagle" prob="1" />
 		<entity name="animalAlcatraz" prob="1" />
+		<entity name="animalWulf" prob="1" />
+		<entity name="animalPug" prob="1" />
+		<entity name="animalBeagle" prob="1" />
+		<entity name="animalWolfhound" prob="1" />
 	</append>
 </configs> 
