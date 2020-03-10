@@ -41,8 +41,8 @@ humanMaleVaultSecurity,entityclasses,Entity,,,Mercenary
 humanMalePowerArmor,entityclasses,Entity,,,Armored Trooper
 
 qc_FoolsGold,items,Item,New,FoolsGold Quest,,,,,
-qc_FoolsGoldDesc,items,Zombie Challenge Note,KgNone,There are rumors of a great treasure at this location,,,,,
+qc_FoolsGoldDesc,items,Quest - Challenge,,,There are rumors of a great treasure at this location.,,,
 challenge_FoolsGold,Quest,Challenge Info,,,Fools Gold
-challenge_FoolsGold_offer,Quest,Challenge Info,,,"Dear Survivor,\nIf you've found this note then you know my crew and I have been watching you from afar. You're pretty good at survival but let's see if you can pass this test and just maybe we'll let you join our clan.\n\nGood Luck, Crazy Jake."
+challenge_FoolsGold_offer,Quest,Challenge Info,,,"Dear Survivor,\nDont know if the source I got this from is reliable. Just keep in mind it was one of the Dukes guys.\n\nGood Luck, Crazy Jake."
 challenge_FoolsGold_subtitle,Quest,Challenge Info,,,Is this a joke?
-challenge_FoolsGold_completion,Quest,Quest Info,,,Well Done...here are some things i found awhile ago. \nTake it.  
+challenge_FoolsGold_completion,Quest,Quest Info,,,Well Done...here are some things I found awhile ago. \nTake it.  

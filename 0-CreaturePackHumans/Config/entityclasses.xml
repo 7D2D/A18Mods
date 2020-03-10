@@ -288,23 +288,6 @@
 			<property name="MoveSpeedPanic" value="1.0"/>
 		</entity_class>
 		
-		<entity_class name="humanEveBanditSpawnAk47" extends="humanEveBandit"> 
-			<property name="Tags" value="entity,bandit,ranged"/>
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
-			<property name="Mass" value="150"/>
-			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
-			<property name="Faction" value="bandits"/>
-			<property name="IsEnemyEntity" value="true"/>
-			<property name="EntityType" value="Player"/>
-			<property name="HandItem" value="rangedBanditAk47"/> <!-- New Hand item: like AK47 but needs melee rather than dynamicmelee -->
-			<property name="WalkType" value="7"/>
-			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="rangedBanditAk47,ammoProjectileBanditMP7"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="rangedBanditAk47,ammoProjectileBanditMP7"/>
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="rangedBanditAk47,ammoProjectileBanditMP7"/>
-		</entity_class>
-	
 		<entity_class name="humanBakerBandit" extends="humanFarmerBandit">
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
@@ -1319,20 +1302,20 @@
 		<entity_class name="humanEveBanditSpawnSMG5test" extends="humanEveBandit"> 
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
 			<property name="Mass" value="150"/>
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/>
 			<property name="EntityType" value="Player"/>
 <!--			<property name="HandItem" value="rangedBanditAk47test"/> --> <!-- New Hand item: like AK47 but needs melee rather than dynamicmelee -->
-			<property name="WalkType" value="7"/>
+			<property name="WalkType" value="6"/>
 			<property name="MaxViewAngle" value="270"/>
 			<property name="SightRange" value="80"/> <!-- distance in m -->			
 			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
 			<property name="NoiseAlertThreshold" value="80"/> <!-- DEPRECATED; an awake zombie triggers instantly if touched by the sound range/volume -->
 			<property name="SmellAlertThreshold" value="60"/> <!-- for awake zombies -->
-			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child -->
+			<property name="RightHandJointName" value="Gunjoint" />  <!-- weapon should go on this child -->
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditSMG5,ammoNPC9mmBulletBall"/>
@@ -1364,10 +1347,10 @@
 		<entity_class name="humanEveBanditSpawnAk47test" extends="humanEveBanditSpawnSMG5test"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdollRanged_X"/>  <!-- emptyhand version -->
+			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
 			<property name="Class" value="EntityBandit"/>  <!-- This class NREs when inside a trader protection area  -->
 			<property name="Faction" value="bandits"/>
-			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon should go on this child, but child rotation is wrong right now -->
+			<property name="RightHandJointName" value="Gunjoint" />  
 			<property name="ItemsOnEnterGame.GameModeSurvival" value="gunBanditAk47,ammoNPC9mmBulletBall"/> 
 			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="gunBanditAk47,ammoNPC9mmBulletBall"/>
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC9mmBulletBall"/>

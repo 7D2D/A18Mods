@@ -24,16 +24,16 @@
 			<property name="phase" value="2" />
 		</objective>
 
-		<action type="SpawnEnemy" id="humanRaiderPest" value="1" phase="3" />
-		<action type="SpawnEnemy" id="humanRaiderMoto" value="1" phase="3" />
-<action type="SpawnEnemy" id="humanRaiderSlugger" value="1" phase="3" />
+		<action type="SpawnEnemy" id="humanRaiderPest" value="2" phase="3" />
+		<action type="SpawnEnemy" id="humanRaiderMoto" value="2" phase="3" />
+		<action type="SpawnEnemy" id="humanRaiderSlugger" value="2" phase="3" />
 		<objective type="AnimalKill" id="humanRaiderPest" value="1" phase="3" />
 		<objective type="AnimalKill" id="humanRaiderMoto" value="1" phase="3" />
 		<objective type="AnimalKill" id="humanRaiderSlugger" value="1" phase="3" />
 		
-		<action type="SpawnEnemy" id="humanRaiderFlamer" value="1" phase="4" />
-		<action type="SpawnEnemy" id="humanRaiderGina" value="1" phase="4" />
-		<action type="SpawnEnemy" id="humanRaiderHedy" value="1" phase="4" />
+		<action type="SpawnEnemy" id="humanRaiderFlamer" value="2" phase="4" />
+		<action type="SpawnEnemy" id="humanRaiderGina" value="2" phase="4" />
+		<action type="SpawnEnemy" id="humanRaiderHedy" value="2" phase="4" />
 
 		<objective type="AnimalKill" id="humanRaiderFlamer" value="1" phase="4" />
 		<objective type="AnimalKill" id="humanRaiderGina" value="1" phase="4" />

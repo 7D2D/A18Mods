@@ -65,6 +65,19 @@
 			<property name="Stacknumber" value="1"/>
 			<property name="Candrop" value="false"/>
 		</item> <!-- no Attack0, no attack -->
+		
+<!-- DarkStarDragon Quests		-->
+
+		<item name="qc_Strays">
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property name="CustomIcon" value="challengeQuestMaster" />
+			<property name="DescriptionKey" value="qc_StraysDesc"/>
+			<property name="CreativeMode" value="Dev"/>
+			<property class="Action0">
+				<property name="QuestGiven" value="challenge_Strays"/>
+			</property>
+		</item>
+		
 	
 	</append>	  
 </configs>
