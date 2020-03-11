@@ -1,4 +1,7 @@
 <configs>
+
+	<remove xpath="//entity[ starts-with(@name, 'invisible')]" />
+
 	<append xpath="/entitygroups">
 		<entitygroup name="BanditHoard">
 			<entity name="humanFarmerBandit" prob="0.1" />

@@ -34,17 +34,36 @@
 			<property name="MoveSpeed" value=".2"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
 		</entity_class> 
-		<entity_class name="fantasyBloodFlySwarm_X" extends="fantasySnowSwarm_X">
+		<entity_class name="fantasyBloodFlySwarm_X" extends="animalZombieVulture">
 			<property name="Tags" value="insect,hostile"/>
 			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
 			<property name="HandItem" value="meleeHandBloodFly" />
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" /> 
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
 			<property name="ExperienceGain" value="1200" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="10"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>				
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-			<property name="MoveSpeed" value=".15"/>
-			<property name="MoveSpeedAggro" value=".6, 1.0"/> 
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 			
 		</entity_class> 
 	</append>
 </configs>

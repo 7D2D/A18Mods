@@ -1,10 +1,10 @@
 <configs>
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsSnow']">
-		<entity name="fantasySnowSwarm_X" prob=".5"/>
+		<entity name="fantasySnowSwarm_X" prob=".1"/>
 	</append>
 	
 	<append xpath="/entitygroups/entitygroup[@name='EnemyAnimalsWasteland']">
-		<entity name="fantasyBloodFlySwarm_X" prob=".5"/>
+		<entity name="fantasyBloodFlySwarm_X" prob=".2"/>
 	</append>
 
 </configs>
