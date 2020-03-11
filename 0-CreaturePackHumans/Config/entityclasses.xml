@@ -108,22 +108,6 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 		
-		<!-- move this one to NPC mod?  -->
-		
-		<entity_class name="humanFarmerBanditSpawnClub" extends="humanFarmerBandit"> 
-			<property name="Tags" value="entity,bandit,melee"/>
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/> <!-- emptyhand version -->
-			<property name="Class" value="EntityBandit"/> <!-- This class NREs when inside a trader protection area  -->
-<!--			<property name="HandItem" value="meleeBanditClubWood"/>  New Hand item: like vanillaclub but needs melee rather than dynamicmelee -->
-			<property name="WalkType" value="7"/>
-			<property name="AttackTimeoutDay" value="1.2"/> 
-			<property name="AttackTimeoutNight" value="1.2"/>
-			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon goes on this child -->
-			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> <!-- puts it on the RightWeapon child -->
-			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
-			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
-		</entity_class>
 		
 		<!--             -->
 		
@@ -582,7 +566,7 @@
 		<entity_class name="humanBakerSurvivor" extends="humanMaleSurvivorTimidTemplate"> 
 			<property name="Tags" value="entity,survivor"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
-			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll3_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/Baker.unity3d?BakerRagdoll2_X"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
 		</entity_class>
 	
@@ -1295,11 +1279,26 @@
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
 		
-<!--  Testing  -->
+<!--  Bandits Testing  -->
 		
 		<!-- testing using the Ranged Class rather than the Vomit class.  Issues: No melee, they will get very close on attack, droped weapon is usable still but thats optional -->
 		
-		<entity_class name="humanEveBanditSpawnSMG5test" extends="humanEveBandit"> 
+		<entity_class name="humanFarmerBanditSpawnClub" extends="humanFarmerBandit"> 
+			<property name="Tags" value="entity,bandit,melee"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/> <!-- emptyhand version -->
+			<property name="Class" value="EntityBandit"/> <!-- This class NREs when inside a trader protection area  -->
+<!--			<property name="HandItem" value="meleeBanditClubWood"/>  New Hand item: like vanillaclub but needs melee rather than dynamicmelee -->
+			<property name="WalkType" value="7"/>
+			<property name="AttackTimeoutDay" value="1.2"/> 
+			<property name="AttackTimeoutNight" value="1.2"/>
+			<property name="RightHandJointName" value="RightWeapon" />  <!-- weapon goes on this child -->
+			<property name="ItemsOnEnterGame.GameModeSurvival" value="meleeBanditClubWood"/> <!-- puts it on the RightWeapon child -->
+			<property name="ItemsOnEnterGame.GameModeSurvivalSP" value="meleeBanditClubWood"/> 
+			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="meleeBanditClubWood"/>  
+		</entity_class>		
+	
+		<entity_class name="humanEveBanditSpawnSMG5" extends="humanEveBandit"> 
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
@@ -1327,7 +1326,6 @@
 			<property name="MoveSpeedPanic" value="1.0"/>
 			<property name="AITask-1" value="RangedAttackTarget2" data="itemType=0;attackPeriod=10"/> 
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntitySurvivor,0,EntityPlayer,0,EntityAnimalRabbit,0"/>
-<!--			<property name="AITask-3" value="RangedAttackTarget" data="itemType=0;cooldown=4;duration=5"/> -->
 			<property name="AITask-3" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/> 
 			<property name="AITask-4" value="BreakBlock"/> 
 			<property name="AITask-5" value="ApproachSpot"/>
@@ -1344,7 +1342,7 @@
 			<!-- <property name="LootListOnDeath" value="45"/> -->
 			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>
-		<entity_class name="humanEveBanditSpawnAk47test" extends="humanEveBanditSpawnSMG5test"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
+		<entity_class name="humanEveBanditSpawnAk47" extends="humanEveBanditSpawnSMG5"> <!-- WIP, need to figure out correct rotations for the new rifle animations-->
 			<property name="Tags" value="entity,bandit"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/Eve.unity3d?EveRagdoll2_X"/>  <!-- emptyhand version -->
@@ -1356,7 +1354,7 @@
 			<property name="ItemsOnEnterGame.GameModeSurvivalMP" value="gunBanditAk47,ammoNPC9mmBulletBall"/>
 		</entity_class>
 		
-		<entity_class name="humanFarmerTestXBow" extends="humanEveBanditSpawnSMG5test"> 
+		<entity_class name="humanFarmerBanditSpawnXBow" extends="humanFarmerBanditSpawnClub"> 
 			<property name="Tags" value="entity,bandit,ranged"/>
 			<property name="Mesh" value="#@modfolder:Resources/FarmerFrankie.unity3d?FarmerRagdoll2_X"/>			
 			<property name="Mass" value="150"/>
