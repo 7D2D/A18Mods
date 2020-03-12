@@ -682,14 +682,14 @@
 			<property name="Sound_Sight_In" value="smg_sight_in"/>
 			<property name="Sound_Sight_Out" value="smg_sight_out"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="1"/>
+			<property name="EconomicValue" value="0"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="AutoReload" value="true"/> <!-- required  -->
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
 				<property name="Auto_fire" value="true" /> 
 				<property name="Magazine_items" value="ammoNPC9mmBulletBall" />
-				<property name="Reload_time" value="1.0" /> 
+				<property name="Reload_time" value="0" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
 				<property name="Bullet_icon" value="uzi" />
@@ -705,11 +705,11 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
 				<passive_effect name="MaxRange" operation="base_set" value="70"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> <!-- Bullets per shot  -->
+				<passive_effect name="BurstRoundCount" operation="base_set" value="2,4"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
 				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
 			</effect_group> 
@@ -732,7 +732,7 @@
 				<property name="Class" value="Ranged" />
 				<property name="Auto_fire" value="true" /> 
 				<property name="Magazine_items" value="ammoNPC762mmBulletBall" />
-				<property name="Reload_time" value="1.0" /> 
+				<property name="Reload_time" value="0" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
 				<property name="Bullet_icon" value="uzi" />
@@ -748,13 +748,13 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
 				<passive_effect name="MaxRange" operation="base_set" value="80"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> <!-- Bullets per shot  -->
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3,5"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
 		<item name="gunBanditPistol">
@@ -774,17 +774,17 @@
 			<property name="Sound_Sight_In" value="smg_sight_in"/>
 			<property name="Sound_Sight_Out" value="smg_sight_out"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="1"/>
-			<property name="ShowQuality" value="true"/>
+			<property name="EconomicValue" value="0"/>
+			<property name="ShowQuality" value="false"/>
 			<property name="AutoReload" value="true"/>
 			<property name="CustomIcon" value="gunPistol"/>
 			<property class="Action0">
 				<property name="Class" value="Ranged" />
-				<property name="Delay" value="0.15" />
+				<property name="Delay" value="0" />
 				<property name="Auto_fire" value="true" />
 				<property name="Crosshair_min_distance" value="5" />
 				<property name="Crosshair_max_distance" value="30" />
-				<property name="Reload_time" value=".1" />
+				<property name="Reload_time" value="0" />
 				<property name="Infinite_ammo" value="true" />
 				<property name="Sound_start" value="Pistol_Fire"/>
 				<property name="Sound_loop" value="Pistol_Fire"/>
@@ -799,13 +799,13 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
 				<passive_effect name="MaxRange" operation="base_set" value="60"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
-				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/> <!-- Bullets per shot  -->
+				<passive_effect name="BurstRoundCount" operation="base_set" value="2,3"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>  <!-- Rays per Round  -->
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
 		<item name="gunBanditHuntingRifle">
@@ -824,7 +824,7 @@
 			<property name="Sound_Sight_In" value="rifle_sight_in"/>
 			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="1"/>
+			<property name="EconomicValue" value="0"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="AutoReload" value="true"/>
 			<property class="Action0">
@@ -846,13 +846,13 @@
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="80"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="30"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
 
@@ -872,14 +872,14 @@
 			<property name="Sound_Sight_In" value="rifle_sight_in"/>
 			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<property name="EconomicValue" value="1"/>
+			<property name="EconomicValue" value="0"/>
 			<property name="ShowQuality" value="true"/>
 			<property name="AutoReload" value="true"/>
 
 		<property class="Action0">
 			<property name="Class" value="Ranged"/>
 			<property name="Magazine_items" value="ammoNPC762mmBulletBall"/>
-			<property name="Reload_time" value="2.0"/>
+			<property name="Reload_time" value="0"/>
 			<property name="Infinite_ammo" value="true" />
 			<property name="Single_magazine_usage" value="false"/>
 			<property name="Bullet_icon" value="uzi" />
@@ -896,12 +896,13 @@
 			<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="80"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> <!-- if this matches the ammo stack size, the Character loads the gun, and wont drop gun or ammo on death  -->
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> <!-- if this matches the ammo stack size, the Character loads the gun, and wont drop gun or ammo on death  -->
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="30"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>
 	
@@ -921,7 +922,7 @@
 				<property name="Class" value="Ranged" />
 				<property name="Auto_fire" value="true" /> 
 				<property name="Magazine_items" value="ammoNPCArrowIron" />
-				<property name="Reload_time" value="1.0" /> 
+				<property name="Reload_time" value="0" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
 				<property name="Bullet_icon" value="uzi" />
@@ -934,19 +935,18 @@
 				<property name="Sound_cancel" value="bow_fire_cancel"/>	
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="80"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>
 
@@ -967,7 +967,7 @@
 				<property name="Class" value="Ranged" />
 				<property name="Auto_fire" value="true" /> 
 				<property name="Magazine_items" value="ammoNPCCrossbowBoltIron" />
-				<property name="Reload_time" value="1.0" /> 
+				<property name="Reload_time" value="0" /> 
 				<property name="Infinite_ammo" value="true" />
 				<property name="Single_magazine_usage" value="false"/>
 				<property name="Bullet_icon" value="uzi" />
@@ -980,19 +980,18 @@
 				<property name="Sound_cancel" value="bow_fire_cancel"/>	
 				<property name="SoundDestroy" value="wooddestroy1"/>
 				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
-				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi" />
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
 				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
 				<passive_effect name="MaxRange" operation="base_set" value="80"/>
-				<passive_effect name="MagazineSize" operation="base_set" value="3"/> 
+				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
 				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/>
 				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/> <!-- Bullets per shot  -->
 				<passive_effect name="RoundRayCount" operation="base_set" value="1"/>
-				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1000"/> 
 			</effect_group> 
 		</item>	
 		
@@ -1006,8 +1005,8 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mbrass"/>
-			<property name="Stacknumber" value="3"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 5 bullets -->
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC9mmBulletBall" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="10"/> <!-- per bullet that hits  -->
@@ -1027,8 +1026,8 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mbrass"/>
-			<property name="Stacknumber" value="3"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletBall" tiered="false"> <!-- Removed the penetration -->
 				<passive_effect name="EntityDamage" operation="base_set" value="15"/> <!-- per bullet that hits  -->
@@ -1048,8 +1047,8 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mbrass"/>
-			<property name="Stacknumber" value="3"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletAP" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="40"/>
@@ -1070,8 +1069,8 @@
 			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mbrass"/>
-			<property name="Stacknumber" value="3"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPC762mmBulletBall" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="50"/> <!-- per bullet that hits  -->
@@ -1091,15 +1090,15 @@
 			<property name="HoldType" value="45"/>
 			<property name="Candrop" value="false"/>				
 			<property name="Material" value="Mmetal"/>
-			<property name="Stacknumber" value="3"/> <!-- STK ammo low -->
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> <!-- STK ammo low -->
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPCCrossbowBoltIron" tiered="false"> <!-- ammoCrossbowBoltIron -->
-				<passive_effect name="EntityDamage" operation="base_set" value="30"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="35"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="6"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.5"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.5"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.2"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 			</effect_group>
@@ -1112,15 +1111,15 @@
 			<property name="HoldType" value="45"/>
 			<property name="Candrop" value="false"/>				
 			<property name="Material" value="Mmetal"/>
-			<property name="Stacknumber" value="3"/> 
-			<property name="EconomicValue" value="1"/>
+			<property name="Stacknumber" value="5"/> 
+			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
 			<effect_group name="ammoNPCArrowIron" tiered="false"> 
-				<passive_effect name="EntityDamage" operation="base_set" value="20"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="25"/>
 				<passive_effect name="BlockDamage" operation="base_set" value="5"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
-				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.5"/>
-				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.5"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.2"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 			</effect_group>
