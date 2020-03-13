@@ -878,7 +878,7 @@
 
 		<property class="Action0">
 			<property name="Class" value="Ranged"/>
-			<property name="Magazine_items" value="ammoNPC762mmBulletBall"/>
+			<property name="Magazine_items" value="ammoNPC762mmBulletAP"/>
 			<property name="Reload_time" value="0"/>
 			<property name="Infinite_ammo" value="true" />
 			<property name="Single_magazine_usage" value="false"/>
@@ -1072,12 +1072,13 @@
 			<property name="Stacknumber" value="5"/> <!-- This is the starting amount of bullets the NPC spawns with.  Think of it as one full clip of 3 bullets -->
 			<property name="EconomicValue" value="0"/>
 			<property name="Group" value="Ammo/Weapons"/>
-			<effect_group name="ammoNPC762mmBulletBall" tiered="false">
+			<effect_group name="ammoNPC762mmBulletHP" tiered="false">
 				<passive_effect name="EntityDamage" operation="base_set" value="50"/> <!-- per bullet that hits  -->
 				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
 				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/> <!-- These 3 lines fix the missing by shooting self in had bug,  needs tuning  -->
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/> 
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.2"/> <!--  End of fix    -->
+				<passive_effect name="TargetArmor" operation="perc_add" value="1"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="2" tags="wood"/>
 			</effect_group>
