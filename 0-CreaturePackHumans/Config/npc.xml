@@ -50,20 +50,5 @@
 				trader_id="63" dialog_id="trader" 
 				quest_list="trader_quests" />		
 		</insertAfter>	
-
-	<insertAfter xpath="/npc/factions[@name='trader']" >
-	
-	<!--  Relationship values: hate,dislike,neutral,like,love,leader  -->
-	
-
-		<faction name="scavengers">
-			<relationship name="*" value="neutral"/>
-			<relationship name="whiteriver" value="dislike"/>
-			<relationship name="undead" value="hate"/>
-			<relationship name="bandits" value="dislike"/>
-			<relationship name="traders" value="like"/>
-		</faction>
-
-	</insertAfter>	
 	
 </configs>

@@ -125,6 +125,45 @@
 			<property name="WalkType" value="9"/>
 		</entity_class>
 
+		<entity_class name="zombieBehemoth" extends="zombieTemplateMale">
+			<property name="Prefab" value="NPC4m"/>
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+			<property name="Mesh" value="#@modfolder:Resources/Behemoth.unity3d?BehemothRagdoll_X"/> 
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="ModelType" value="Standard"/>
+			<property name="WalkType" value="9"/>
+			<property name="ExperienceGain" value="6735"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="PhysicsBody" value="zombieBehemoth"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ReplaceMaterial1" value="entities/zombies/materials/Z_eye1"/>
+			<property name="HandItem" value="meleeHandZombieBehemoth"/>
+			<property name="Mass" value="500"/>
+			<property name="Weight" value="300"/>
+			<property name="StompsSpikes" value="true"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="LegCrippleThreshold" value="0"/>
+			<property name="KnockdownProneDamageThreshold" value="0"/>
+			<property name="KnockdownKneelDamageThreshold" value="0"/>
+			<property name="LegsExplosionDamageMultiplier" value="2"/> 
+			<property name="ArmsExplosionDamageMultiplier" value="2"/>
+			<property name="HeadExplosionDamageMultiplier" value="2"/>
+			<property name="ChestExplosionDamageMultiplier" value="2"/> 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1500"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+			</effect_group>
+		</entity_class>		
 		
 <!--  Zombies by DarkStarDragon -->
 		
@@ -1111,5 +1150,15 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
 		</entity_class>		
+		
+<!-- Testing  -->
+
+<!--		<entity_class name="Creature02" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,walker"/>
+			<property name="Mesh" value="#@modfolder:Resources/Creature02.unity3d?Creature02" />
+			<property name="PhysicsBody" value="mixamoUNConvertedZombie"/>     
+		</entity_class> -->
+		
+
 	</append>
 </configs>
