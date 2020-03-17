@@ -267,7 +267,7 @@
 			</effect_group>
 		</item>	
 		
-<!-- Modified Bandit Class spawning versions of player weapons  -->	
+<!-- Modified Bandit Class spawning versions of player weapons, used by NPCs as well  -->	
 
 		<item name="meleeBanditClubWood"> 
 			<property name="Tags" value="blunt,club,melee,grunting,weapon,meleeWeapon"/>
@@ -703,8 +703,8 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="70"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
-				<passive_effect name="MaxRange" operation="base_set" value="70"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="5"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="5"/>
@@ -746,8 +746,8 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
-				<passive_effect name="MaxRange" operation="base_set" value="80"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="MaxRange" operation="base_set" value="60"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
@@ -797,8 +797,8 @@
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
-				<passive_effect name="MaxRange" operation="base_set" value="60"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/> <!-- lowering this to a small number seemed to stop them from firing until in that range  -->
+				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
@@ -934,12 +934,11 @@
 				<property name="Sound_draw" value="bow2_draw"/>
 				<property name="Sound_cancel" value="bow_fire_cancel"/>	
 				<property name="SoundDestroy" value="wooddestroy1"/>
-				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
-				<passive_effect name="MaxRange" operation="base_set" value="80"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/>
+				<passive_effect name="MaxRange" operation="base_set" value="40"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
@@ -979,12 +978,11 @@
 				<property name="Sound_draw" value="bow2_draw"/>
 				<property name="Sound_cancel" value="bow_fire_cancel"/>	
 				<property name="SoundDestroy" value="wooddestroy1"/>
-				<property name="Particles_muzzle_fire" value="nozzleflash_ak" />
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="80"/>
-				<passive_effect name="MaxRange" operation="base_set" value="80"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="60"/>
+				<passive_effect name="MaxRange" operation="base_set" value="60"/>
 				<passive_effect name="MagazineSize" operation="base_set" value="5"/> 
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1"/>
@@ -995,7 +993,59 @@
 			</effect_group> 
 		</item>	
 		
-	<!--   test ammo   -->		
+		<item name="gunBanditPumpShotgun">
+			<property name="Tags" value="weapon,ranged,gun,shotgun,shortRange"/>
+			<property name="DisplayType" value="rangedShotgun"/>
+			<property name="HoldType" value="5"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Candrop" value="false"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab"/>
+			<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="TintColor" value="255,255,255"/>
+			<property name="CrosshairOnAim" value="false"/>
+			<property name="CrosshairUpAfterShot" value="false"/>
+			<property name="Sound_Sight_In" value="rifle_sight_in"/>
+			<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="AutoReload" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Auto_fire" value="true" /> 
+				<property name="Magazine_items" value="ammoNPCShotgunShell"/>
+				<property name="Reload_time" value="0.5"/>
+				<property name="Infinite_ammo" value="true" />
+				<property name="Single_magazine_usage" value="false"/>
+				<property name="Bullet_icon" value="uzi" />
+				<property name="Sound_start" value="pump_shotgun_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Particles_muzzle_fire" value="gunfire_shotgun"/>
+				<property name="Particles_muzzle_fire_fpv" value="gunfire_shotgun_fpv"/>
+				<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
+				<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+				<property name="Buff" value="buffInjuryBleedingZombie"/>
+			</property>
+			<effect_group name="gunPumpShotgun">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="20"/>
+				<passive_effect name="MaxRange" operation="base_set" value="20"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>				
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="5000"/> 
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+				<passive_effect name="BuffProcChance" operation="base_set" value=".02" tags="buffInjuryBleedingZombie"/>
+			</effect_group>
+		</item>		
+		
+	<!--  ammo   -->		
 		
 		<item name="ammoNPC9mmBulletBall">
 			<property name="Tags" value="ammo,ranged"/>
@@ -1124,8 +1174,33 @@
 				<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
 			</effect_group>
-		</item>		
-<!--                       End testing               -->	
+		</item>	
+
+		<item name="ammoNPCShotgunShell">
+			<property name="Tags" value="ammo,shotgun"/>
+			<property name="DisplayType" value="ammoShotgun"/>
+			<property name="HoldType" value="45"/>
+			<property name="Candrop" value="false"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mlead_scrap"/>
+			<property name="Stacknumber" value="3"/>
+			<property name="EconomicValue" value="1"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<effect_group name="ammoNPCShotgunShell" tiered="false">
+				<passive_effect name="EntityDamage" operation="base_set" value="5"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value="-0.5,0.2"/>
+				<passive_effect name="BlockDamage" operation="base_set" value="5.4"/>
+				<passive_effect name="BlockDamage" operation="base_add" value="20" tags="wood"/>
+				<passive_effect name="RoundRayCount" operation="base_set" value="10"/>
+				<passive_effect name="TargetArmor" operation="perc_add" value=".4"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<passive_effect name="BlockPenetrationFactor" operation="base_set" value="51"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+				<passive_effect name="DismemberChance" operation="perc_add" value="0.1"/>
+			</effect_group>
+		</item>
 
 	</append>	  
 </configs>
