@@ -1,6 +1,16 @@
 <configs>
   <append xpath="/buffs">
 
+	<buff name="ItsMe">
+		<stack_type value="ignore"/>
+		<duration value="0.1"/>
+		<effect_group name="WalkType9">
+			<triggered_effect trigger="onSelfBuffStart" action="AnimatorFireTrigger" property="IsElectrocuted" value="true" duration="0.01"/>
+			<triggered_effect trigger="onSelfBuffStart" action="AnimatorSetInt" property="ItsMe" value="9" duration="1"/>
+		</effect_group>
+	</buff>
+	
+
   </append>
 
 </configs>
