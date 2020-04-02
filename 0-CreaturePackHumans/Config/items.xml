@@ -1082,7 +1082,7 @@
 			<effect_group name="ammoNPC762mmBulletBall" tiered="false"> <!-- Removed the penetration -->
 				<passive_effect name="EntityDamage" operation="base_set" value="15"/> <!-- per bullet that hits  -->
 				<passive_effect name="BlockDamage" operation="base_set" value="10"/>
-				<passive_effect name="EntityPenetrationCount" operation="base_set" value="1"/>
+				<passive_effect name="EntityPenetrationCount" operation="base_set" value="2"/>
 				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="0.2"/> 
 				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="0.2"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
@@ -1201,6 +1201,6 @@
 				<passive_effect name="DismemberChance" operation="perc_add" value="0.1"/>
 			</effect_group>
 		</item>
-
+ 
 	</append>	  
 </configs>

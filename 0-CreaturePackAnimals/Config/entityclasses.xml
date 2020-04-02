@@ -151,14 +151,14 @@
 			<property name="AITask-2" value="BreakBlock"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="RunawayWhenHurt"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18,EntityAnimalSnake,18"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalRabbit,18"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
 			<property name="AITask-9" value=""/>
 			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalSnake,0,0,EntityAnimalRabbit,0,0"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityAnimalRabbit,0,0"/>
 			<property name="AITarget-4" value=""/>
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
@@ -481,7 +481,7 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="HandItem" value="meleeHandAnimalSnake"/>					
+			<property name="HandItem" value="meleeHandAnimalFox"/>					
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
 			<property name="SoundHurt" value="wolfpain"/>
@@ -511,7 +511,7 @@
 			<property name="MoveSpeed" value=".3"/>
 			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
 			<property name="MoveSpeedPanic" value="1.2"/>
-			<property name="HandItem" value="meleeHandAnimalSnake"/>					
+			<property name="HandItem" value="meleeHandAnimalFox"/>					
 			<property name="SoundRandom" value="coyoteroam"/>
 			<property name="SoundAlert" value="wolfalert"/>
 			<property name="SoundHurt" value="wolfpain"/>

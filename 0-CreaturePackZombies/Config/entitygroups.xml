@@ -102,6 +102,7 @@
 		<entity name="zombieCopSwat01TSBX" prob=".3" />
 		<entity name="zombieCopCityFemale01TSBX" prob=".3" />
 		<entity name="zombieHoly01MUMPFY" prob=".3" />
+		<entity name="zombieBehemoth" prob=".15" />
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='zombieBoeFeral']" >
@@ -124,7 +125,8 @@
 		<entity name="zombieCopCity02TSBXFeral"/>
 		<entity name="zombieCopSwat01TSBXFeral"/>
 		<entity name="zombieCopCityFemale01TSBXFeral"/>
-		<entity name="zombieHoly01MUMPFYFeral"/>		
+		<entity name="zombieHoly01MUMPFYFeral"/>
+		<entity name="zombieBehemoth" prob=".5" />
 	</insertAfter>
 
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >

@@ -161,6 +161,8 @@
 				<passive_effect name="HealthMax" operation="base_set" value="50"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
-		</entity_class> 		
+		</entity_class> 
+
+
 	</append>
 </configs>

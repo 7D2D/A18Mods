@@ -7,6 +7,10 @@
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
 
+<!-- <append xpath="/entity_classes/entity_class[starts-with(@name, 'zombieTemplateMale')]" >
+    <property name="ParticleOnSpawn" value="#@modfolder:Resources/FrostShield.unity3d?p_FrostShield_X" data="SetShapeToMesh0"/>
+  </append> -->
+
 
 
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
@@ -141,7 +145,6 @@
 			<property name="ExperienceGain" value="6735"/>
 			<property name="DeadBodyHitPoints" value="1000"/>
 			<property name="PhysicsBody" value="zombieBehemoth"/>
-
 			<property name="ReplaceMaterial1" value="entities/zombies/materials/Z_eye1"/> 
 			<property name="HandItem" value="meleeHandZombieBehemoth"/>
 			<property name="Mass" value="500"/>
@@ -160,7 +163,7 @@
 				<passive_effect name="HealthMax" operation="base_set" value="1500"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="DamageModifier" operation="perc_set" value="1" tags="head"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="50"/>
 				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
 <!--				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ItsMe"/> -->
 			</effect_group> 
