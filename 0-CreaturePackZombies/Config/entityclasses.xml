@@ -2,7 +2,7 @@
 
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
 	<append xpath="//entity_class[@name='zombieSpider']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
-	<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
+	<append xpath="//entity_class[@name='zombieFatCop']/property[@value='ApproachAndAttackTarget']/@data">,0,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
 	<append xpath="//entity_class[@name='zombieDemolition']/property[@value='ApproachAndAttackTarget']/@data">,EntityAnimalStag,0,EntityBandit,0,EntitySurvivor,0</append>
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetAsTargetIfHurt']/@data">,EntityAnimalStag,EntityBandit,EntitySurvivor</append>
 	<append xpath="//entity_class[@name='zombieTemplateMale']/property[@value='SetNearestEntityAsTarget']/@data">,EntityAnimalStag,0,0,EntityBandit,0,0,EntitySurvivor,0,0</append>
