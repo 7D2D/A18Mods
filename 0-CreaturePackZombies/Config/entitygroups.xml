@@ -1,5 +1,12 @@
 <configs>
 
+	<append xpath="/entitygroups/entitygroup[ starts-with(@name, 'EnemyAnimals')]">
+		<entity name="zombieGuppyCreepyCrawly" prob=".1" />
+		<entity name="zombieGuppyInsect" prob=".1" />	
+<!--		<entity name="zombieGuppyCreatureSlug" prob=".1" /> -->
+		<entity name="zombieGuppyInfernalDog" prob=".1" />		
+	</append>
+	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesAll']/entity[@name='zombieBoe']" >
 		<entity name="zombieSanta" prob=".3" />
 		<entity name="zombieNurseTemplate" prob=".25" />
