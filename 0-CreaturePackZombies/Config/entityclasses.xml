@@ -1011,6 +1011,99 @@
 			</effect_group>
 		</entity_class>
 		
+		<entity_class name="zombieGuppyAbomination" extends="zombieTemplateMale">
+            <property name="Tags" value="entity,zombie,normal"/>
+                <property name="AvatarController" value="AvatarZombie01Controller"/>
+                <property name="Mesh" value="#@modfolder:Resources/guppyZombieAbomination.unity3d?guppyZombieAbomination.prefab"/>
+                <property name="WalkType" value="2"/>
+                <property name="MoveSpeedAggro" value=".5, 1.35"/>
+                <property name="HandItem" value="meleeHandZombie01"/>
+                <property name="JumpMaxDistance" value="4.6, 5"/>
+                <property name="HasRagdoll" value="true"/>        
+                <property name="RootMotion" value="true"/>
+                <property name="RotateToGround" value="false"/>
+                <property name="ExperienceGain" value="750"/>
+                <property name="LootDropProb" value=".03"/>
+                <property name="DismemberMultiplierHead" value=".7"/>
+                <property name="DismemberMultiplierArms" value=".7"/>
+                <property name="DismemberMultiplierLegs" value=".7"/>            
+                <effect_group name="Base Effects">
+                    <passive_effect name="HealthMax" operation="base_set" value="285"/>
+                    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                    <passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
+                </effect_group>                
+        </entity_class>     		
+		
+		<entity_class name="zombieGuppy04" extends="zombieTemplateMale">
+            <property name="Tags" value="entity,zombie,normal"/>
+                <property name="AvatarController" value="AvatarZombie01Controller"/>
+                <property name="Mesh" value="#@modfolder:Resources/guppyZombie04.unity3d?guppyZombie04.prefab"/>
+                <property name="WalkType" value="7"/>
+                <property name="MoveSpeedAggro" value=".5, 1.35"/>
+                <property name="HandItem" value="meleeHandZombie01"/>
+                <property name="JumpMaxDistance" value="4.6, 5"/>
+                <property name="HasRagdoll" value="true"/>        
+                <property name="RootMotion" value="true"/>
+                <property name="RotateToGround" value="false"/>
+                <property name="ExperienceGain" value="750"/>
+                <property name="LootDropProb" value=".03"/>
+                <property name="DismemberMultiplierHead" value=".7"/>
+                <property name="DismemberMultiplierArms" value=".7"/>
+                <property name="DismemberMultiplierLegs" value=".7"/>            
+                <effect_group name="Base Effects">
+                    <passive_effect name="HealthMax" operation="base_set" value="285"/>
+                    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                    <passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
+                </effect_group>                
+        </entity_class> 		
+		
+		<entity_class name="zombieGuppySecurityGuardMocap" extends="zombieTemplateMale">
+            <property name="Tags" value="entity,zombie,normal"/>
+                <property name="AvatarController" value="AvatarZombie01Controller"/>
+                <property name="Mesh" value="#@modfolder:Resources/guppyZombieSecurityGuard.unity3d?guppyZombieSecurityGuardMocap.prefab"/>
+                <property name="WalkType" value="7"/>
+                <property name="MoveSpeedAggro" value=".5, 1.35"/>
+                <property name="HandItem" value="meleeHandZombie01"/>
+                <property name="JumpMaxDistance" value="4.6, 5"/>
+                <property name="HasRagdoll" value="true"/>        
+                <property name="RootMotion" value="true"/>
+                <property name="RotateToGround" value="false"/>
+                <property name="ExperienceGain" value="750"/>
+                <property name="LootDropProb" value=".03"/>
+                <property name="DismemberMultiplierHead" value=".7"/>
+                <property name="DismemberMultiplierArms" value=".7"/>
+                <property name="DismemberMultiplierLegs" value=".7"/>            
+                <effect_group name="Base Effects">
+                    <passive_effect name="HealthMax" operation="base_set" value="285"/>
+                    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                    <passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
+                </effect_group>                
+        </entity_class> 		
+		
+		<entity_class name="zombieGuppySecurityGuardTFP" extends="zombieTemplateMale">
+            <property name="Tags" value="entity,zombie,normal"/>
+                <property name="AvatarController" value="AvatarZombie01Controller"/>
+                <property name="Mesh" value="#@modfolder:Resources/guppyZombieSecurityGuard.unity3d?guppyZombieSecurityGuardTFP.prefab"/>
+                <property name="WalkType" value="7"/>
+                <property name="MoveSpeedAggro" value=".5, 1.35"/>
+                <property name="HandItem" value="meleeHandZombie01"/>
+                <property name="JumpMaxDistance" value="4.6, 5"/>
+                <property name="HasRagdoll" value="true"/>        
+                <property name="RootMotion" value="true"/>
+                <property name="RotateToGround" value="false"/>
+                <property name="ExperienceGain" value="750"/>
+                <property name="LootDropProb" value=".03"/>
+                <property name="DismemberMultiplierHead" value=".7"/>
+                <property name="DismemberMultiplierArms" value=".7"/>
+                <property name="DismemberMultiplierLegs" value=".7"/>            
+                <effect_group name="Base Effects">
+                    <passive_effect name="HealthMax" operation="base_set" value="285"/>
+                    <passive_effect name="HealthMax" operation="perc_set" value="1"/>
+                    <passive_effect name="PhysicalDamageResist" operation="base_set" value="35"/>
+                </effect_group>                
+        </entity_class> 		
+		
+		
 <!--  Zombies by TSBX   -->
 
 		<entity_class name="zombieHazmatFemale01TSBX" extends="zombieNurse">
@@ -1158,12 +1251,23 @@
 		
 <!-- Testing  -->
 
-<!--		<entity_class name="Creature02" extends="zombieTemplateMale">
-			<property name="Tags" value="entity,zombie,walker"/>
-			<property name="Mesh" value="#@modfolder:Resources/Creature02.unity3d?Creature02" />
-			<property name="PhysicsBody" value="mixamoUNConvertedZombie"/>     
-		</entity_class> -->
+
+<!--		<entity_class name="zombieStig" extends="zombieTemplateMale">
 		
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieStig.unity3d?zombieStig_X"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects"> 
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/> 
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> -->
+
 
 	</append>
 </configs>
