@@ -30,11 +30,11 @@
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/>			
-			<!-- <property name="MapIcon" value="ui_game_symbol_enemy_dot" /> -->
-			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+			<!-- <property name="MapIcon" value="ui_game_symbol_enemy_dot" />  --> 
+<!--			<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />  Uncomment these lines if you want to see the NPC name and location on map
 			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
 			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
-			<property name="TrackerIcon" value="ui_game_symbol_run"/>			
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>	-->		
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="ApproachDistraction"/>

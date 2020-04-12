@@ -289,25 +289,27 @@
 		
 <!-- Flying Things  -->
 
-		<entity_class name="animalTemplateTimidFlying" extends="animalZombieVulture" >
-			<property name="Class" value="EntityVulture"/>
+		<entity_class name="animalTemplateTimidFlying" >
+			<property name="Class" value="EntityHornet"/>
 			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
 			<property name="Tags" value="entity,animal"/>
 			<property name="SurfaceCategory" value="organic"/>
-			<!-- Want a mostly non-aggressive Bird?  You need these lines and no Action0 on the hand in case they seek you so no damage -->
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="ModelType" value="Standard"/>
 			<property name="HandItem" value="meleeHandAnimalRobin"/>
-			<property name="AINoiseSeekDist" value="1"/>
-			<property name="MaxViewAngle" value="1"/>
+			<property name="MaxViewAngle" value="1"/> <!-- Reduce sight and angle to blind this actually hostile animal, can see you, wont attack you -->
 			<property name="SightRange" value="1"/>
-			<!--                                                                  -->
 			<property name="MoveSpeed" value="1"/>
-			<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
 			<property name="HasRagdoll" value="true"/> <!-- No actual ragdoll but needed for dedi, but make sure you dont have a E_Bipded_Root tag on the entity though or boom! -->
 			<property name="HasDeathAnim" value="true"/>
 			<property name="RootMotion" value="false"/>
-			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="Weight" value="30"/>
+			<property name="Mass" value="50"/>
+			<property name="Parent" value="Animals"/>
+			<property name="Prefab" value="NPC"/>
 			<property name="EntityType" value="Animal"/>
 			<property name="IsEntityAnimal" value="true"/>
 			<property name="IsEnemyEntity" value="false"/> <!-- Set this if you want this entity to be spawned when user chooses 'enemy entities off' -->
@@ -320,6 +322,11 @@
 			<property name="SoundAttack" value=""/>
 			<property name="SoundSense" value=""/>
 			<property name="SoundGiveUp" value=""/>
+			<property name="AIPathCostScale" value="100, 100"/>
+			<property name="AITask-1" value="Wander"/>
+			<property name="AITask-2" value=""/>
+			<property name="Immunity" value="sickness;disease;wellness"/> 
+			<property name="DismemberMultiplierLegs" value="0"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
@@ -330,6 +337,25 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>
 		</entity_class> 
+		
+		<entity_class name="animalTemplateHostileFlying" extends="animalTemplateTimidFlying">
+			<property name="Class" value="EntityHornet"/>
+			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
+			<property name="Tags" value="entity,animal,hostile"/>
+			<property name="AvatarController" value="AvatarAnimalController"/> 
+			<property name="HandItem" value="meleeHandAnimalBear"/>
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="MaxViewAngle" value="180"/>
+			<property name="SightRange" value="70"/>
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/> 
+			<property name="MaxTurnSpeed" value="190"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class> 		
+		
 		<entity_class name="animalRobin" extends="animalTemplateTimidFlying" >
 			<property name="Mesh" value="#@modfolder:Resources/Robin.unity3d?Robin_X" />
 			<property name="Tags" value="entity,animal"/>
@@ -339,7 +365,6 @@
 			<property name="MaxTurnSpeed" value="190"/>
 			<property name="DeadBodyHitPoints" value="100"/>
 			<property name="SizeScale" value="1.1"/>
-			<property name="Faction" value="animals"/>
 			<property name="SoundRandomTime" value="10.0"/>
 			<property name="SoundRandom" value="RobinSounds" />
 			<property name="SoundAlert" value="RobinSounds"/>
@@ -431,6 +456,37 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			</effect_group>			
 		</entity_class>
+		
+<!--  Hostile Flyers  -->		
+		
+		<entity_class name="animalGuppyInsect" extends="animalTemplateHostileFlying">
+			<property name="Tags" value="entity,zombie,hostile"/>
+			<property name="Mass" value="100"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?guppyInsect.prefab"/>
+			  <property name="MoveSpeed" value="1"/>
+			  <property name="MoveSpeedAggro" value="2.1, 2.1"/>
+			  <property name="MaxTurnSpeed" value="190"/>      
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="ExperienceGain" value="250"/>
+			<property name="DeadBodyHitPoints" value="100"/>
+			<property name="SightRange" value="70"/>      
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="390"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
+				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+			</effect_group>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		</entity_class>		
+		
 		
 <!--  DarkStarDragons Animals   -->
 		
