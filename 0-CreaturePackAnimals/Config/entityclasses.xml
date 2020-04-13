@@ -463,9 +463,9 @@
 			<property name="Tags" value="entity,zombie,hostile"/>
 			<property name="Mass" value="100"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?guppyInsect.prefab"/>
-			  <property name="MoveSpeed" value="1"/>
-			  <property name="MoveSpeedAggro" value="2.1, 2.1"/>
-			  <property name="MaxTurnSpeed" value="190"/>      
+			<property name="MoveSpeed" value="1"/>
+			<property name="MoveSpeedAggro" value="2.1, 2.1"/>
+			<property name="MaxTurnSpeed" value="190"/>      
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
 			<property name="ExperienceGain" value="250"/>
 			<property name="DeadBodyHitPoints" value="100"/>
@@ -478,7 +478,6 @@
 			<property name="SoundAttack" value="animalhornetattack"/>
 			<property name="SoundSense" value=""/>
 			<property name="SoundGiveUp" value=""/>
-			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="390"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
@@ -487,13 +486,8 @@
 				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			</effect_group>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+            <drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="2"/> 
+            <drop event="Harvest" name="foodHoney" tag="butcherHarvest" count="2"/>
 		</entity_class>		
 		
 		
