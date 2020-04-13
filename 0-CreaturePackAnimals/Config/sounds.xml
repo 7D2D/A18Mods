@@ -192,5 +192,66 @@
 		  <HighestPitch name="1.0"/>
 			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
 		</SoundDataNode>		
-	</append>
+
+	
+	
+	
+		<SoundDataNode name="animalhornetalert"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetalert1"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetalert2"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetalert3"/>
+			<Channel name="Mouth"/>
+			<Priority name="3"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalhornethurt"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetpain1"/>
+			<Channel name="Mouth"/>
+			<Priority name="1"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalhornetattack"> <AudioSource name="Sounds/AudioSource_Creatures"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetattack1"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetattack2"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetattack3"/>
+			<Channel name="Mouth"/>
+			<Priority name="2"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalhornetroam"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetroam1"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		<SoundDataNode name="animalhornetdeath"> <AudioSource name="Sounds/AudioSource_CreatureSenseAlert"/>
+			<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetdeath1"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetdeath2"/>
+			<AudioClip ClipName="Sounds/Enemies/Hornets/hornetdeath3"/>
+			<Channel name="Mouth"/>
+			<Priority name="5"/>
+			<maxVoicesPerEntity value="1"/>
+		  <LowestPitch name="0.9"/>
+		  <HighestPitch name="1.0"/>
+			<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="0.5"/> <NoiseScale value="1"/> <MaxVoices value="10"/> <MaxRepeatRate value="0.9"/>
+		</SoundDataNode>
+		
+	</append>	
 </configs>

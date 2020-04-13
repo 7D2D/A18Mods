@@ -469,7 +469,16 @@
 			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
 			<property name="ExperienceGain" value="250"/>
 			<property name="DeadBodyHitPoints" value="100"/>
-			<property name="SightRange" value="70"/>      
+			<property name="SightRange" value="70"/>
+			<property name="SoundRandomTime" value="5.0"/>
+			<property name="SoundRandom" value="animalhornetroam" />
+			<property name="SoundAlert" value="animalhornetalert"/>
+			<property name="SoundHurt" value="animalhornethurt"/>
+			<property name="SoundDeath" value="animalhornetdeath"/>
+			<property name="SoundAttack" value="animalhornetattack"/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="390"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
