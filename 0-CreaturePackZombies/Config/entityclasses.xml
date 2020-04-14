@@ -1102,7 +1102,7 @@
 			<property name="AttackTimeoutDay" value="1.5"/>
 			<property name="AttackTimeoutNight" value="1.4"/>
 			<property name="CanClimbLadders" value="false"/>
-			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItem" value="meleeHandAnimalZombieBear"/>
 			<property name="ExperienceGain" value="1250"/>
 			<property name="DeadBodyHitPoints" value="450"/>
 			<property name="RotateToGround" value="true"/>
