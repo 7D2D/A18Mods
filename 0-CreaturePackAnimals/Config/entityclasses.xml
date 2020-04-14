@@ -327,6 +327,7 @@
 			<property name="AITask-2" value=""/>
 			<property name="Immunity" value="sickness;disease;wellness"/> 
 			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="TimeStayAfterDeath" value="300"/>
 			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
 			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="1"/>
 			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1"/>
