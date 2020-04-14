@@ -1124,7 +1124,7 @@
 		</entity_class>	
 		
 		<entity_class name="zombieGuppyInfernalDogBoss" extends="zombieGuppyInfernalDog">
-			<property name="Mesh" value="#@modfolder:Resources/guppyInfernalDog.unity3d?guppyInfernalDogBoss.prefab"/>
+			 <property name="Mesh" value="#@modfolder:Resources/guppyInfernalDogBoss.unity3d?guppyInfernalDogBoss.prefab"/>
 			<effect_group name="Base Effects">
 			  <passive_effect name="HealthMax" operation="base_set" value="1550"/>
 			  <passive_effect name="HealthMax" operation="perc_add" value="0"/>
