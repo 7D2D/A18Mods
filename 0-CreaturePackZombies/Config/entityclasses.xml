@@ -1075,69 +1075,6 @@
 			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		</entity_class>	 
 
-<!--		<entity_class name="zombieGuppyInsect" extends="animalTemplateHostile">
-			<property name="Tags" value="entity,zombie,hostile"/>
-			<property name="AvatarController" value="AvatarAnimalController"/> 
-			<property name="ModelType" value="Standard"/>
-			<property name="Class" value="EntityHornet"/>      
-			<property name="Prefab" value="NPC"/>
-			<property name="RotateToGround" value="false"/>
-			<property name="Parent" value="Enemies"/>
-			<property name="Weight" value="40"/>
-			<property name="HasRagdoll" value="true"/> 
-			<property name="HasDeathAnim" value="true"/>
-			<property name="RootMotion" value="false"/>
-			<property name="AIGroupCircle" value="1"/>
-			<property name="AINoiseSeekDist" value="30"/>
-			<property name="Mass" value="100"/>
-			<property name="IsEntityAnimal" value="true"/>
-			<property name="IsEnemyEntity" value="true"/> 			
-			<property name="Mesh" value="#@modfolder:Resources/guppyInsect.unity3d?guppyInsect.prefab"/>
-			  <property name="MoveSpeed" value="1"/>
-			  <property name="MoveSpeedAggro" value="2.1, 2.1"/>
-			  <property name="MaxTurnSpeed" value="190"/>      
-			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
-			<property name="AITask-1" value="Swim"/>
-			<property name="AITask-2" value="BreakBlock"/>
-			<property name="AITask-3" value="DestroyArea"/>
-			<property name="AITask-4" value="Territorial"/>
-			<property name="AITask-5" value="ApproachDistraction"/>
-			<property name="AITask-6" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,40,EntityPlayer,0,EntityNPC,0"/>
-			<property name="AITask-7" value="ApproachSpot"/>
-			<property name="AITask-8" value="Look"/>
-			<property name="AITask-9" value="Wander"/>
-			<property name="AITask-10" value=""/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
-			<property name="AITarget-2" value="BlockingTargetTask"/>
-			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,18,13,EntityAnimalStag,0,0"/>
-			<property name="AITarget-4" value=""/>        
-			<property name="SoundRandom" value=""/>
-			<property name="SoundAlert" value=""/>
-			<property name="SoundHurt" value=""/>
-			<property name="SoundDeath" value=""/>
-			<property name="SoundAttack" value=""/>
-			<property name="SoundSense" value=""/>
-			<property name="SoundGiveUp" value=""/>
-			<property name="ExperienceGain" value="250"/>
-			<property name="DeadBodyHitPoints" value="100"/>
-			<property name="SightRange" value="70"/>      
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="390"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_set" value="1" />
-				<passive_effect name="BuffResistance" operation="base_add" value="1" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-			</effect_group>
-			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
-			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> 
-			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="2"/>
-			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="3"/>
-			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
-			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
-			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
-		</entity_class>	-->
-
 		<entity_class name="zombieGuppyInfernalDog" extends="animalTemplateHostile">
 			<property name="Mesh" value="#@modfolder:Resources/guppyInfernalDog.unity3d?guppyInfernalDog.prefab"/>
 			<property name="AvatarController" value="AvatarAnimalController"/>        
@@ -1185,6 +1122,16 @@
 			  <passive_effect name="HealthMax" operation="perc_add" value="0"/>
 			</effect_group>			
 		</entity_class>	
+		
+		<entity_class name="zombieGuppyInfernalDogBoss" extends="zombieGuppyInfernalDog">
+			<property name="Mesh" value="#@modfolder:Resources/guppyInfernalDog.unity3d?guppyInfernalDogBoss.prefab"/>
+			<effect_group name="Base Effects">
+			  <passive_effect name="HealthMax" operation="base_set" value="1550"/>
+			  <passive_effect name="HealthMax" operation="perc_add" value="0"/>
+			</effect_group>			
+		</entity_class>			
+		
+		
   
 		<entity_class name="zombieGuppyMutantFighter" extends="animalTemplateHostile">
 			<property name="Tags" value="entity,zombie,normal"/>
