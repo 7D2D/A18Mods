@@ -1028,7 +1028,7 @@
 			<passive_effect name="HealthMax" operation="base_set" value="200"/>
 			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
 			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
@@ -1067,10 +1067,10 @@
 			<property name="MaxViewAngle" value="270"/>			
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<effect_group name="Base Effects">
-			<passive_effect name="HealthMax" operation="base_set" value="200"/>
+			<passive_effect name="HealthMax" operation="base_set" value="300"/>
 			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 			<passive_effect name="StaminaMax" operation="base_set" value="200"/>
-			<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
+			<passive_effect name="PhysicalDamageResist" operation="base_set" value="20" />
 			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 			<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
@@ -1210,7 +1210,7 @@
 			<property name="MoveSpeedPanic" value="1.1"/>
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="base_set" value="300"/>
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
@@ -1327,5 +1327,145 @@
 		</entity_class>		
 		
 		
+		
+<!--  Guppy Soldiers  -->
+
+		<entity_class name="guppyHumanoidRiflemanTemplate" extends="humanRangedMaleBanditTemplate"> 
+			<property name="MaxTurnSpeed" value="600"/>
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<!--<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier08"/> -->
+			<property name="PhysicsBody" value="guppyHumanoidRifle01"/>
+			<property name="Mass" value="195"/>
+			<property name="Weight" value="70"/>
+			<property name="SightRange" value="190"/>
+			<property name="MaxViewAngle" value="340"/>
+			<property name="PainResistPerHit" value=".5"/>
+			<property name="Class" value="EntityAnimalStag"/>
+			<property name="RotateToGround" value="false"/>			
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="EntityType" value="Player"/>
+			<property name="HandItem" value="guppyRifleMachineGun"/>
+			<property name="WalkType" value="7"/>
+			<property name="RightHandJointName" value="MuzzleTip" />
+			<property name="MoveSpeed" value="0.45"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AINoiseSeekDist" value="150"/>
+			<property name="AttackTimeoutDay" value="0.3"/> 
+			<property name="AttackTimeoutNight" value="0.7"/>
+			<property name="AIPathCostScale" value=".8, 1"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180"/>
+			<property name="AITask-2" value="ApproachDistraction"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="RunawayFromEntity" data="EntityZombie,EntityBandit,EntityEnemyAnimal"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-4" value=""/> 
+			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
+			<property name="SoundStamina" value="Player_Male/player1stamina"/>
+			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
+			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
+			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
+			<property name="SoundJump" value="Player_Male/player1Jump"/>
+			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
+			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
+			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
+			<property name="SoundSleeperSense" value="sleepersense"/>
+			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+			<property name="SoundAlertTime" value="25.0"/>
+			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandom" value="malehateroam"/>
+			<property name="SoundAlert" value="malehatealert"/>
+			<property name="SoundSense" value="malehatesense"/>
+			<property name="SoundHurt" value="malehatepain"/>
+			<property name="SoundDeath" value="malehatedeath"/>
+			<property name="SoundAttack" value="malehateattack"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="30" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>
+			<property name="ExperienceGain" value="500"/> 
+			<property name="LootDropProb" value="0.02"/> 
+			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		</entity_class>	
+
+		<entity_class name="humanGuppySoldier01" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier01"/>     
+		</entity_class>
+    
+		<entity_class name="humanGuppySoldier01New" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier01New"/>      
+		</entity_class>    
+    
+		<entity_class name="humanGuppySoldier02" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier02"/>      
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier03" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+				<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier03"/> 
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier04" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier04"/> 
+			<property name="HandItem" value="guppyRocketLauncher"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=10;maxRange=180"/>      
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier05" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier05"/>      
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier06" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier06"/>      
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier07" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier07"/>  
+			<property name="HandItem" value="guppyFlameThrowerGun"/>   
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=1;duration=4;minRange=1;maxRange=180"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="RunawayFromEntity" data="EntityZombie,EntityBandit,EntityEnemyAnimal"/>      
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityVulture,0,EntityZombieCop,0,EntityZombieCrawl,0,EntityZombieDog,0,EntityEnemyAnimal,0"/>      
+			<property name="AITask-10" value="BreakBlock"/> 
+			<property name="AITask-11" value="Leap"/> 
+			<property name="AITask-12" value=""/>	
+			<property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityVulture,0,0,EntityZombieCop,0,0,EntityZombieCrawl,0,0,EntityZombieDog,0,0,EntityEnemyAnimal,0,0"/>  
+			<property name="AITarget-2" value=""/> 
+		</entity_class>
+
+		<entity_class name="humanGuppySoldier08" extends="guppyHumanoidRiflemanTemplate">  
+			<property name="Tags" value="entity,survivor,ranged"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier08"/>      
+		</entity_class>   
+			
+	
 	</append>
 </configs>

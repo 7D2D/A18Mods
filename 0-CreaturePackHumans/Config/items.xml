@@ -1201,6 +1201,198 @@
 				<passive_effect name="DismemberChance" operation="perc_add" value="0.1"/>
 			</effect_group>
 		</item>
+		
+<!-- Guppy Items  -->
+
+		<item name="ammoProjectileGuppyTracerBullet">
+			<property name="Meshfile" value="#@modfolder:Resources/guppyParticlesforGuppy.unity3d?guppyParticleTracerBullet" />
+			<property name="Material" value="Mbrass"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="ammoProjectileGuppyBullet"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="0"/>
+				<property name="Velocity" value="70"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value="1"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="metal"/>
+			</effect_group>
+ 		</item>
+    
+		<item name="ammoProjectileGuppyRocket"> 
+			<property name="Meshfile" value="#@modfolder:Resources/guppyParticlesforGuppy.unity3d?guppyParticleRocketLauncher" />
+			<property name="Material" value="Mbrass"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="CustomIcon" value="ammoProjectileGuppyBullet"/>
+			<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>      
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="25"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Explosion.ParticleIndex" value="4"/> <!-- which Prefab/particle is used -->
+				<property name="Explosion.RadiusBlocks" value="5"/> <!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="4"/> <!-- damage radius for entities -->
+				<property name="Velocity" value="70"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value="1"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="metal"/>
+			</effect_group>
+ 		</item> 
+
+		<item name="ammoProjectileGuppyFlamethrower"> 
+      <property name="Meshfile" value="#@modfolder:Resources/guppyParticlesforGuppy.unity3d?guppyParticleFlamethrower" /> 
+			<property name="Material" value="Morganic"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="50"/>
+				<property name="Velocity" value="9"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value="8"/>
+				<property name="Buff" value="buffBurningMolotov"/>
+			</property>
+			<effect_group name="ammoProjectileGuppyFlamethrower" tiered="false">
+				<requirement name="EntityTagCompare" tags="feral"/>
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value="0.3" tags="buffBurningMolotov"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="player"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="npc"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="7" tags="animal"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="50" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="concrete"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="metal"/>
+				<passive_effect name="DamageModifier" operation="base_set" value="1" tags="steel"/>
+			</effect_group>
+			<effect_group>
+					<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="selfAOE" range="1" buff="buffBurningMolotov"/>
+			</effect_group>
+ 		</item>     
+
+		<item name="guppyRifleMachineGun">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="Tags" value="weapon,ranged"/>      
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="1"/>
+				<property name="Range" value="2.0"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh" />
+			</property>
+			<property class="Action1"> 
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".01"/> 
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileGuppyTracerBullet"/>
+				<property name="Reload_time" value="0"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="05"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="05"/>
+				<passive_effect name="EntityDamage" operation="base_add" value="-8"/> 
+				<passive_effect name="BlockDamage" operation="base_add" value="-1"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="30"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="4"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".1"/> 
+			</effect_group>
+		</item>	 
+
+    <item name="guppyRocketLauncher"> 
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="Tags" value="weapon,ranged"/>      
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="15"/>
+				<property name="DamageBlock" value="1"/>
+				<property name="Range" value="2.0"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh" />
+			</property>
+			<property class="Action1"> 
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value=".01"/> 
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileGuppyRocket"/>
+				<property name="Reload_time" value="0"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="05"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="05"/>
+				<passive_effect name="EntityDamage" operation="base_add" value="-50"/> 
+				<passive_effect name="BlockDamage" operation="base_add" value="-100"/>
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="30"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/> 
+			</effect_group>
+		</item>	
+
+    <item name="guppyFlameThrowerGun"> 
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action0">
+				<property name="DamageEntity" value="30"/>
+				<property name="DamageBlock" value="15"/>
+				<property name="Range" value="1.7"/>
+				<property name="Sphere" value="1.2"/>
+				<property name="Sound_start" value="swoosh" />
+				<property name="DamageBonus.head" value="5" />
+			</property>
+			<property class="Action1"> 
+				<property name="Class" value="Vomit"/>
+				<property name="Hitmask_override" value="Arrow"/>
+				<property name="Delay" value="0"/> 
+				<property name="Range" value="200"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="ammoProjectileGuppyFlamethrower"/>
+				<property name="Reload_time" value="0"/>
+				<property name="Sound_start" value="pump_shotgun_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_shotgun"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="150"/>
+				<passive_effect name="MaxRange" operation="base_set" value="200"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="30"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="8"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="16"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="16"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="0.5"/>
+			</effect_group>
+		</item>	    
+		
  
 	</append>	  
 </configs>
