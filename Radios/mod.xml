@@ -1,0 +1,27 @@
+<mod>
+  <info>
+    <author>Xyth</author>
+    <name>Radios</name>
+    <description>Radios</description>
+    <mod_version>1.1</mod_version>
+    <game_version>18.0</game_version>
+  </info>
+  <hashes>
+    <hash filename="Config\blocks.xml" hash="eee00c6d8713cf0a2ab644d5b23701fd" />
+    <hash filename="Config\recipes.xml" hash="f30e86199a92b95ed8c0d86472b888bf" />
+    <hash filename="ItemIcons\JukeBox.png" hash="9422a2bf425480ba3eccc2f6bef796eb" />
+    <hash filename="ItemIcons\OldRadio.png" hash="9a8c3d689d9232e0b36118870150289f" />
+    <hash filename="ItemIcons\RA801.png" hash="6f7a093d579b1e59c95dd08d0e3750f4" />
+    <hash filename="Resources\media00.mp4" hash="2f7ac15b2c3db5466525dc7ed1a9f25a" />
+    <hash filename="Resources\media01.mp4" hash="4f61e2e7875c31963c63572457ffc489" />
+    <hash filename="Resources\media02.mp4" hash="7cfa36307014fed0baf2f362cc924c04" />
+    <hash filename="Resources\media03.mp4" hash="bc0d12064f3d3772f05a6235d8aed7fe" />
+    <hash filename="Resources\media04.mp4" hash="f455c469153f071d6e867ca4dd939ac1" />
+    <hash filename="Resources\media05.mp4" hash="322688796679d084465521c326c9a14e" />
+    <hash filename="Resources\media06.mp4" hash="286d68adbf4654ce509c29336aaadab1" />
+    <hash filename="Resources\media07.mp4" hash="8670e47a58c41b79e7d788f78a367a87" />
+    <hash filename="Resources\media08.mp4" hash="a7fe09fc39833bbe0f7136077f07f51a" />
+    <hash filename="Resources\media09.mp4" hash="aca30c05d102c26db517c164e0d49a89" />
+    <hash filename="Resources\Radios.unity3d" hash="e4cfc08cf363840524cdd7d967b43079" />
+  </hashes>
+</mod>
