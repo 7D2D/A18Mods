@@ -1,6 +1,6 @@
 <configs>
 
-<!--	<remove xpath="//entity[ starts-with(@name, 'invisible')]" /> -->
+	<!--<remove xpath="//entity[ starts-with(@name, 'invisible')]" /> Hold this line, might be needed again-->
 
 	<append xpath="/entitygroups">
 		<entitygroup name="BanditHoard">
@@ -20,7 +20,7 @@
 			<entity name="humanRaiderJayne" prob="0.05" />
 			<entity name="humanRaiderGina" prob="0.05" />	
 			<entity name="humanRaiderHedy" prob="0.05" />	
-	<!--	<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
+			<!--<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
 			<entity name="humanEveBanditSpawnAk47" prob="0.05" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 		</entitygroup>
 	</append> 
@@ -72,7 +72,7 @@
 		<entity name="humanRaiderJayne" prob="0.05" />
 		<entity name="humanRaiderGina" prob="0.05" />	
 		<entity name="humanRaiderHedy" prob="0.05" />	
-<!--	<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
+		<!--<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
 		<entity name="humanEveBanditSpawnAk47" prob="0.05" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 	</append> 
 
@@ -96,6 +96,16 @@
 			<entity name="humanDeltaForce" prob="0.05" />	
 			<entity name="humanNationalGuard" prob="0.05" /> 
 			<entity name="humanNationalGuardMedic" prob="0.05" />	
-			<entity name="humanArmyDoctor" prob="0.05" />	
+			<entity name="humanArmyDoctor" prob="0.05" />
+			<entity name="humanGuppySoldier01" prob="0.05" />	
+			<entity name="humanGuppySoldier01New" prob="0.05" /> 
+			<entity name="humanGuppySoldier02" prob="0.05" />	
+			<entity name="humanGuppySoldier03" prob="0.05" />	
+			<entity name="humanGuppySoldier04" prob="0.05" /> 
+			<entity name="humanGuppySoldier05" prob="0.05" />	
+			<entity name="humanGuppySoldier06" prob="0.05" /> 
+			<entity name="humanGuppySoldier07" prob="0.05" />	
+			<entity name="humanGuppySoldier08" prob="0.05" />	
+
 	</append> 		
 </configs>
