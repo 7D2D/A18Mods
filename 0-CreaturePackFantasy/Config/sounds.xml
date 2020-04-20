@@ -1,0 +1,169 @@
+<configs>
+	<append xpath="/Sounds">
+	
+		<SoundDataNode name="JapaneseWarriorAlert">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundAlert" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="JapaneseWarriorAttack">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundAttack" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="JapaneseWarriorRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundRandom" />
+      <AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?RandomMale1" />
+      <AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?RandomMale2" />
+      <AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?RandomMale3" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="JapaneseWarriorHurt">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundHurt" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="JapaneseWarriorSense">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundSense" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="JapaneseWarriorDie">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidJapaneseWarriorSounds.unity3d?SoundDeath" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+    
+		<SoundDataNode name="KatanaGirlAlert">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundAlert" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="KatanaGirlAttack">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundAttack" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="KatanaGirlDeath">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundDeath" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="KatanaGirlHurt">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundHurt" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="KatanaGirlHurtSmall">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.1" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundHurtSmall" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>    
+		<SoundDataNode name="KatanaGirlRandom">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundRandom" />
+      <AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?FemaleRandom2" />
+      <AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?FemaleRandom3" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>
+		<SoundDataNode name="KatanaGirlSense">
+			<AudioSource name="Sounds/AudioSource_VO" />
+			<Channel name="Mouth"/>
+			<Noise ID="3" range="100" volume="15" time="10" muffled_when_crouched="0.65" heat_map_strength="0.05" heat_map_time="60" />
+			<AudioClip ClipName="#@modfolder:Resources/guppyHumanoidKatanaGirlSounds.unity3d?SoundSense" />
+			<LocalCrouchVolumeScale name="1.0" />
+			<CrouchNoiseScale name="0.5" />
+			<NoiseScale name="1" />
+			<MaxVoices name="10" />
+			<maxVoicesPerEntity name="1" />
+			<MaxRepeatRate name="6.0" />
+		</SoundDataNode>    
+    
+	</append>
+	
+</configs>    

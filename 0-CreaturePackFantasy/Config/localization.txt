@@ -1,0 +1,5 @@
+Key,Source,Context,Changes,English,French,German,Klingon,Spanish,Polish
+humanGuppyKatanaGirl,entityclasses,Entity,,Human Japanese Female with Katana,,,,,
+humanGuppyJapaneseWarrior,entityclasses,Entity,,Human Japanese Male Warrior,,,,,
+humanGuppyJapaneseNinja,entityclasses,Entity,,Human Japanese Male Ninja,,,,,
+humanGuppyJapaneseSamurai,entityclasses,Entity,,Human Japanese Male Samurai,,,,,
