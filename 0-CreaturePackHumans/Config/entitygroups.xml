@@ -19,7 +19,8 @@
 			<entity name="humanRaiderBettie" prob="0.05" />
 			<entity name="humanRaiderJayne" prob="0.05" />
 			<entity name="humanRaiderGina" prob="0.05" />	
-			<entity name="humanRaiderHedy" prob="0.05" />	
+			<entity name="humanRaiderHedy" prob="0.05" />
+			<entity name="humanGuppyThugBandit01" prob="0.05" />	
 			<!--<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
 			<entity name="humanEveBanditSpawnAk47" prob="0.05" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 		</entitygroup>
@@ -31,6 +32,9 @@
 			<entity name="humanCowboySurvivor" prob="1" />
 			<entity name="humanNurseSurvivor" prob="1" />
 			<entity name="humanBakerSurvivor" prob="1" />
+			<entity name="humanGuppySophiaAlive" prob="1" />
+			<entity name="humanGuppyOldManAlive" prob="1" />
+			<entity name="humanGuppyMalePatient01" prob="1" />
 		</entitygroup>
 	</append> 
 	
@@ -72,6 +76,7 @@
 		<entity name="humanRaiderJayne" prob="0.05" />
 		<entity name="humanRaiderGina" prob="0.05" />	
 		<entity name="humanRaiderHedy" prob="0.05" />	
+		<entity name="humanGuppyThugBandit01" prob="0.05" />	
 		<!--<entity name="humanFarmerBanditSpawnClub" prob="0.05" />
 		<entity name="humanEveBanditSpawnAk47" prob="0.05" />  Commented these out due to NRE error if they enter trader protected area, uncomment if you mitigate that in the trader POI xml -->
 	</append> 
@@ -85,6 +90,9 @@
 			<entity name="humanCowboySurvivor" prob="0.05" />
 			<entity name="humanNurseSurvivor" prob="0.05" />
 			<entity name="humanBakerSurvivor" prob="0.05" />
+			<entity name="humanGuppySophiaAlive" prob="0.05" />
+			<entity name="humanGuppyOldManAlive" prob="0.05" />
+			<entity name="humanGuppyMalePatient01" prob="0.05" />
 			<entity name="humanFemaleVaultResident" prob="0.05" /> 
 			<entity name="humanVaultDoctor" prob="0.05" /> 
 			<entity name="humanMaleVaultResident" prob="0.05" /> 

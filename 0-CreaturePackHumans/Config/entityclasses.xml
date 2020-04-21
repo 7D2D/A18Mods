@@ -1460,7 +1460,69 @@
 		<entity_class name="humanGuppySoldier08" extends="guppyHumanoidRiflemanTemplate">  
 			<property name="Tags" value="entity,survivor,ranged"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidRifleman.unity3d?guppySoldier08"/>      
+		</entity_class>  
+		
+<!--  More from Guppy  -->
+
+		<entity_class name="humanGuppyOldManAlive" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyOldManAlive.unity3d?humanGuppyOldManAlive"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
 		</entity_class>   
-	
+		<entity_class name="humanGuppySophiaAlive" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppySophiaAlive.unity3d?humanGuppySophiaAlive"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>    
+ 		<entity_class name="humanGuppyMalePatient01" extends="humanMaleSurvivorTimidTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyMalePatient01.unity3d?humanGuppyMalePatient01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="180"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 
+		<entity_class name="humanGuppyThugBandit01" extends="humanMeleeMaleBanditTemplate">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/humanGuppyThugBandit01.unity3d?humanGuppyThugBandit01"/> 
+			<property name="WalkType" value="7"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="170"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_set" value="05" />
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
+				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
+			</effect_group>  
+		</entity_class>		
+		
+		
 	</append>
 </configs>

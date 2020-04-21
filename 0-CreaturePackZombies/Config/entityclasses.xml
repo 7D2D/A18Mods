@@ -1409,6 +1409,40 @@
 			</effect_group>
 		</entity_class>		
 		
+<!--  More from Guppy -->		
+		
+	    <entity_class name="zombieGuppyOldManZombie" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyOldManZombie.unity3d?zombieGuppyOldManZombie"/> 
+			<property name="WalkType" value="5"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class> 	
+		
+		<entity_class name="zombieGuppyBaldMan01" extends="zombieTemplateMale">
+			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/zombieGuppyBaldMan01.unity3d?zombieGuppyBaldMan01"/> 
+			<property name="WalkType" value="3"/>
+			<property name="PhysicsBody" value="mixamoConvertedStandardZombie"/>
+			<property name="HasDeathAnim" value="true"/>	
+			<property name="Mass" value="150"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+				<passive_effect name="HealthMax" operation="base_set" value="150"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+			</effect_group>
+		</entity_class>   		
+		
+		
+		
 <!-- Testing  -->
 
 

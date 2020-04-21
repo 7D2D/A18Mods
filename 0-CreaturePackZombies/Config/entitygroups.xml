@@ -36,18 +36,17 @@
 		<entity name="zombieGuppyDoctor04Black" prob=".3" />
 		<entity name="zombieGuppyDoctorFemale01" prob=".3" />
 		<entity name="zombieGuppyDoctorFemale02" prob=".3" />
-		
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />
 		<entity name="zombieGuppyAbomination" prob=".3" />
 		<entity name="zombieGuppy04" prob=".3" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".3" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".3" />
-		
 		<entity name="zombieHazmatFemale01TSBX" prob=".3" />
 		<entity name="zombieCopCity02TSBX" prob=".3" />
 		<entity name="zombieCopSwat01TSBX" prob=".3" />
 		<entity name="zombieCopCityFemale01TSBX" prob=".3" />
 		<entity name="zombieHoly01MUMPFY" prob=".3" />
-
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
@@ -168,7 +167,9 @@
 		<entity name="zombieGuppyAbomination" prob=".1" />
 		<entity name="zombieGuppy04" prob=".1" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".1" />		
-		<entity name="zombieGuppySecurityGuardTFP" prob=".1" />		
+		<entity name="zombieGuppySecurityGuardTFP" prob=".1" />	
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />
 		<entity name="zombieHazmatFemale01TSBX" prob=".1" />
 		<entity name="zombieCopCity02TSBX" prob=".1" />
 		<entity name="zombieCopSwat01TSBX" prob=".1" />
@@ -449,6 +450,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -466,6 +469,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -483,6 +488,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -500,6 +507,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -517,6 +526,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -534,6 +545,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
@@ -551,6 +564,8 @@
 		<entity name="zombieGuppyHungry02Red" prob=".25" />
 		<entity name="zombieGuppyHungry03White" prob=".25" />
 		<entity name="zombieGuppyAbomination" prob=".25" />
+		<entity name="zombieGuppyOldManZombie" prob=".3" />
+		<entity name="zombieGuppyBaldMan01" prob=".3" />		
 		<entity name="zombieGuppy04" prob=".25" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
