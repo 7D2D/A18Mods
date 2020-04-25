@@ -22,6 +22,7 @@
 	<append xpath="/entity_classes">
 		<entity_class name="zombieSanta" extends="zombieFatHawaiian"> <!-- Thanks to MaxFox for this guys texture and the encouragement to crack this method.  -->
 			<property name="Tags" value="entity,zombie,brute"/> <!-- Use a tag to pick the hand effect you want, see items.xml -->
+			<property name="Faction" value="undead"/>			
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieSanta.unity3d?zombieStandardSantaRagdoll_X"/> <!-- Model ripped from base game, Rig from base game  -->
 			<property name="WalkType" value="9"/>
@@ -30,6 +31,7 @@
 		
 		<entity_class name="zombieSantaFeral" extends="zombieSanta">
 			<property name="Tags" value="entity,zombie,walker,feral"/>
+			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
@@ -46,6 +48,7 @@
 		
 		<entity_class name="zombieNurseTemplate" extends="zombieNurse">
 			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/ZombieNurseTemplate.unity3d?zombieStandardNurseRagdoll_X"/> <!-- Model/texture ripped from base game, Rig from base game  -->
 			<!-- Retexturing Index: Materials : 0 Body,1 Eyes -->
@@ -54,6 +57,7 @@
 				
 		<entity_class name="zombieNurseTemplateFeral" extends="zombieNurseTemplate">
 			<property name="Tags" value="entity,zombie,walker,feral"/>
+			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
@@ -69,6 +73,7 @@
 		
 		<entity_class name="zombieFemaleTutorial" extends="zombieNurseTemplate">
 			<property name="Tags" value="entity,zombie,normal"/>
+			<property name="Faction" value="undead"/>				
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/zombieTestFemale.unity3d?zombieTestFemale_X"/> 
 			<!-- Retexturing Index: N/A -->
@@ -82,6 +87,7 @@
 		
 		<entity_class name="zombieFemaleTutorialFeral" extends="zombieFemaleTutorial">
 			<property name="Tags" value="entity,zombie,walker,feral"/>
+			<property name="Faction" value="undead"/>				
 			<property name="DismemberMultiplierHead" value=".7"/><property name="DismemberMultiplierArms" value=".7"/><property name="DismemberMultiplierLegs" value=".7"/>
 			<property name="PainResistPerHit" value=".25"/>
 			<property name="MoveSpeedAggro" value=".5, 1.35"/>
