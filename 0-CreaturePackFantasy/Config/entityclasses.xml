@@ -2,87 +2,34 @@
 	<!-- IMPORTANT NOTE: In entityclasses.xml, effect_groups DO extend if you extend an entity to another.
 		Pay attention so that you do not stack several base_add or perc_add. -->
 	<append xpath="/entity_classes">
-		<entity_class name="fantasySnowSwarm_X" extends="animalZombieVulture">
-			<property name="Tags" value="hostile"/>
-			<property name="Class" value="EntityVulture" />
-			<property name="AvatarController" value="AvatarAnimalController"/>
-			<property name="ModelType" value="Standard" />
-			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="PhysicsBody" value="vulture" />
-			<property name="SurfaceCategory" value="earth"/>
-			<property name="Mass" value="10"/>
-			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm2_X" /> 
-			<property name="HandItem" value="meleeHandSnowstorm" />
-			<property name="SoundRandom" value="" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value=""/>
-			<property name="SoundHurt" value=""/>
-			<property name="SoundDeath" value=""/>
-			<property name="SoundAttack" value=""/>
-			<property name="SoundSense" value=""/>
-			<property name="SoundGiveUp" value=""/>
-			<property name="ExperienceGain" value="1200" />
-			<property name="DeadBodyHitPoints" value="1" />
-			<property name="LootDropProb" value="0"/> 
-			<property name="TimeStayAfterDeath" value="2.0"/>
-			<property name="Buffs" value="buffSnowSwarm"/>		 
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="100"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-			</effect_group>
-			<property name="MoveSpeed" value=".2"/>
-			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
-		</entity_class> 
-		<entity_class name="fantasyBloodFlySwarm_X" extends="animalZombieVulture">
-			<property name="Tags" value="insect,hostile"/>
-			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
-			<property name="HandItem" value="meleeHandBloodFly" />
-			<property name="Class" value="EntityVulture" />
-			<property name="AvatarController" value="AvatarAnimalController"/>
-			<property name="ModelType" value="Standard" />
-			<property name="HasRagdoll" value="true" /> 
-			<property name="RagdollOnDeathChance" value="0"/>
-			<property name="PhysicsBody" value="vulture" />
-			<property name="SurfaceCategory" value="earth"/>
-			<property name="Mass" value="10"/>
-			<property name="SoundRandom" value="" />
-			<property name="SoundRandomTime" value="60.0"/>
-			<property name="SoundAlert" value=""/>
-			<property name="SoundHurt" value=""/>
-			<property name="SoundDeath" value=""/>
-			<property name="SoundAttack" value=""/>
-			<property name="SoundSense" value=""/>
-			<property name="SoundGiveUp" value=""/>
-			<property name="ExperienceGain" value="1200" />
-			<property name="DeadBodyHitPoints" value="1" />
-			<property name="LootDropProb" value="0"/> 
-			<property name="TimeStayAfterDeath" value="2.0"/>
-			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="10"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-			</effect_group>
-			<property name="MoveSpeed" value=".2"/>
-			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 			
-		</entity_class> 
-		
-<!--  Guppy Things  -->	
+	
+<!--  templates  -->	
 
-		<entity_class name="humanGuppyFantasyTemplate"> 
+		<entity_class name="fantasyMeleeMaleBanditTemplate"> 
 			<property name="EntityType" value="Player"/>
-			<property name="Tags" value="entity,bandit,melee"/>
-			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseWarrior.unity3d?guppyJapaneseWarrior"/>
+			<property name="Tags" value="entity,bandit,melee,template"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="ModelType" value="Standard"/>
 			<property name="HasRagdoll" value="true"/>
+			<property name="RootMotion" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ParticleOnDeath" value="blood_death"/>
+			<property name="SurfaceCategory" value="organic"/> <!-- determines the particle effect played on hit -->
 			<property name="Prefab" value="NPC"/>
 			<property name="Class" value="EntityEnemyAnimal"/> <!-- Work around class to NPC class is patched  -->	
+			<!--<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
 			<property name="Parent" value="Enemies"/>
 			<property name="Mass" value="150"/>
 			<property name="Weight" value="70"/>			
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Faction" value="bandits"/>
 			<property name="IsEnemyEntity" value="true"/>			
+			<!--<property name="MapIcon" value="ui_game_symbol_enemy_dot" />  --> 
+			<!--<property name="CompassIcon" value="ui_game_symbol_enemy_dot" />  Uncomment these lines if you want to see the NPC name and location on map
+			<property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+			<property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+			<property name="TrackerIcon" value="ui_game_symbol_run"/>	-->		
 			<property name="AINoiseSeekDist" value="20"/>	
 			<property name="AIPathCostScale" value=".8, 1"/>
 			<property name="AITask-1" value="ApproachDistraction"/>
@@ -101,6 +48,9 @@
 			<property class="FallLandBehavior">
 				<property name="None" data="weightmin=0.6"/> <!-- a chance none of these options will be chosen -->
 				<property name="Ragdoll" data="heightMin=2;weightMin=.2;weightMax=.4"/>
+				<!-- <property name="Stumble" data="heightMin=2.0;weightMin=0.2"/> -->
+				<!-- <property name="Boost" data="heightMin=2.0;weightMin=0.2"/> -->
+				<!-- <property name="CatBoost" data="heightMin=2.0;weightMin=0.2"/> -->
 			</property>
 			<property name="WalkType" value="7"/>
 			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
@@ -122,10 +72,6 @@
 			<property name="SoundHurt" value="malehatepain"/>
 			<property name="SoundDeath" value="malehatedeath"/>
 			<property name="SoundAttack" value="malehateattack"/>			
-			<property name="RootMotion" value="true"/>
-			<property name="HasDeathAnim" value="true"/>
-			<property name="ParticleOnDeath" value="blood_death"/>
-			<property name="SurfaceCategory" value="organic"/> <!-- determines the particle effect played on hit -->
 			<property name="DismemberMultiplierHead" value="1"/>
 			<property name="DismemberMultiplierArms" value="1"/>
 			<property name="DismemberMultiplierLegs" value="1"/>
@@ -143,7 +89,8 @@
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".5"/>		
 			<property name="MaxViewAngle" value="270"/>
-			<property name="SightRange" value="50"/>
+			<property name="SightRange" value="70"/>
+			<property name="LegCrippleScale" value="0"/> <!--  Needed to prevent crippling which changes walktype to zombie (may change that eventually  -->
 			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
 			<property name="SleeperWakeupSightDetectionMax" value="340,480"/> <!-- Indiv.Random. "I see you" light value at "SightRange" -->
@@ -187,22 +134,163 @@
 			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
 		</entity_class>
 		
-		<entity_class name="guppyHumanoidTemplate" extends="humanGuppyFantasyTemplate"> 
-			<property name="MaxTurnSpeed" value="600"/>
-			<property name="Tags" value="entity,survivor,ranged"/>
+		<entity_class name="fantasyRangedMaleBanditTemplate" extends="fantasyMeleeMaleBanditTemplate"> 		
+			<property name="Tags" value="entity,bandit,ranged,template"/>
+			<property name="Faction" value="bandits"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="HandItemCrawler" value="handBanditMP7"/>			
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityAnimalStag,0"/>
+			<property name="AITask-3" value="ApproachDistraction"/>
+			<property name="AITask-4" value="ApproachSpot"/> 
+			<property name="AITask-5" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-6" value="Territorial"/>
+			<property name="AITask-7" value="Look"/>			
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value="BreakBlock"/> 
+			<property name="AITask-10" value="Leap"/> 
+			<property name="AITask-11" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityPlayer,EntitySurvivor,EntityAnimalStag,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityZombie,0,0,EntitySurvivor,0,0,EntityAnimalStag,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class>
+		
+		<entity_class name="fantasyMaleSurvivorTemplate" extends="fantasyMeleeMaleBanditTemplate"> <!-- Normal Surviors, will engage enemies  -->
+			<property name="Tags" value="entity,survivor,template"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<!--<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
+			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/> 
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Territorial"/>
+			<property name="AITask-4" value="Look"/> 		
+			<property name="AITask-5" value="Wander"/>
+			<property name="AITask-6" value="BreakBlock"/> 
+			<property name="AITask-7" value="Leap"/> 
+			<property name="AITask-8" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class>		
+		
+		<entity_class name="fantasyRangedSurvivorTemplate" extends="fantasyRangedMaleBanditTemplate"> 
+			<property name="Tags" value="entity,survivor,ranged,template"/>
+			<property name="Class" value="EntityAnimalStag"/> 
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="RunawayWhenHurt" data="runChance=.9;healthPer=.5;healthPerMax=0.75"/>
+			<property name="AITask-5" value="Territorial"/>
+			<property name="AITask-6" value="Look"/>			
+			<property name="AITask-7" value="Wander"/>
+			<property name="AITask-8" value="BreakBlock"/> 
+			<property name="AITask-9" value="Leap"/> 
+			<property name="AITask-10" value=""/>	
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntityPlayer,EntityEnemyAnimal"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class> 
+		
+		<entity_class name="fantasyMaleSurvivorTimidTemplate" extends="fantasyMeleeMaleBanditTemplate"> <!-- Timid, will flee trouble unless hurt  -->
+			<property name="Tags" value="entity,survivor,template"/>
 			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<property name="PainResistPerHit" value=".4"/>			
+			<!--<property name="Class" value="EntityBandit"/>  This class NREs when inside a trader protection area  -->
+			<property name="Class" value="EntityAnimalStag"/> <!-- Survivors are Stag class, Traders are Survivor class  -->
+			<property name="Faction" value="whiteriver"/>
+			<property name="IsEnemyEntity" value="false"/>
+			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityAlive"/>
+			<property name="AITask-2" value="RunawayWhenHurt"/>
+			<property name="AITask-3" value="RunawayFromEntity" data="class=EntityPlayer,EntityZombie,EntityBandit,EntityEnemyAnimal"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockIf" data="condition=alert e 0"/>
+			<property name="AITarget-3" value="BlockingTargetTask"/>
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityAlive,20,15"/>
+			<property name="AITarget-5" value=""/>
+		</entity_class>		
+		
+		<entity_class name="fantasyMeleeMaleTraderTemplate" extends="fantasyMeleeMaleBanditTemplate">
+			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
+			<property name="Tags" value="entity,npc,trader,melee,template"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<property name="PhysicsBody" value="traderStandard"/>
+			<property name="RightHandJointName" value="RightWeapon" />
+			<property name="HandItem" value="handChefKnife"/>
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="NPCID" value="traderJoel"/>
+			<property name="AttackTimeoutDay" value=".8"/>
+			<property name="AttackTimeoutNight" value=".8"/>
+			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-2" value="ApproachSpot"/> 
+			<property name="AITask-3" value="Look"/>
+			<property name="AITask-4" value="BreakBlock"/> 
+			<property name="AITask-5" value="Wander"/> 
+			<property name="AITask-6" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityEnemyAnimal,EntityBandit"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class> 
+
+		<entity_class name="fantasyRangedMaleTraderTemplate" extends="fantasyRangedMaleBanditTemplate">
+			<property name="Class" value="EntitySurvivor"/> <!-- This class NREs when inside a trader protection area  -->
+			<property name="Tags" value="entity,npc,trader,ranged,template"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
+			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="HandItem" value="handBanditMP7"/> 
+			<property name="AIPathCostScale" value=".9, 1"/>
+			<property name="LootListAlive" value="62"/>
+			<property name="NPCID" value="traderWeapons"/>
+			<property name="AttackTimeoutDay" value=".8"/>
+			<property name="AttackTimeoutNight" value=".8"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-3" value="ApproachSpot"/> 
+			<property name="AITask-4" value="Look"/>
+			<property name="AITask-5" value="BreakBlock"/> 
+			<property name="AITask-6" value="Wander"/> 
+			<property name="AITask-7" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityEnemyAnimal,EntityBandit"/> 
+			<property name="AITarget-2" value="BlockingTargetTask"/> 
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
+			<property name="AITarget-4" value=""/> 
+		</entity_class> 	
+				
+		<entity_class name="fantasyGuppyHumanoidTemplate" extends="fantasyMaleSurvivorTemplate"> 
+			<property name="MaxTurnSpeed" value="600"/>
+			<property name="Tags" value="entity,survivor,ranged,template"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="195"/>
 			<property name="Weight" value="70"/>
 			<property name="SightRange" value="190"/>
 			<property name="MaxViewAngle" value="340"/>
 			<property name="PainResistPerHit" value=".5"/>
-			<property name="RootMotion" value="true"/>      
-			<property name="Class" value="EntityAnimalStag"/>
 			<property name="RotateToGround" value="false"/>			
 			<property name="Faction" value="whiteriver"/>
-			<property name="IsEnemyEntity" value="false"/>
-			<property name="EntityType" value="Player"/>
 			<property name="HandItem" value="meleeHandAnimalWolf"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightHand" />
@@ -229,39 +317,82 @@
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
 			<property name="AITarget-4" value=""/> 
-			<property name="SoundHurtSmall" value="Player_Male/player1painsm"/>
-			<property name="SoundStamina" value="Player_Male/player1stamina"/>
-			<property name="SoundDrownPain" value="Player_Male/player1drownpain"/>
-			<property name="SoundWaterSurface" value="Player_Male/player1drownsurface"/>
-			<property name="SoundDrownDeath" value="Player_Male/player1drowndeath"/>
-			<property name="SoundJump" value="Player_Male/player1Jump"/>
-			<property name="SoundLandSoft" value="Player_Male/player1LandSoft"/>
-			<property name="SoundLandHard" value="Player_Male/player1LandHard"/>
-			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
-			<property name="SoundSleeperSense" value="sleepersense"/>
-			<property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
-			<property name="SoundAlertTime" value="25.0"/>
-			<property name="SoundRandomTime" value="200.0"/>
-			<property name="SoundRandom" value="malehateroam"/>
-			<property name="SoundAlert" value="malehatealert"/>
-			<property name="SoundSense" value="malehatesense"/>
-			<property name="SoundHurt" value="malehatepain"/>
-			<property name="SoundDeath" value="malehatedeath"/>
-			<property name="SoundAttack" value="malehateattack"/>
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="800"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>
-			<property name="ExperienceGain" value="500"/> 
-			<property name="LootDropProb" value="0.02"/> 
-			<property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
 		</entity_class>	
+	
+<!--  Swarms  -->	
+	
+		<entity_class name="fantasySnowSwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="entity,hostile,fantasySnowSwarm_X"/>
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm2_X" /> 
+			<property name="HandItem" value="meleeHandSnowstorm" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1200" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<property name="Buffs" value="buffSnowSwarm"/>		 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
+		</entity_class> 
+		
+		<entity_class name="fantasyBloodFlySwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="insect,entity,hostile,fantasyBloodFlySwarm_X"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
+			<property name="HandItem" value="meleeHandBloodFly" />
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="AvatarAnimalController"/>
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" /> 
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1200" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 			
+		</entity_class> 
+		
+<!--  Guppy Things  -->	
 
-		<entity_class name="humanGuppyKatanaGirl" extends="guppyHumanoidTemplate">  
+		<entity_class name="humanGuppyKatanaGirl" extends="fantasyGuppyHumanoidTemplate">  
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="HasRagdoll" value="true"/>      
 			<property name="Tags" value="entity,survivor,ranged"/>
@@ -278,7 +409,7 @@
 			</effect_group>
 		</entity_class>
     
-		<entity_class name="humanGuppyJapaneseWarrior" extends="guppyHumanoidTemplate"> 
+		<entity_class name="humanGuppyJapaneseWarrior" extends="fantasyGuppyHumanoidTemplate"> 
 			<property name="PhysicsBody" value="guppyJapWarriorPhysics"/>  
 			<property name="HasRagdoll" value="true"/>      
 			<property name="Tags" value="entity,survivor,ranged"/>
@@ -295,7 +426,7 @@
 			</effect_group>      
 		</entity_class> 
 
-		<entity_class name="humanGuppyJapaneseNinja" extends="guppyHumanoidTemplate"> 
+		<entity_class name="humanGuppyJapaneseNinja" extends="fantasyGuppyHumanoidTemplate"> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>  
 			<property name="HasRagdoll" value="true"/>      
 			<property name="Tags" value="entity,survivor,ranged"/>
@@ -312,7 +443,7 @@
 			</effect_group>      
 		</entity_class>  
 
-		<entity_class name="humanGuppyJapaneseSamurai" extends="guppyHumanoidTemplate"> 
+		<entity_class name="humanGuppyJapaneseSamurai" extends="fantasyGuppyHumanoidTemplate"> 
 			<property name="PhysicsBody" value="mixamoConvertedStandard"/>  
 			<property name="HasRagdoll" value="true"/>      
 			<property name="Tags" value="entity,survivor,ranged"/>
@@ -326,11 +457,7 @@
 			<property name="SoundAttack" value="JapaneseWarriorAttack"/>   
 			<effect_group name="Base Effects">
 				<passive_effect name="HealthMax" operation="base_set" value="800"/>
-				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-				<passive_effect name="StaminaMax" operation="base_set" value="200"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="75" />
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
-				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
 			</effect_group>  
 			<property name="AITask-1" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityBandit,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
 			<property name="AITask-2" value="ApproachSpot"/> 
