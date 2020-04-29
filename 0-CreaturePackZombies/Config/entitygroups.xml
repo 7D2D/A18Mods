@@ -48,6 +48,24 @@
 		<entity name="zombieCopCityFemale01TSBX" prob=".3" />
 		<entity name="zombieHoly01MUMPFY" prob=".3" />
 		<entity name="zombieFatMan01TSBX" prob=".3" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
+		<entity name="zombieGuppyBaldCopFeral" prob=".15" />
+		<entity name="zombieGuppyBeatCopFeral" prob=".15" />
+		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
+		<entity name="zombieGuppyPeteFeral" prob=".15" />
+		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
+		<entity name="zombieGuppySethFeral" prob=".15" />	
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
@@ -96,6 +114,24 @@
 		<entity name="zombieCopCityFemale01TSBXFeral" prob=".15" />
 		<entity name="zombieHoly01MUMPFYFeral" prob=".15" />
 		<entity name="zombieFatMan01TSBX" prob=".3" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
+		<entity name="zombieGuppyBaldCopFeral" prob=".15" />
+		<entity name="zombieGuppyBeatCopFeral" prob=".15" />
+		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
+		<entity name="zombieGuppyPeteFeral" prob=".15" />
+		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
+		<entity name="zombieGuppySethFeral" prob=".15" />			
 	</insertAfter>
 
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/entity[@name='zombieBoe']" >
@@ -125,6 +161,18 @@
 		<entity name="zombieHoly01MUMPFY" prob=".3" />
 		<entity name="zombieFatMan01TSBX" prob=".3" />		
 		<entity name="zombieBehemoth" prob=".15" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".15" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />				
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWastelandNight']/entity[@name='zombieBoeFeral']" >
@@ -148,7 +196,14 @@
 		<entity name="zombieCopSwat01TSBXFeral"/>
 		<entity name="zombieCopCityFemale01TSBXFeral"/>
 		<entity name="zombieHoly01MUMPFYFeral"/>
+		<entity name="zombieGuppyPest" prob=".5" />
 		<entity name="zombieBehemoth" prob=".5" />
+		<entity name="zombieGuppyBaldCopFeral" />
+		<entity name="zombieGuppyBeatCopFeral" />
+		<entity name="zombieGuppyGermanCosplayFeral" />
+		<entity name="zombieGuppyPeteFeral"  />
+		<entity name="zombieGuppyPoliceRalphFeral" />
+		<entity name="zombieGuppySethFeral" />	
 	</insertAfter>
 
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
@@ -171,14 +226,26 @@
 		<entity name="zombieGuppy04" prob=".1" />
 		<entity name="zombieGuppySecurityGuardMocap" prob=".1" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".1" />	
-		<entity name="zombieGuppyOldManZombie" prob=".3" />
-		<entity name="zombieGuppyBaldMan01" prob=".3" />
+		<entity name="zombieGuppyOldManZombie" prob=".1" />
+		<entity name="zombieGuppyBaldMan01" prob=".1" />
 		<entity name="zombieHazmatFemale01TSBX" prob=".1" />
 		<entity name="zombieCopCity02TSBX" prob=".1" />
 		<entity name="zombieCopSwat01TSBX" prob=".1" />
 		<entity name="zombieCopCityFemale01TSBX" prob=".1" />
 		<entity name="zombieHoly01MUMPFY" prob=".1" />
-		<entity name="zombieFatMan01TSBX" prob=".1" />		
+		<entity name="zombieFatMan01TSBX" prob=".1" />
+		<entity name="zombieGuppyBaldCop" prob=".1" />
+		<entity name="zombieGuppyBeatCop" prob=".1" />
+		<entity name="zombieGuppyGermanCosplay" prob=".1" />
+		<entity name="zombieGuppyPete" prob=".1" />
+		<entity name="zombieGuppyPoliceRalph" prob=".1" />
+		<entity name="zombieGuppySeth" prob=".1" />
+		<entity name="zombieGuppyPest" prob=".1" />
+		<entity name="zombieGuppyAlma" prob=".1" />
+		<entity name="zombieGuppyBelle" prob=".1" />
+		<entity name="zombieGuppyClot" prob=".1" />	
+		<entity name="zombieGuppyLucy" prob=".1" />
+		<entity name="zombieGuppyNurse" prob=".1" />				
 	</insertAfter>	
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieGhostTownGroup']/entity[@name='zombieBoe']" >
@@ -206,7 +273,18 @@
 		<entity name="zombieCopSwat01TSBX" prob=".3" />
 		<entity name="zombieCopCityFemale01TSBX" prob=".3" />
 		<entity name="zombieHoly01MUMPFY" prob=".3" />	
-		<entity name="zombieFatMan01TSBX" prob=".3" />		
+		<entity name="zombieFatMan01TSBX" prob=".3" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />				
 	</insertAfter>	
 
 <!-- Military Types  -->	
@@ -419,7 +497,13 @@
 		<entity name="zombieCopCity02TSBXFeral"/>
 		<entity name="zombieCopSwat01TSBXFeral"/>
 		<entity name="zombieCopCityFemale01TSBXFeral"/>
-		<entity name="zombieHoly01MUMPFYFeral"/>		
+		<entity name="zombieHoly01MUMPFYFeral"/>
+		<entity name="zombieGuppyBaldCopFeral" />
+		<entity name="zombieGuppyBeatCopFeral" />
+		<entity name="zombieGuppyGermanCosplayFeral" />
+		<entity name="zombieGuppyPeteFeral" />
+		<entity name="zombieGuppyPoliceRalphFeral" />
+		<entity name="zombieGuppySethFeral" />		
 	</insertAfter>
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/entity[@name='zombieArleneFeral']" >	
 		<entity name="zombieSantaFeral"/>
@@ -441,7 +525,13 @@
 		<entity name="zombieCopCity02TSBXFeral"/>
 		<entity name="zombieCopSwat01TSBXFeral"/>
 		<entity name="zombieCopCityFemale01TSBXFeral"/>
-		<entity name="zombieHoly01MUMPFYFeral"/>		
+		<entity name="zombieHoly01MUMPFYFeral"/>
+		<entity name="zombieGuppyBaldCopFeral" />
+		<entity name="zombieGuppyBeatCopFeral" />
+		<entity name="zombieGuppyGermanCosplayFeral" />
+		<entity name="zombieGuppyPeteFeral" />
+		<entity name="zombieGuppyPoliceRalphFeral" />
+		<entity name="zombieGuppySethFeral" />			
 	</insertAfter>	
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoe']">
@@ -461,7 +551,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />		
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoe']">
@@ -481,7 +583,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteve']">
@@ -501,7 +615,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieMoe']">
@@ -521,7 +647,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieYo']">
@@ -541,7 +679,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBusinessMan']">
@@ -561,7 +711,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSkateboarder']">
@@ -581,7 +743,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />		
 	</insertAfter>
 		
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieArlene']">
@@ -708,6 +882,12 @@
 		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
 		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
 		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+		<entity name="zombieGuppyBaldCopFeral" prob=".15" />
+		<entity name="zombieGuppyBeatCopFeral" prob=".15" />
+		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
+		<entity name="zombieGuppyPeteFeral" prob=".15" />
+		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
+		<entity name="zombieGuppySethFeral" prob=".15" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoeFeral']">
@@ -721,6 +901,12 @@
 		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
 		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
 		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+		<entity name="zombieGuppyBaldCopFeral" prob=".15" />
+		<entity name="zombieGuppyBeatCopFeral" prob=".15" />
+		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
+		<entity name="zombieGuppyPeteFeral" prob=".15" />
+		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
+		<entity name="zombieGuppySethFeral" prob=".15" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveFeral']">
@@ -747,6 +933,12 @@
 		<entity name="zombieGuppyHungry02RedFeral" prob=".25" />
 		<entity name="zombieGuppyHungry03WhiteFeral" prob=".25" />		
 		<entity name="zombieHoly01MUMPFYFeral" prob=".25" />
+		<entity name="zombieGuppyBaldCopFeral" prob=".15" />
+		<entity name="zombieGuppyBeatCopFeral" prob=".15" />
+		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
+		<entity name="zombieGuppyPeteFeral" prob=".15" />
+		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
+		<entity name="zombieGuppySethFeral" prob=".15" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieYoFeral']">
@@ -880,7 +1072,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieJoe']">
@@ -898,7 +1102,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieSteve']">
@@ -934,7 +1150,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'wanderingHordeStageGS')]/entity[@name='zombieYo']">
@@ -1114,7 +1342,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieJoe']">
@@ -1132,7 +1372,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieSteve']">
@@ -1168,7 +1420,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'scoutHordeStageGS')]/entity[@name='zombieYo']">
@@ -1432,7 +1696,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />	
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieJoe']">
@@ -1449,7 +1725,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieSteve']">
@@ -1493,7 +1781,19 @@
 		<entity name="zombieGuppySecurityGuardMocap" prob=".25" />		
 		<entity name="zombieGuppySecurityGuardTFP" prob=".25" />				
 		<entity name="zombieHoly01MUMPFY" prob=".25" />
-		<entity name="zombieFatMan01TSBX" prob=".25" />				
+		<entity name="zombieFatMan01TSBX" prob=".25" />	
+		<entity name="zombieGuppyBaldCop" prob=".3" />
+		<entity name="zombieGuppyBeatCop" prob=".3" />
+		<entity name="zombieGuppyGermanCosplay" prob=".3" />
+		<entity name="zombieGuppyPete" prob=".3" />
+		<entity name="zombieGuppyPoliceRalph" prob=".3" />
+		<entity name="zombieGuppySeth" prob=".3" />
+		<entity name="zombieGuppyPest" prob=".3" />
+		<entity name="zombieGuppyAlma" prob=".3" />
+		<entity name="zombieGuppyBelle" prob=".3" />
+		<entity name="zombieGuppyClot" prob=".3" />	
+		<entity name="zombieGuppyLucy" prob=".3" />
+		<entity name="zombieGuppyNurse" prob=".3" />			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'feralHordeStageGS')]/entity[@name='zombieBusinessMan']">
