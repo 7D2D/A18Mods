@@ -112,7 +112,7 @@
 			<entity name="humanGuppySoldier04" prob="0.05" /> 
 			<entity name="humanGuppySoldier05" prob="0.05" />	
 			<entity name="humanGuppySoldier06" prob="0.05" /> 
-			<entity name="humanGuppySoldier07" prob="0.05" />	
+<!--		<entity name="humanGuppySoldier07" prob="0.05" />	-->
 			<entity name="humanGuppySoldier08" prob="0.05" />	
 
 	</append> 		

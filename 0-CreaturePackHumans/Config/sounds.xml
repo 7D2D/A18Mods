@@ -1,4 +1,9 @@
 <configs>
+
+
+	<set xpath="/Sounds/SoundDataNode[@name='malehateattack']/MaxRepeatRate/@value">3.5</set>
+	<set xpath="/Sounds/SoundDataNode[@name='malehatepain']/MaxRepeatRate/@value">2.5</set>
+
 	<append xpath="/Sounds">
 	
 		<SoundDataNode name="HarleyAlert">
@@ -143,7 +148,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>
 
 		<SoundDataNode name="RangerHurt">
@@ -157,7 +162,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.0" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>
 
 		<SoundDataNode name="RangerSense">
@@ -171,7 +176,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>
 
 		<SoundDataNode name="RangerDie">
@@ -186,7 +191,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>
 		
 		<SoundDataNode name="GurlzAlert">
@@ -240,7 +245,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>
 
 		<SoundDataNode name="GurlzSense">
@@ -254,7 +259,7 @@
 			<NoiseScale name="1" />
 			<MaxVoices name="10" />
 			<maxVoicesPerEntity name="1" />
-			<MaxRepeatRate name="1.111" />
+			<MaxRepeatRate name="3" />
 		</SoundDataNode>		
 	</append>
 	
