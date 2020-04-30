@@ -1554,9 +1554,7 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
-				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1577,9 +1575,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
@@ -1594,8 +1591,8 @@
 			<!-- Begin Off Template Changes -->	
 				<property name="LootDropEntityClass" value="EntityLootContainerStrong"/> 
 				<property name="DismemberMultiplierHead" value=".7"/>
-			<property name="DismemberMultiplierArms" value=".7"/>
-			<property name="DismemberMultiplierLegs" value=".7"/>
+				<property name="DismemberMultiplierArms" value=".7"/>
+				<property name="DismemberMultiplierLegs" value=".7"/>
 		</entity_class> 
 		<entity_class name="zombieGuppyBeatCop" extends="zombieRegularTemplate">		
 				<property name="Tags" value="zombieGuppyBeatCop,entity,zombie,normal"/>
@@ -1603,9 +1600,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1626,9 +1622,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
@@ -1653,9 +1648,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1676,9 +1670,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
@@ -1703,9 +1696,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1726,9 +1718,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
@@ -1743,8 +1734,8 @@
 			<!-- Begin Off Template Changes -->	
 				<property name="LootDropEntityClass" value="EntityLootContainerStrong"/> 
 				<property name="DismemberMultiplierHead" value=".7"/>
-			<property name="DismemberMultiplierArms" value=".7"/>
-			<property name="DismemberMultiplierLegs" value=".7"/>
+				<property name="DismemberMultiplierArms" value=".7"/>
+				<property name="DismemberMultiplierLegs" value=".7"/>
 		</entity_class> 
 
 		<entity_class name="zombieGuppyPoliceRalph" extends="zombieRegularTemplate">		
@@ -1753,9 +1744,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1776,9 +1766,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
@@ -1803,9 +1792,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="413"/>
 				<property name="LootDropProb" value="0.02"/>
@@ -1820,32 +1808,25 @@
 			<!-- Begin Off Template Changes -->	
 		</entity_class>		
 
-		<entity_class name="zombieGuppySethFeral" extends="zombieBruteTemplate">		
+<!--		<entity_class name="zombieGuppySethFeral" extends="zombieBruteTemplate">		
 				<property name="Tags" value="zombieGuppySethFeral,entity,zombie,feral"/>
 				<property name="Mesh" value="#@modfolder:Resources/zombieGuppySeth.unity3d?zombieGuppySeth"/>
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
-				<property name="HandItem" value="meleeHandZombieStrongFeral"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
-				<property name="RightHandJointName" value="RightHand"/>
+				<property name="RootMotion"  value="true"/>
+				<property name="RightHandJointName" value="RightHand"/> 
 				<property name="ExperienceGain" value="750"/>
 				<property name="LootDropProb" value="0.03"/>
 				<property name="DeadBodyHitPoints" value="1000"/>
 			<effect_group name="Base Effects">	
-			  <passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
 			  <passive_effect name="HealthMax" operation="base_set" value="300"/>
-			  <passive_effect name="HealthMax" operation="perc_set" value="1"/>
-			  <passive_effect name="StaminaMax" operation="base_set"  value="100"/>
-			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
 			</effect_group>	
-			<!-- Begin Off Template Changes -->	
 				<property name="LootDropEntityClass" value="EntityLootContainerStrong"/> 
 				<property name="DismemberMultiplierHead" value=".7"/>
-			<property name="DismemberMultiplierArms" value=".7"/>
-			<property name="DismemberMultiplierLegs" value=".7"/>
-		</entity_class> 
+				<property name="DismemberMultiplierArms" value=".7"/>
+				<property name="DismemberMultiplierLegs" value=".7"/> 
+		</entity_class> -->
 
 		<entity_class name="zombieGuppyPest" extends="zombieBossTemplate">		
 				<property name="Tags" value="zombieGuppyPest,entity,zombie,normal"/>
@@ -1853,7 +1834,7 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1877,9 +1858,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1902,9 +1882,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1927,9 +1906,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1944,7 +1922,7 @@
 			<!-- Begin Off Template Changes -->	
 				<property name="Mass" value="200"/>
 				<property name="Weight" value="200"/>    
-			<property name="SizeScale" value="1.2"/>  
+				<property name="SizeScale" value="1.2"/>  
 		</entity_class>
 
 		<entity_class name="zombieGuppyLucy" extends="zombieRegularTemplate">		
@@ -1953,9 +1931,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1979,9 +1956,8 @@
 				<property name="AvatarController" value="AvatarZombie01Controller"/>
 				<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
 				<property name="WalkType" value="7"/>
-				<property name="RootMotion"  value="TRUE"/>
+				<property name="RootMotion"  value="true"/>
 				<property name="HandItem" value="meleeHandZombie01"/>
-				<property name="HandItemCrawler" value="meleeHandZombie01"/>
 				<property name="RightHandJointName" value="RightHand"/>
 				<property name="ExperienceGain" value="313"/>
 				<property name="LootDropProb" value="0.05"/>
@@ -1996,7 +1972,7 @@
 			<!-- Begin Off Template Changes -->	
 				<property name="Mass" value="200"/>
 				<property name="Weight" value="200"/>    
-			<property name="SizeScale" value="1.2"/>  
+				<property name="SizeScale" value="1.2"/>  
 		</entity_class> 		
 
 	</append>

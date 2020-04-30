@@ -65,7 +65,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
 		<entity name="zombieGuppyPeteFeral" prob=".15" />
 		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
-		<entity name="zombieGuppySethFeral" prob=".15" />	
+
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesNight']/entity[@name='zombieBoe']" >
@@ -131,7 +131,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
 		<entity name="zombieGuppyPeteFeral" prob=".15" />
 		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
-		<entity name="zombieGuppySethFeral" prob=".15" />			
+	
 	</insertAfter>
 
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesWasteland']/entity[@name='zombieBoe']" >
@@ -203,7 +203,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" />
 		<entity name="zombieGuppyPeteFeral"  />
 		<entity name="zombieGuppyPoliceRalphFeral" />
-		<entity name="zombieGuppySethFeral" />	
+
 	</insertAfter>
 
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombiesHoard']/entity[@name='zombieBoe']" >
@@ -503,7 +503,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" />
 		<entity name="zombieGuppyPeteFeral" />
 		<entity name="zombieGuppyPoliceRalphFeral" />
-		<entity name="zombieGuppySethFeral" />		
+	
 	</insertAfter>
 	<insertAfter xpath="/entitygroups/entitygroup[@name='ZombieBadassGroup']/entity[@name='zombieArleneFeral']" >	
 		<entity name="zombieSantaFeral"/>
@@ -531,7 +531,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" />
 		<entity name="zombieGuppyPeteFeral" />
 		<entity name="zombieGuppyPoliceRalphFeral" />
-		<entity name="zombieGuppySethFeral" />			
+		
 	</insertAfter>	
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieBoe']">
@@ -887,7 +887,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
 		<entity name="zombieGuppyPeteFeral" prob=".15" />
 		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
-		<entity name="zombieGuppySethFeral" prob=".15" />			
+			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieJoeFeral']">
@@ -906,7 +906,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
 		<entity name="zombieGuppyPeteFeral" prob=".15" />
 		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
-		<entity name="zombieGuppySethFeral" prob=".15" />			
+			
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieSteveFeral']">
@@ -938,7 +938,7 @@
 		<entity name="zombieGuppyGermanCosplayFeral" prob=".15" />
 		<entity name="zombieGuppyPeteFeral" prob=".15" />
 		<entity name="zombieGuppyPoliceRalphFeral" prob=".15" />
-		<entity name="zombieGuppySethFeral" prob=".15" />			
+	
 	</insertAfter>
 	
 	<insertAfter xpath="/entitygroups/entitygroup[ starts-with(@name, 'sleeperHordeStageGS')]/entity[@name='zombieYoFeral']">
