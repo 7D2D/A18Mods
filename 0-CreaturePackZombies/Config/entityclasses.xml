@@ -50,7 +50,7 @@
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAlive,0"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,20,EntityEnemyAnimal,40,EntitySurvivor,40,EntityPlayer,40,EntityBandit,40"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
