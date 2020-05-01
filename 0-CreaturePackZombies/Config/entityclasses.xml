@@ -50,14 +50,14 @@
 			<property name="AITask-2" value="DestroyArea"/>
 			<property name="AITask-3" value="Territorial"/>
 			<property name="AITask-4" value="ApproachDistraction"/>
-			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAlive,0"/>
 			<property name="AITask-6" value="ApproachSpot"/>
 			<property name="AITask-7" value="Look"/>
 			<property name="AITask-8" value="Wander"/>
-			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer"/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal,EntityPlayer"/>
 			<property name="AITarget-2" value="BlockingTargetTask"/>
 			<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
-			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/> 
+			<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityAlive,0,0"/> 
 			<property class="FallLandBehavior">
 				<property name="None" data="weightmin=0.6"/>
 				<property name="Ragdoll" data="heightMin=2;weightMin=.2;weightMax=.4"/>
@@ -132,7 +132,13 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 			</effect_group>
-		</entity_class>    
+		</entity_class>   
+
+		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
+			<property name="Tags" value="entity,zombie,walker,template, alt"/> <!-- Zombies will attach other zombies if hit by them  -->
+			<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityAlive"/>
+		</entity_class> 
+		
 			
 		<entity_class name="zombieBruteTemplate" extends="zombieRegularTemplate">
 			<property name="Tags" value="entity,zombie,walker,template"/>
@@ -151,7 +157,6 @@
 			<property name="PhysicsBody" value="zombieFat"/>
 			<property name="RootMotion" value="true"/>
 			<property name="HasDeathAnim" value="true"/>
-			<property name="ReplaceMaterial1" value="entities/zombies/materials/Z_eye1"/>
 			<property name="HandItem" value="meleeHandZombieFeral"/>
 			<property name="JumpMaxDistance" value=".9, 1"/>
 			<property name="ExperienceGain" value="750"/>
