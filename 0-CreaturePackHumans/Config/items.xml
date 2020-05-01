@@ -523,7 +523,7 @@
 				<property name="Velocity" value="30"/>
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
-				<property name="CollisionRadius" value=".25"/>
+				<property name="CollisionRadius" value=".5"/>
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>
@@ -545,7 +545,7 @@
 				<property name="Velocity" value="40"/>
 				<property name="FlyTime" value="2"/>
 				<property name="LifeTime" value="4"/>
-				<property name="CollisionRadius" value=".25"/>
+				<property name="CollisionRadius" value=".5"/>
 			</property>
 			<effect_group name="Base Effects">
 				<passive_effect name="ModSlots" operation="base_set" value="0"/>

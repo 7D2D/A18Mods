@@ -97,7 +97,7 @@
 			<property name="ChestExplosionDamageMultiplier" value="1"/>
 			<property name="PainResistPerHit" value=".5"/>		
 			<property name="MaxViewAngle" value="270"/>
-			<property name="SightRange" value="70"/>
+			<property name="SightRange" value="80"/>
 			<property name="LegCrippleScale" value="0"/> <!--  Needed to prevent crippling which changes walktype to zombie (may change that eventually  -->
 			<property name="SightLightThreshold" value="-2,150"/> <!-- how well lit you have to be for the zombie to see you at min,max range -->
 			<property name="SleeperWakeupSightDetectionMin" value="-40,5"/> <!-- Indiv.Random. sight capability - "I see you" light value at point blank -->
@@ -149,7 +149,7 @@
 			<property name="HandItem" value="handBanditMP7"/> 
 			<property name="HandItemCrawler" value="handBanditMP7"/>			
 			<property name="RightHandJointName" value="Muzzle" />
-			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=80"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4"/>
 			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityZombie,0,EntityPlayer,0,EntitySurvivor,0,EntityAnimalStag,0"/>
 			<property name="AITask-3" value="ApproachDistraction"/>
 			<property name="AITask-4" value="ApproachSpot"/> 
@@ -652,7 +652,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="GurlzRandom" />
-			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandomTime" value="30.0"/>
 			<property name="SoundAlert" value="GurlzAlert"/>
 			<property name="SoundAttack" value="GurlzAttack"/>
 			<property name="SoundSense" value="GurlzSense"/>
@@ -676,7 +676,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="GurlzRandom" />
-			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandomTime" value="30.0"/>
 			<property name="SoundAlert" value="GurlzAlert"/>
 			<property name="SoundAttack" value="GurlzAttack"/>
 			<property name="SoundSense" value="GurlzSense"/>
@@ -702,7 +702,7 @@
 			<property name="SoundLandHard" value="Player_Male/player2LandHard"/>
 			<property name="SoundPlayerLandThump" value="PlayerLandThump"/>
 			<property name="SoundRandom" value="GurlzRandom" />
-			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandomTime" value="30.0"/>
 			<property name="SoundAlert" value="GurlzAlert"/>
 			<property name="SoundAttack" value="GurlzAttack"/>
 			<property name="SoundSense" value="GurlzSense"/>
@@ -820,7 +820,7 @@
 			<property name="HandItem" value="handSprayNPray"/> 
 			<property name="RightHandJointName" value="Muzzle" />
 			<property name="SoundAlertTime" value="25.0"/>
-			<property name="SoundRandomTime" value="200.0"/>
+			<property name="SoundRandomTime" value="60.0"/>
 			<property name="SoundRandom" value="RangerRandom"/>
 			<property name="SoundAlert" value="RangerAlert"/>
 			<property name="SoundSense" value="RangerSense"/>
