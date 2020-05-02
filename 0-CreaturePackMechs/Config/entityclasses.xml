@@ -191,6 +191,29 @@
 				<passive_effect name="HealthMax" operation="base_set" value="100"/>
 			</effect_group>
 		</entity_class> 
-
+		<entity_class name="mechRecyclingBot" extends="mechTemplateHostile" >
+			<property name="Mesh" value="#@modfolder:Resources/Protectronz.unity3d?ProtectronDark" /> <!-- Free CC model by shanonso -->
+			<property name="Tags" value="entity,mech,mechRecyclingBot"/>
+			<property name="Faction" value="whiteriver"/>
+			<property name="HandItem" value="handRobot"/>
+			<property name="HasRagdoll" value="true"/> <!-- No ragdoll on entity, but when both Ragdoll and Rootmotion is false, the entity will not animate attacks on dedicated servers.  Set it to true even without a ragdoll but you MUST NOT have an E_Biped_Root tag on the entity or it will NRE  -->
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/> 
+			<property name="SoundRandomTime" value="20.0"/>
+			<property name="SoundRandom" value="RobotRandom" />
+			<property name="SoundAlert" value="RobotAlert" />
+			<property name="SoundAttack" value="RobotAttack" />
+			<property name="SoundDeath" value="RobotDie" />
+			<property name="SoundHurt" value="RobotRandom" />
+			<property name="SoundSense" value="RobotSense" /> 
+			<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+			<drop event="Harvest" name="resourceMechanicalParts" tag="salvageHarvest" count="10"/> 
+			<drop event="Harvest" name="resourceScrapIron" tag="salvageHarvest" count="9"/>
+			<drop event="Harvest" name="resourceElectricParts" tag="salvageHarvest" count="12"/> 
+			<drop event="Harvest" name="resourceScrapPolymers" tag="salvageHarvest" count="9"/>			
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="400"/>
+			</effect_group>
+		</entity_class>
 	</append>
 </configs>
