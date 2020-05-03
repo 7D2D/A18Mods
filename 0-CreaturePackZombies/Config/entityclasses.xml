@@ -132,6 +132,9 @@
 				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
 				<passive_effect name="StaminaMax" operation="base_set" value="100"/>
 			</effect_group>
+			<!--<effect_group name="ragtestforNREs">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
+			</effect_group>-->	
 		</entity_class>   
 
 		<entity_class name="zombieRegularAltTemplate" extends="zombieRegularTemplate">
@@ -723,7 +726,7 @@
 			</effect_group>
 		</entity_class>
 		
-		<entity_class name="zombieCoroner" extends="zombieTemplateMale">
+		<entity_class name="zombieCoroner" extends="zombieRegularTemplate">
 		<!-- Free model from Mixamo  -->
 			<property name="Tags" value="entity,zombie,normal"/>
 			<property name="Mesh" value="#@modfolder:Resources/Zombiez.unity3d?ZombieCoronerDark"/> 

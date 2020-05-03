@@ -136,7 +136,10 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffInjuryBleeding,buffInjuryBleedingZombie,buffInfectionCatch"/>
 				<passive_effect name="BuffResistance" operation="base_add" value="2" tags="buffLegSprained,buffLegBroken,buffArmSprained,buffPlayerFallingDamage"/>
-			</effect_group>			
+			</effect_group>	
+			<!--<effect_group name="ragtestforNREs">
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="ragtest"/>		
+			</effect_group>	-->		
 			<property name="RotateToGround" value="false"/>	
 			<property name="PushFactor" value="10"/>			
 			<property name="RightHandJointName" value="RightWeapon" /> <!-- or LeftWeapon for left hand, just specify the child object name where any ranged particle should release from -->
