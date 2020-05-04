@@ -13,7 +13,7 @@
 			<entity name="humanRiflemanBandit" prob="0.05" />
 			<entity name="humanHeavyGuyBandit" prob="0.05" />
 			<entity name="humanRaiderPest" prob="0.05" />
-			<!--entity name="humanRaiderMoto" prob="0.05" /> -->
+			<entity name="humanRaiderMoto" prob="0.05" /> 
 			<entity name="humanRaiderSlugger" prob="0.05" />	
 			<entity name="humanRaiderFlamer" prob="0.05" />	
 			<entity name="humanRaiderBettie" prob="0.05" />
@@ -69,7 +69,7 @@
 		<entity name="humanRiflemanBandit" prob="0.05" />
 		<entity name="humanHeavyGuyBandit" prob="0.05" />
 		<entity name="humanRaiderPest" prob="0.05" />
-		<!--<entity name="humanRaiderMoto" prob="0.05" /> -->
+		<entity name="humanRaiderMoto" prob="0.05" /> 
 		<entity name="humanRaiderSlugger" prob="0.05" />	
 		<entity name="humanRaiderFlamer" prob="0.05" />	
 		<entity name="humanRaiderBettie" prob="0.05" />
@@ -110,7 +110,7 @@
 			<entity name="humanGuppySoldier02" prob="0.05" />	
 			<entity name="humanGuppySoldier03" prob="0.05" />	
 			<entity name="humanGuppySoldier04" prob="0.05" /> 
-<!--		<entity name="humanGuppySoldier05" prob="0.05" />	-->
+			<entity name="humanGuppySoldier05" prob="0.05" />	
 			<entity name="humanGuppySoldier06" prob="0.05" /> 
 <!--		<entity name="humanGuppySoldier07" prob="0.05" />	-->
 			<entity name="humanGuppySoldier08" prob="0.05" />	
