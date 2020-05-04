@@ -55,7 +55,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -120,7 +120,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -167,7 +167,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".15" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -240,7 +240,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".1" />
 		<entity name="zombieGuppySeth" prob=".1" />
 		<entity name="zombieGuppyPest" prob=".1" />
-		<entity name="zombieGuppyAlma" prob=".1" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".1" />
 		<entity name="zombieGuppyClot" prob=".1" />	
 		<entity name="zombieGuppyLucy" prob=".1" />
@@ -279,7 +279,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -558,7 +558,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -590,7 +590,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -622,7 +622,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -654,7 +654,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -686,7 +686,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -718,7 +718,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -750,7 +750,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1076,7 +1076,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1106,7 +1106,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1154,7 +1154,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1346,7 +1346,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1376,7 +1376,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1424,7 +1424,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1700,7 +1700,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1729,7 +1729,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />
@@ -1785,7 +1785,7 @@
 		<entity name="zombieGuppyPoliceRalph" prob=".3" />
 		<entity name="zombieGuppySeth" prob=".3" />
 		<entity name="zombieGuppyPest" prob=".3" />
-		<entity name="zombieGuppyAlma" prob=".3" />
+		<!--<entity name="zombieGuppyAlma" prob=".3" /> -->
 		<entity name="zombieGuppyBelle" prob=".3" />
 		<entity name="zombieGuppyClot" prob=".3" />	
 		<entity name="zombieGuppyLucy" prob=".3" />

@@ -1879,10 +1879,9 @@
 			  <passive_effect name="StaminaMax" operation="base_set"  value="100"/>
 			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="0"/>
 			</effect_group>	
-			<!-- Begin Off Template Changes -->	
 				<property name="Mass" value="200"/>
 				<property name="Weight" value="200"/>    
-		</entity_class>
+		</entity_class> 
 
 		<entity_class name="zombieGuppyBelle" extends="zombieRegularTemplate">		
 				<property name="Tags" value="zombieGuppyBelle,entity,zombie,normal"/>
