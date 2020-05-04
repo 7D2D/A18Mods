@@ -281,20 +281,17 @@
 		<entity_class name="fantasyGuppyHumanoidTemplate" extends="fantasyMaleSurvivorTemplate"> 
 			<property name="MaxTurnSpeed" value="600"/>
 			<property name="Tags" value="entity,survivor,ranged,template"/>
-			<property name="AvatarController" value="AvatarZombie01Controller"/>
 			<property name="Mesh" value="#@modfolder:Resources/guppyHumanoidJapaneseKatanaGirl.unity3d?guppyKatanaGirl"/>  
-			<property name="PhysicsBody" value="mixamoConvertedStandard"/>
 			<property name="Mass" value="195"/>
 			<property name="Weight" value="70"/>
-			<property name="SightRange" value="190"/>
-			<property name="MaxViewAngle" value="340"/>
+			<property name="SightRange" value="90"/>
 			<property name="PainResistPerHit" value=".5"/>
 			<property name="RotateToGround" value="false"/>			
 			<property name="Faction" value="whiteriver"/>
 			<property name="HandItem" value="meleeHandAnimalWolf"/>
 			<property name="WalkType" value="7"/>
 			<property name="RightHandJointName" value="RightHand" />
-			<property name="MoveSpeed" value="0.55"/>
+			<property name="MoveSpeed" value="0.5"/>
 			<property name="MoveSpeedAggro" value="1.3, 1.3"/> 
 			<property name="MoveSpeedPanic" value="1.3"/>
 			<property name="AINoiseSeekDist" value="150"/>
@@ -318,16 +315,125 @@
 			<property name="AITarget-3" value="SetAsTargetIfHurt" data="class=EntityZombie,EntityBandit,EntitySurvivor,EntityPlayer,EntityAnimalStag,EntityEnemyAnimal"/> 
 			<property name="AITarget-4" value=""/> 
 			<effect_group name="Base Effects">
-				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="base_set" value="200"/>
 				<passive_effect name="PhysicalDamageResist" operation="base_set" value="10" />
 			</effect_group>
 		</entity_class>	
-	
+		<entity_class name="fantasyGuppyEnemyTemplate">
+		  <property name="EntityType" value="Zombie"/>
+		  <property name="Tags" value="entity,zombie,walker"/>
+		  <property name="Mesh" value="Zombies/zombieStandardBoeRagdoll"/>
+		  <property name="AvatarController" value="AvatarZombie01Controller"/>
+		  <property name="ModelType" value="Standard"/>
+		  <property name="HasRagdoll" value="true"/>
+		  <property name="Prefab" value="NPC"/>
+		  <property name="Class" value="EntityZombie"/>
+		  <property name="Parent" value="Enemies"/>
+		  <property name="Mass" value="170"/>
+		  <property name="Weight" value="70"/>
+		  <property name="PhysicsBody" value="zombieStandard"/>
+		  <property name="Faction" value="undead"/>
+		  <property name="Tags" value="entity,zombie"/>
+		  <property name="IsEnemyEntity" value="true"/>
+		  <!-- <property name="MapIcon" value="ui_game_symbol_enemy_dot" /> -->
+		  <property name="CompassIcon" value="ui_game_symbol_enemy_dot" />
+		  <property name="CompassUpIcon" value="ui_game_symbol_enemy_dot_up" />
+		  <property name="CompassDownIcon" value="ui_game_symbol_enemy_dot_down" />
+		  <property name="TrackerIcon" value="ui_game_symbol_run"/>
+		  <property name="AINoiseSeekDist" value="8"/>
+		  <property name="AIPathCostScale" value=".15, .4"/>
+		  <property name="AITask-1" value="BreakBlock"/>
+		  <property name="AITask-2" value="DestroyArea"/>
+		  <property name="AITask-3" value="Territorial"/>
+		  <property name="AITask-4" value="ApproachDistraction"/>
+		  <property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityNPC,0,EntityEnemyAnimal,0,EntityPlayer,0"/>
+		  <property name="AITask-6" value="ApproachSpot"/>
+		  <property name="AITask-7" value="Look"/>
+		  <property name="AITask-8" value="Wander"/>
+		  <property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityEnemyAnimal,EntityPlayer"/>
+		  <property name="AITarget-2" value="BlockingTargetTask"/>
+		  <property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+		  <property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityNPC,0,0"/> 
+		  <property class="FallLandBehavior">
+			<property name="None" data="weightmin=0.6"/>
+			<property name="Ragdoll" data="heightMin=2;weightMin=.2;weightMax=.4"/>
+			<!-- <property name="Stumble" data="heightMin=2.0;weightMin=0.2"/> -->
+			<!-- <property name="Boost" data="heightMin=2.0;weightMin=0.2"/> -->
+			<!-- <property name="CatBoost" data="heightMin=2.0;weightMin=0.2"/> -->
+		  </property>
+		  <property name="WalkType" value="7"/>
+		  <property name="SoundRandomTime" value="60.0"/>
+		  <property name="SoundRandom" value="Enemies/Base_Zombie_Male/zombiemaleroam"/>
+		  <property name="SoundAlertTime" value="25.0"/>
+		  <property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert"/>
+		  <property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense"/>
+		  <property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain"/>
+		  <property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath"/>
+		  <property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack"/>
+		  <property name="SoundSleeperSense" value="sleepersense"/>
+		  <property name="SoundSleeperBackToSleep" value="sleeperbacktosleep"/>
+		  <property name="RootMotion" value="true"/>
+		  <property name="HasDeathAnim" value="true"/>
+		  <property name="ParticleOnDeath" value="blood_death"/>
+		  <property name="SurfaceCategory" value="organic"/>
+		  <property name="DismemberMultiplierHead" value="1"/>
+		  <property name="DismemberMultiplierArms" value="1"/>
+		  <property name="DismemberMultiplierLegs" value="1"/>
+		  <property name="LegCrippleScale" value="2"/>
+		  <property name="LegCrawlerThreshold" value="0"/>
+		  <property name="KnockdownProneDamageThreshold" value="0.5"/>
+		  <property name="KnockdownProneStunDuration" value="0.5,1.8"/>
+		  <property name="KnockdownProneRefillRate" value="0.045,0.045"/>
+		  <property name="KnockdownKneelDamageThreshold" value="0.4"/>
+		  <property name="KnockdownKneelStunDuration" value="0.5,1.8"/>
+		  <property name="KnockdownKneelRefillRate" value="0.045,0.045"/>
+		  <property name="LegsExplosionDamageMultiplier" value="1"/>
+		  <property name="ArmsExplosionDamageMultiplier" value="1"/>
+		  <property name="HeadExplosionDamageMultiplier" value="1"/>
+		  <property name="ChestExplosionDamageMultiplier" value="1"/>
+		  <property name="PainResistPerHit" value=".45"/>
+		  <property name="MaxViewAngle" value="180"/>
+		  <property name="SightRange" value="30"/>
+		  <property name="SightLightThreshold" value="-2,150"/>
+		  <property name="SleeperWakeupSightDetectionMin" value="-40,5"/>
+		  <property name="SleeperWakeupSightDetectionMax" value="340,480"/>
+		  <property name="SleeperSenseSightDetectionMin" value="-10,0"/>
+		  <property name="SleeperSenseSightDetectionMax" value="200,300"/>
+		  <property name="SleeperNoiseSenseThreshold" value="3,8"/>
+		  <property name="SleeperNoiseWakeThreshold" value="9,12"/>
+		  <property name="SleeperSmellSenseThreshold" value="20,50"/>
+		  <property name="SoundSleeperSenseChance" value=".5"/>
+		  <property name="SleeperSmellWakeThreshold" value="40,100"/>
+		  <property name="NoiseAlertThreshold" value="30"/>
+		  <property name="SmellAlertThreshold" value="40"/>
+		  <property name="MaxTurnSpeed" value="250"/>
+		<property name="MoveSpeed" value="0.25"/> 
+		<property name="MoveSpeedAggro" value="1.1, 1.1"/> 
+		<property name="MoveSpeedPanic" value="1.1"/>
+		  <property name="CanClimbLadders" value="true"/>
+		  <property name="JumpMaxDistance" value="2.8, 3.9"/>
+		  <property name="HandItem" value="meleeHandZombie01"/>
+		  <property name="HandItemCrawler" value="meleeHandZombie02"/>
+		  <property name="AttackTimeoutDay" value="1.5"/>
+		  <property name="AttackTimeoutNight" value="1.1"/>
+		  <property name="Immunity" value="sickness;disease;wellness"/>
+		  <property name="ExperienceGain" value="413"/>
+		  <property name="LootDropProb" value="0.02"/>
+		  <property name="LootDropEntityClass" value="EntityLootContainerRegular"/>
+		  <property name="TimeStayAfterDeath" value="30"/>
+		  <property name="DeadBodyHitPoints" value="1000"/>
+		  <effect_group name="Base Effects">
+			<passive_effect name="DistractionResistance" operation="base_set" value="0,0"/>
+			<passive_effect name="HealthMax" operation="base_set" value="150"/>
+			<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			<passive_effect name="StaminaMax" operation="base_set" value="100"/>
+		  </effect_group>
+		</entity_class>    	
 <!--  Swarms  -->	
 	
 		<entity_class name="fantasySnowSwarm_X" extends="animalZombieVulture">
 			<property name="Tags" value="entity,hostile,fantasySnowSwarm_X"/>
-			<property name="Class" value="EntityVulture" />
+			<property name="Class" value="EntityHornet" />
 			<property name="AvatarController" value="AvatarAnimalController"/>
 			<property name="ModelType" value="Standard" />
 			<property name="HasRagdoll" value="true" /> <!-- not really true, but a useful lie.  Either rootmotion or ragdoll MUST be true, or no attack animations on dedi  -->
@@ -475,7 +581,132 @@
 			<property name="AITarget-2" value="BlockingTargetTask"/> 
 			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityBandit,0,0,EntityZombie,0,0,EntityEnemyAnimal,0,0"/> 
 			<property name="AITarget-4" value=""/>       
-		</entity_class>      
-		
+		</entity_class>   
+
+		<entity_class name="fantasyGuppyOrc" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyOrc,entity,orc,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyOrc.unity3d?fantasyGuppyOrc"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>    
+		</entity_class>   
+
+		<entity_class name="fantasyGuppyBarbarian" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyBarbarian,entity,survivor,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyBarbarian.unity3d?fantasyGuppyBarbarian"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>    
+		</entity_class>
+
+		<entity_class name="fantasyGuppyOrcUrsag" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyOrcUrsag,entity,orc,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyOrcUrsag.unity3d?fantasyGuppyOrcUrsag"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>    
+		</entity_class>
+
+		<entity_class name="fantasyGuppyOrcMagur" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyOrcMagur,entity,orc,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyOrcMagur.unity3d?fantasyGuppyOrcMagur"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>    
+		</entity_class>
+
+		<entity_class name="fantasyGuppyOrcDardan" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyOrcDardan,entity,orc,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyOrcDardan.unity3d?fantasyGuppyOrcDardan"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+			<property name="Mass" value="200"/>
+			<property name="Weight" value="200"/>    
+		</entity_class>
+
+		<entity_class name="fantasyGuppyOrcAzrak" extends="fantasyGuppyEnemyTemplate">		
+			<property name="Tags" value="fantasyGuppyOrcAzrak,entity,orc,normal"/>
+			<property name="Mesh" value="#@modfolder:Resources/fantasyGuppyOrcAzrak.unity3d?fantasyGuppyOrcAzrak"/>
+			<property name="AvatarController" value="AvatarZombie01Controller"/>
+			<property name="PhysicsBody"  value="mixamoConvertedStandardZombie"/>
+			<property name="WalkType" value="7"/>
+			<property name="RootMotion"  value="true"/>
+			<property name="HandItem" value="meleeHandAnimalDireWolf"/>
+			<property name="HandItemCrawler" value="meleeHandAnimalDireWolf"/>
+			<property name="RightHandJointName" value="RightHand"/>
+			<property name="ExperienceGain" value="500"/>
+			<property name="LootDropProb" value="0.05"/>
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<effect_group name="Base Effects">	
+			  <passive_effect name="HealthMax" operation="base_set" value="150"/>
+			  <passive_effect name="PhysicalDamageResist" operation="base_set" value="40"/>
+			</effect_group>	
+				<property name="Mass" value="200"/>
+				<property name="Weight" value="200"/>    
+		</entity_class>
 	</append>
 </configs>
