@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xml>
+	<ModInfo>
+		<Name value="Cutscenes" />
+		<Description value="Tutorial Project and mod showing how to use cutscenes" />
+		<Author value="Xyth" />
+		<Version value="1.0" />
+		<Website value="" />
+	</ModInfo>
+</xml>

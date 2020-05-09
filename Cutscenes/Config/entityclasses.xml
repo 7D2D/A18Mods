@@ -1,0 +1,183 @@
+<configs>
+	<append xpath="/entity_classes">
+		<entity_class name="Samara" extends="zombieTemplateMale">
+			<property name="Mesh" value="#@modfolder:Resources/Samara.unity3d?Samara_X" />			
+			<property name="IsEnemyEntity" value="true"/>
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="HandItem" value="handSamara"/> 
+			<property name="RightHandJointName" value="Muzzle" />
+      <property name="Buffs" value="buffSamaraAOE"/>
+      <property name="MoveSpeed" value="0.25"/> 
+			<property name="MoveSpeedAggro" value=".8, 1.1"/> 
+			<property name="MoveSpeedPanic" value="1.1"/>
+			<property name="AttackTimeoutDay" value="3.0"/> 
+			<property name="AttackTimeoutNight" value="3.0"/>
+			<property name="PainResistPerHit" value=".85"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="true"/>
+      <property name="AITask-1" value="ApproachAndFollowTargetSDX, Mods" data="incentives=Leader,Death=true"/>
+      <property name="AITask-2" value="Look"/>
+      <property name="AITask-3" value="" />
+      <property name="AITarget-1" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0"/>
+      <property name="AITarget-2" value=""/>
+			<property name="RandomIndexes" value="2" /> 
+			<property name="SoundRandom" value="Enemies/Base_Zombie_Female/zombiefemaleroam"/>
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Female/zombiefemalealert"/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemaleattack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalepain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemaledeath"/>
+			<property name="SoundSense" value="Enemies/Base_Zombie_Female/zombiefemalesense"/>		
+			<property name="HasDeathAnim" value="true"/>
+			<property name="ExperienceGain" value="1550"/> 
+			<property name="DeadBodyHitPoints" value="1000"/>
+			<property name="TimeStayAfterDeath" value="5"/>
+      <effect_group name="Base Effects">
+        <passive_effect name="HealthMax" operation="base_set" value="100000"/>
+        <passive_effect name="HealthMax" operation="perc_add" value="0"/>
+      </effect_group>
+		</entity_class> 
+		<entity_class name="animalSnowShark" extends="animalTemplateHostile">
+			<property name="Tags" value="entity,animal,hostile,perkAT05"/>
+			<property name="MapIcon" value="ui_game_symbol_tracking_bear"/>
+			<property name="TrackerIcon" value="ui_game_symbol_tracking_bear"/>
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="HandItem" value="handSnowShark"/> 
+			<property name="ModelType" value="Standard"/>
+			<property name="HasRagdoll" value="true"/>
+			<property name="HasDeathAnim" value="true"/>
+			<property name="RootMotion" value="false"/>
+			<property name="JumpMaxDistance" value="2, 4"/>
+			<property name="RagdollOnDeathChance" value="0"/>
+			<property name="PhysicsBody" value="bear"/>
+			<property name="Mass" value="800"/>
+			<property name="Mesh" value="#@modfolder:Resources/SnowShark.unity3d?SnowShark_X" /> 
+			<property name="AITask-1" value="Leap"/>
+			<property name="AITask-2" value="BreakBlock"/>
+			<property name="AITask-3" value="DestroyArea"/>
+			<property name="AITask-4" value="Territorial"/>
+			<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityAnimalStag,0,EntityPlayer,0,EntityZombie,0"/>
+			<property name="AITask-6" value="ApproachSpot"/>
+			<property name="AITask-7" value="Look"/>
+			<property name="AITask-8" value="Wander"/>
+			<property name="AITask-9" value=""/>
+			<property name="AITarget-1" value="SetAsTargetIfHurt"/>
+			<property name="AITarget-2" value="BlockingTargetTask"/>
+			<property name="AITarget-3" value="SetNearestEntityAsTarget" data="class=EntityPlayer,0,0,EntityAnimalStag,0,0,EntityZombie,0,0"/>
+			<property name="AITarget-4" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundRandom" value="SharkIdle"/>
+			<property name="SoundSense" value="SharkIdle"/>
+			<property name="SoundAlert" value="SharkAlert"/>
+			<property name="SoundAttack" value="SharkAttack"/>
+			<property name="SoundFootstepModifier" value=""/>
+			<property name="SoundGiveUp" value="SharkIdle"/>
+			<property name="ExperienceGain" value="1750"/> <!-- XP strong -->
+			<property name="DeadBodyHitPoints" value="600"/>
+			<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+			<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="50"/> <!-- animalBear -->
+			<drop event="Harvest" name="resourceLeather" tag="butcherHarvest" count="15"/>
+			<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="5"/>
+			<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="25"/>
+			<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="5"/>
+			<drop event="Harvest" name="resourceTestosteroneExtract" tag="butcherHarvest" count="2"/>
+			<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="800"/>
+				<passive_effect name="HealthMax" operation="perc_add" value="0"/> <!-- Animal HP scale -->
+			</effect_group>
+		</entity_class>
+		<entity_class name="animalSnowSwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="hostile"/>
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="true" />
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="earth"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?SnowSwarm2_X" /> 
+			<property name="HandItem" value="meleeHandSnowstorm" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1500" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="5.0"/>
+			<property name="Buffs" value="buffSnowSwarm"/>		 
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="100"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+			<property name="MoveSpeed" value=".2"/>
+			<property name="MoveSpeedAggro" value="1.1, 1.4"/> 
+		</entity_class> 
+		<entity_class name="animalBloodFlySwarm_X" extends="animalZombieVulture">
+			<property name="Tags" value="insect,hostile"/>
+			<property name="Class" value="EntityVulture" />
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="ModelType" value="Standard" />
+			<property name="HasRagdoll" value="false" />
+			<property name="PhysicsBody" value="vulture" />
+			<property name="SurfaceCategory" value="organic"/>
+			<property name="Mass" value="10"/>
+			<property name="Mesh" value="#@modfolder:Resources/Swarms.unity3d?Swarm_X" /> 
+			<property name="SizeScale" value="1.0"/>
+			<property name="AttackIndexes" value="0" />
+			<property name="HandItem" value="meleeHandBloodFly" />
+			<property name="SoundRandom" value="" />
+			<property name="SoundRandomTime" value="60.0"/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundHurt" value=""/>
+			<property name="SoundDeath" value=""/>
+			<property name="SoundAttack" value=""/>
+			<property name="SoundSense" value=""/>
+			<property name="SoundGiveUp" value=""/>
+			<property name="ExperienceGain" value="1500" />
+			<property name="DeadBodyHitPoints" value="1" />
+			<property name="LootDropProb" value="0"/> 
+			<property name="TimeStayAfterDeath" value="2.0"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="10"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="0"/>				
+			</effect_group>
+			<property name="MoveSpeed" value=".15"/>
+			<property name="MoveSpeedAggro" value=".6, 1.0"/> <!-- Used when player in vehicle -->
+		</entity_class> 
+		<entity_class name="zombieDeadHead" extends="zombieSpider" >
+			<property name="Mesh" value="#@modfolder:Resources/IceHead.unity3d?IceHead_X" /> 
+			<property name="AvatarController" value="MecanimSDX, Mods" />
+			<property name="RightHandJointName" value="Muzzle" />
+			<property name="RootMotion" value="false" />
+			<property name="HasRagdoll" value="true" />
+			<property name="HandItem" value="handIceHead"/>
+			<property name="MaxHealth" value="100"/>
+			<property name="Weight" value="30"/>
+			<property name="AttackTimeoutDay" value="1.5"/> <!-- in s -->
+			<property name="AttackTimeoutNight" value="1.5"/>
+			<property name="CanClimbLadders" value="true"/>
+			<property name="CanClimbVertical" value="true"/>
+			<property name="AttackIndexes" value="2" />
+			<property name="MoveSpeed" value="0.35"/> <!-- .35 for moddersupdate=true  -->
+			<property name="MoveSpeedAggro" value=".35, 1.1"/> <!-- .35, .35 for moddersupdate=true  -->
+			<property name="MoveSpeedPanic" value=".35"/>
+			<property name="JumpMaxDistance" value="5, 7"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="60"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+			</effect_group>
+		</entity_class>
+		
+		
+	</append>
+</configs>

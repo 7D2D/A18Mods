@@ -1,0 +1,16 @@
+<configs>
+
+   <!--  If the video clip you want to show doesnt have embedded sound, or you want that sound to play inside the player head, you can call a .unity3d sound prefab using a sound node instead.    -->
+
+	<append xpath="/Sounds">
+		<SoundDataNode name="buffCutscene00">
+		  <AudioSource name="Sounds/AudioSource_Notifications"/>
+		  <AudioClip ClipName="#@modfolder:Resources/cutscene00sound.unity3d?cutscene00sound" Loop="false" />
+		  <LocalCrouchVolumeScale value="1.0"/>
+		  <CrouchNoiseScale value="0.5"/>
+		  <NoiseScale value="1"/>
+		  <MaxVoices value="10"/>
+		  <MaxRepeatRate value=".01"/>
+		</SoundDataNode>
+	</append>
+ </configs>

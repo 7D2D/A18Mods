@@ -1,0 +1,49 @@
+<configs>
+  <append xpath="/buffs">
+
+     <!-- buffs that show video full screen over the top of the UI and player.  These will loop until the duration ends.  -->
+
+    <!-- Intro cut scene video -->
+		<buff name="buffCutscene00"  name_key="Buff" icon="ui_game_symbol_destruction2" hidden="true">
+			<duration value="40"/>
+			<stack_type value="ignore"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachPrefabToEntity" prefab="#@modfolder:Resources/cutscenes.unity3d?CutsceneExample00" parent_transform="CameraNode" local_offset="0,0,0" local_rotation="0,0,0"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/cutscenes.unity3d?CutsceneExample00"/>
+				<triggered_effect trigger="onSelfBuffRemove" action="RemovePrefabFromEntity" prefab="#@modfolder:Resources/cutscenes.unity3d?CutsceneExample00"/>
+				<triggered_effect trigger="onSelfBuffStart" action="PlaySound" sound="buffCutscene00" play_in_head="true"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="StopSound" sound="buffCutscene00" />
+				<triggered_effect trigger="onSelfBuffRemove" action="StopSound" sound="buffCutscene00" />
+				<triggered_effect trigger="onSelfLeaveGame" action="StopSound" sound="buffCutscene00" />
+			</effect_group>
+		</buff>
+	</append>
+   <!--  appends to the update loop             -->
+
+
+
+  <append xpath="/buffs/buff[@name='buffStatusCheck01']">
+
+    <!-- Intro Video, determined to a cvar. The cvar default value is 0. -->
+    <effect_group name="IntroVideo">
+      <requirement name="CVarCompare" cvar="$IntroVideo" operation="LT" value="1"/>
+      <triggered_effect trigger="onSelfBuffUpdate" action="AddBuff" buff="buffCutscene00" />
+      <!-- Set to 1 so it does not re-trigger-->
+      <triggered_effect trigger="onSelfBuffUpdate" action="ModifyCVar" cvar="$IntroVideo" operation="set" value="1"/>
+    </effect_group>
+  </append>
+
+  <append xpath="/buffs/buff[@name='buffStatusCheck01']/effect_group">
+
+    <!-- Cutscene buffs  -->
+
+    <triggered_effect trigger="onSelfBuffUpdate" action="RemovePrefabFromEntity" prefab="CutsceneExample00">
+      <requirement name="NotHasBuff" buff="buffCutscene00"/>
+    </triggered_effect>
+    <triggered_effect trigger="onSelfBuffUpdate" action="AttachPrefabToEntity" prefab="CutsceneExample00">
+      <requirement name="HasBuff" buff="buffCutscene00"/>
+    </triggered_effect>
+
+   </append>
+
+</configs>
